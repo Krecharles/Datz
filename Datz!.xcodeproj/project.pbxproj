@@ -31,7 +31,6 @@
 		2B8EF2E1206E71CE00EACEE0 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */; };
 		2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */; };
 		2BBA11052072AC0A0006F6E3 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */; };
-		2BD453972074EB5900662920 /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD453962074EB5900662920 /* Subjects.swift */; };
 		2BEACD4A206D8288007A1B58 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEACD49206D8288007A1B58 /* SubjectViewController.swift */; };
 		2BED8082206CF5BF0056CCC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8081206CF5BF0056CCC9 /* AppDelegate.swift */; };
 		2BED8084206CF5BF0056CCC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8083206CF5BF0056CCC9 /* ViewController.swift */; };
@@ -65,7 +64,6 @@
 		2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMakerTableViewController.swift; sourceTree = "<group>"; };
 		2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
-		2BD453962074EB5900662920 /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		2BEACD49206D8288007A1B58 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		2BED807E206CF5BF0056CCC9 /* Datz!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Datz!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BED8081206CF5BF0056CCC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			children = (
 				2B6700D4206E466B00B54616 /* Model.swift */,
 				2B6700D6206E4C7900B54616 /* Data.swift */,
-				2BD453962074EB5900662920 /* Subjects.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD453972074EB5900662920 /* Subjects.swift in Sources */,
 				2BED8084206CF5BF0056CCC9 /* ViewController.swift in Sources */,
 				2BEACD4A206D8288007A1B58 /* SubjectViewController.swift in Sources */,
 				2B65DE41206D02B600450F2D /* UISliderX.swift in Sources */,

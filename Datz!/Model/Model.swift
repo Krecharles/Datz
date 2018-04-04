@@ -19,12 +19,7 @@ struct Year : Codable {
 		
 		var subs = [Subject]()
 		for s in subjects {
-			if let c = s as CombiSubjectMeta {
-				subs.append(c)
-			}
-			else {
-				subs.append(Subject(meta: s))
-			}
+			subs.append(Subject(meta: s))
 		}
 		
 		trimesters = []
@@ -92,10 +87,10 @@ struct Year : Codable {
 	
 }
 
-//protocol SubjectMeta : Codable {
-//	var name: String {get set}// Mathématiques
-//	var coef: Float  {get set}// 4
-//}
+struct SubjectMeta : Codable {
+	var name: String // Mathématiques
+	var coef: Float // 4
+}
 
 struct Trimester : Codable {
 
@@ -129,6 +124,49 @@ struct Trimester : Codable {
 		return out
 
 	}
+}
+
+struct Subject: Codable  {
+
+	var name: String
+	var tests : [Test]
+	var coef: Float
+	var plusPoints: Float
+	var goal: Float?
+	
+	// Structs can't inherit structs, so I have to do this
+	init(meta: SubjectMeta) {
+		name = meta.name
+		coef = meta.coef
+		tests = []
+		plusPoints = 0
+	}
+
+	/// only average of the tests, no up rounding but still bonus
+	func getAvg() -> Float {
+		var out: Float = 0.0
+		for test in tests {
+			out += test.grade/test.maxGrade
+		}
+		return out * 60.0 / Float(tests.count) + plusPoints
+	}
+
+
+
+	/// respects also pluspoints and up rounding
+	func getFinalAvg() -> Int {
+		let ceiled = ceil(getAvg())
+		// weird line of code coz division sometimes is inaccurate
+		if getAvg() - ceiled + 1 < 0.00001 {
+			return Int(ceiled)-1
+		}
+		return Int(ceil(getAvg()))
+	}
+
+	func isAvgCalculable() -> Bool {
+		return tests.count > 0
+	}
+
 }
 
 struct Test: Codable {
