@@ -135,23 +135,39 @@ class SubjectViewController: UIViewController {
 			textField.textAlignment = .center
 			textField.keyboardType = .decimalPad
 		})
-		alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
-			if let grade = Float(alert.textFields![0].text!.replacingOccurrences(of: ",", with: ".")),
-				let maxGrade = Float(alert.textFields![1].text!) {
-				self.subject.tests.append(Test(grade: grade, maxGrade: maxGrade))
-				self.setInfos()
-			} else {
-				let a = UIAlertController(title: "Unable to parse your grade.", message: "Please enter a valid grade!", preferredStyle: .alert)
-				a.addAction(UIAlertAction(title: "OK", style: .default))
-				self.present(a, animated: true, completion: nil)
-			}
-		}))
+		
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
 		}))
 		
-		for i in 0...2 {
-			alert.addAction(UIAlertAction(title: "title", style: .default))
+		if let c = subject.combiSubjects {
+			for (i, s) in c.subjects.enumerated() {
+				alert.addAction(UIAlertAction(title: "Add to \(s.name)", style: .default, handler: { action in
+					if let grade = Float(alert.textFields![0].text!),
+						let maxGrade = Float(alert.textFields![1].text!) {
+						self.subject.combiSubjects!.subjects[i].tests.append(Test(grade: grade, maxGrade: maxGrade))
+						self.setInfos()
+					} else {
+						let a = UIAlertController(title: "Unable to parse your grade.", message: "Please enter a valid grade!", preferredStyle: .alert)
+						a.addAction(UIAlertAction(title: "OK", style: .default))
+						self.present(a, animated: true, completion: nil)
+					}
+				}))
+			}
+		} else {
+			alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
+				if let grade = Float(alert.textFields![0].text!),
+					let maxGrade = Float(alert.textFields![1].text!) {
+					self.subject.tests.append(Test(grade: grade, maxGrade: maxGrade))
+					self.setInfos()
+				} else {
+					let a = UIAlertController(title: "Unable to parse your grade.", message: "Please enter a valid grade!", preferredStyle: .alert)
+					a.addAction(UIAlertAction(title: "OK", style: .default))
+					self.present(a, animated: true, completion: nil)
+				}
+			}))
 		}
+			
+			
 		self.present(alert, animated: true, completion: nil)
 	}
 	

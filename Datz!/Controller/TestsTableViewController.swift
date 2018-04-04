@@ -11,19 +11,33 @@ import UIKit
 extension SubjectViewController : UITableViewDataSource, UITableViewDelegate {
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return 3
+		if let c = subject.combiSubjects {
+			return c.subjects.count
+		}
+		return 1
 	}
 	
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return "This is a title"
+		if let c = subject.combiSubjects {
+			return "\(c.subjects[section].name) | coef: \(Int(c.subjects[section].coef))/\(c.subjects.count)"
+		}
+		return ""
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		if let c = subject.combiSubjects {
+			return c.subjects[section].tests.count
+		}
 		return subject.tests.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let test = subject.tests[indexPath.row]
+		let test: Test!
+		if let c = subject.combiSubjects {
+			test = c.subjects[indexPath.section].tests[indexPath.row]
+		} else {
+			test = subject.tests[indexPath.row]
+		}
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Prototype") as! TestTableViewCell
 		let ns = formatter
 		cell.testLabel.text = "\(ns.string(from: NSNumber(value: test.grade))!) / \(ns.string(from: NSNumber(value: test.maxGrade))!)"
@@ -38,7 +52,13 @@ extension SubjectViewController : UITableViewDataSource, UITableViewDelegate {
 	}
 
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-		subject.tests.remove(at: indexPath.row)
+		tableView.beginUpdates()
+		if subject.combiSubjects != nil {
+			subject.combiSubjects!.subjects[indexPath.section].tests.remove(at: indexPath.row)
+		} else {
+			subject.tests.remove(at: indexPath.row)
+		}
+		tableView.endUpdates()
 		setInfos()
 	}
 
