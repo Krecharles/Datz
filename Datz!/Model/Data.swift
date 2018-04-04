@@ -111,10 +111,40 @@ class MyData {
 		func createYear(_ name: String, _ subjectNames: [String], _ subjectCoefs: [Int]) {
 			var metas = [SubjectMeta]()
 			for i in 0..<subjectNames.count {
-				metas.append(SubjectMeta(name: subjectNames[i], coef: Float(subjectCoefs[i])))
+				metas.append(SubjectMeta(name: subjectNames[i], coef: Float(subjectCoefs[i]), combiMeta: nil))
 			}
 			presetYears.append(Year(name: name, subjects: metas))
 		}
+		
+		// because of combi subjects -.-
+		func co(_ names: [String], _ coefs: [Float]) -> CombiMeta {
+			var subs = [SubjectMeta]()
+			for i in 0..<names.count {
+				subs.append(SubjectMeta(name: names[i], coef: coefs[i]))
+			}
+			return CombiMeta(subjects: subs)
+		}
+		
+		func ms(_ name: String, _ coef: Float) -> SubjectMeta {
+			return SubjectMeta(name: name, coef: coef, combiMeta: nil)
+		}
+		
+		func mc(_ name: String, _ coef: Float, combiMeta: CombiMeta) -> SubjectMeta {
+			return SubjectMeta(name: name, coef: coef, combiMeta: combiMeta)
+		}
+		
+		func add(_ name: String, _ subjects: [SubjectMeta]) {
+			presetYears.append(Year(name: name, subjects: subjects))
+		}
+		
+//		let c = co(["mathe2", "info"], [3, 1])
+//		let meta = SubjectMeta(name: "Combi2", coef: 4, combiMeta: c)
+		
+//		let meta = me("Combi", 4, combiMeta: co(["mathe2", "info"], [3, 1]))
+//		let year = Year(name: "2MB", subjects: [mc("Combi", 4, combiMeta: co(["mathe2", "info"], [3, 1]))])
+		
+		add("2MB", [mc("Combi", 4, combiMeta: co(["mathe2", "info"], [3, 1]))])
+		
 		
 		createYear("7e", ["Français", "Allemand", "Mathématiques", "SciNa", "Histoire", "VieSo", "Géographie", "Artistique", "EduMusic", "Luxembourgeois", "EduPhys"], [4, 4, 4, 3, 2, 2, 2, 1, 1, 1, 1])
 		createYear("6C", ["Français", "Allemand", "Latin", "Mathématiques", "SciNa", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 3, 2, 2, 2, 1, 1])

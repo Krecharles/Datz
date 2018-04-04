@@ -90,6 +90,22 @@ struct Year : Codable {
 struct SubjectMeta : Codable {
 	var name: String // Mathématiques
 	var coef: Float // 4
+	var combiMeta: CombiMeta?
+	
+	init(name: String, coef: Float, combiMeta: CombiMeta?) {
+		self.name = name
+		self.coef = coef
+		self.combiMeta = combiMeta
+	}
+	
+	init(name: String, coef: Float) {
+		self.init(name: name, coef: coef, combiMeta: nil)
+	}
+	
+}
+
+struct CombiMeta : Codable {
+	var subjects: [SubjectMeta]
 }
 
 struct Trimester : Codable {
@@ -126,6 +142,35 @@ struct Trimester : Codable {
 	}
 }
 
+struct CombiSubject: Codable {
+	
+	var subjects: [Subject]
+	
+	init() {
+		subjects = []
+	}
+	
+	func getAvg() -> Float {
+		var out: Float = 0
+		var gradeNumber: Float = 0
+		for s in subjects {
+			if !s.isAvgCalculable() { continue }
+			out += Float(s.getFinalAvg()) * s.coef
+			gradeNumber += s.coef
+		}
+		return out/gradeNumber
+	}
+	
+	func isAvgCalculable() -> Bool {
+		for s in subjects {
+			if s.isAvgCalculable() {
+				return true
+			}
+		}
+		return false
+	}
+}
+
 struct Subject: Codable  {
 
 	var name: String
@@ -133,6 +178,7 @@ struct Subject: Codable  {
 	var coef: Float
 	var plusPoints: Float
 	var goal: Float?
+	var combiSubjects: CombiSubject?
 	
 	// Structs can't inherit structs, so I have to do this
 	init(meta: SubjectMeta) {
@@ -140,10 +186,21 @@ struct Subject: Codable  {
 		coef = meta.coef
 		tests = []
 		plusPoints = 0
+		if let c = meta.combiMeta {
+			combiSubjects = CombiSubject()
+			for s in c.subjects {
+				combiSubjects?.subjects.append(Subject(meta: s))
+			}
+		}
 	}
 
 	/// only average of the tests, no up rounding but still bonus
 	func getAvg() -> Float {
+		if let combi = combiSubjects {
+			if combi.isAvgCalculable() {
+				return combi.getAvg() + plusPoints
+			}
+		}
 		var out: Float = 0.0
 		for test in tests {
 			out += test.grade/test.maxGrade
@@ -164,6 +221,9 @@ struct Subject: Codable  {
 	}
 
 	func isAvgCalculable() -> Bool {
+		if let combi = combiSubjects {
+			return combi.isAvgCalculable()
+		}
 		return tests.count > 0
 	}
 
