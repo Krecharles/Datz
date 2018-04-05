@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B04221F207628750069DDF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B04221E207628750069DDF5 /* Info.plist */; };
 		2B04406B206D712B00DB3F49 /* CustomSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04406A206D712B00DB3F49 /* CustomSegues.swift */; };
 		2B42BAFA206D453A00C64951 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAF9206D453A00C64951 /* MainTableView.swift */; };
 		2B42BAFC206D496500C64951 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAFB206D496500C64951 /* MainTableViewCell.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B04221E207628750069DDF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B04406A206D712B00DB3F49 /* CustomSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
 		2B42BAF9206D453A00C64951 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		2B42BAFB206D496500C64951 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		2BED8080206CF5BF0056CCC9 /* Datz! */ = {
 			isa = PBXGroup;
 			children = (
+				2B04221E207628750069DDF5 /* Info.plist */,
 				2B65DE48206D180500450F2D /* Resources */,
 				2B65DE47206D17ED00450F2D /* View */,
 				2B65DE49206D181A00450F2D /* Controller */,
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B04221F207628750069DDF5 /* Info.plist in Resources */,
 				2BED808C206CF5BF0056CCC9 /* LaunchScreen.storyboard in Resources */,
 				2BED8089206CF5BF0056CCC9 /* Assets.xcassets in Resources */,
 				2BED8087206CF5BF0056CCC9 /* Main.storyboard in Resources */,

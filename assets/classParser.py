@@ -2,7 +2,6 @@
 # add("2MB", [mc("Combi", 4, co(["mathe2", "info"], [3, 1])), ms("Mathematiques", 4)])
 
 import pandas as pd
-from pandas.compat import u
 
 df = pd.read_excel("All Classes.xlsx")
 

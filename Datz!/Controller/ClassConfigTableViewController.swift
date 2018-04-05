@@ -119,7 +119,10 @@ class ClassConfigTableViewController: UITableViewController {
 	}
 	
 	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-		return showsCustomYears && indexPath.section == 0
+		if showsCustomYears && indexPath.section == 0 && MyData.allNames.count > 0 {
+			return true
+		}
+		return false
 	}
 	
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

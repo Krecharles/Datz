@@ -12,13 +12,7 @@ import Foundation
 class MyData {
 
 	/// the names of all the saved year objects
-	static var allNames = [String]() {
-		didSet {
-			// This saves it once too much when this var is initialized,
-			// but that doesn't matter too much
-			saveAllNames()
-		}
-	}
+	static var allNames = [String]()
 	public static var activeYear: Year!
 	
 	public static var presetYears = [Year]()
@@ -57,15 +51,24 @@ class MyData {
 	
 	static func loadActiveYear() {
 		let activeIndex = UserDefaults.standard.integer(forKey: "activeIndex")
-		activeYear = getYear(name: allNames[activeIndex])
+		if activeIndex < allNames.count {
+			activeYear = getYear(name: allNames[activeIndex])
+		}
+		else {
+			print("------fatal error, Index out of range")
+			print(allNames)
+			print(activeIndex)
+			activeYear = getYear(name: allNames[0])
+		}
+		
 	}
 	
 	// MARK: saving
 	
 	static func save() {
-		// I don't save allNames here, the variable is saved when it is mutated
 		save(year: activeYear) // since it has been edited
 		saveActiveIndex()
+		saveAllNames()
 		
 		UserDefaults.standard.set("not first launch", forKey: "firstLaunch")
 	}

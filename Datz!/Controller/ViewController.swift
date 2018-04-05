@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 			des.subjectIndex = mainTableView.indexPathForSelectedRow!.row
 		}
 		if segue.identifier == "ClassConfigSegue" {
-			MyData.save(year: MyData.activeYear)
+			MyData.save()
 			let des = segue.destination as! ClassConfigTableViewController
 			des.didSegueFromMainView = true
 		}
