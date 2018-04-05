@@ -150,7 +150,10 @@
                                         </prototypes>
                                     </tableView>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLJ-FM-NLh" userLabel="Fade View" customClass="UIViewX" customModule="Datz_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="375" height="76"/>
+                                        <rect key="frame" x="0.0" y="90" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gae-JV-Kr4"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,7 +205,6 @@
                                     <constraint firstItem="9t0-HG-e1S" firstAttribute="leading" secondItem="qdv-sf-PAp" secondAttribute="leading" constant="31" id="Nj3-bs-ca3"/>
                                     <constraint firstItem="90t-W6-epL" firstAttribute="centerY" secondItem="9t0-HG-e1S" secondAttribute="centerY" id="UEU-1y-zRm"/>
                                     <constraint firstItem="RLJ-FM-NLh" firstAttribute="leading" secondItem="qdv-sf-PAp" secondAttribute="leading" id="eHo-ti-Z7d"/>
-                                    <constraint firstAttribute="bottom" secondItem="RLJ-FM-NLh" secondAttribute="bottom" constant="256" id="hta-IF-LZU"/>
                                     <constraint firstItem="RLJ-FM-NLh" firstAttribute="top" secondItem="cLp-77-NuN" secondAttribute="top" id="kGQ-kJ-HVw"/>
                                     <constraint firstItem="cLp-77-NuN" firstAttribute="leading" secondItem="RLJ-FM-NLh" secondAttribute="leading" id="lfP-ub-gLr"/>
                                     <constraint firstAttribute="bottom" secondItem="cLp-77-NuN" secondAttribute="bottom" id="sHC-Sw-wpp"/>
@@ -419,11 +421,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="33" y="34"/>
         </scene>
         <!--Class Config Table View Controller-->
         <scene sceneID="Dyz-hl-gLs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri9-2v-Uqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="ClassConfigTableViewController" id="jm2-j0-zno" customClass="ClassConfigTableViewController" customModule="Datz_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qI1-x5-kd4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -458,9 +461,8 @@
                         <segue destination="2K7-Ab-Tzd" kind="show" identifier="ClassMakerSegue" id="jTc-3E-Sje"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ri9-2v-Uqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="-690"/>
+            <point key="canvasLocation" x="33" y="-728"/>
         </scene>
         <!--Class Maker Table View Controller-->
         <scene sceneID="dn1-lK-gts">
@@ -629,7 +631,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3r-kI-bxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="-690"/>
+            <point key="canvasLocation" x="846" y="-728"/>
         </scene>
         <!--Subject View Controller-->
         <scene sceneID="4zj-3A-08l">
@@ -797,9 +799,9 @@
                                         </prototypes>
                                     </tableView>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3k-eE-kwD" userLabel="Fade View" customClass="UIViewX" customModule="Datz_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="129" width="376" height="75"/>
+                                        <rect key="frame" x="0.0" y="129" width="376" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="IZT-JR-mgM"/>
+                                            <constraint firstAttribute="height" constant="50" id="IZT-JR-mgM"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -1003,6 +1005,6 @@
         <image name="LearnWallpaper" width="364" height="243"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YpD-N9-9yE"/>
+        <segue reference="1Ew-0N-J5d"/>
     </inferredMetricsTieBreakers>
 </document>

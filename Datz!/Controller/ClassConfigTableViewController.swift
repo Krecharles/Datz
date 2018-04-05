@@ -10,9 +10,20 @@ import UIKit
 
 class ClassConfigTableViewController: UITableViewController {
 	
-	var didSegueFromMainView = false
+	var didSegueFromMainView = false // means that it is the first launch
 	
 	var showsCustomYears = MyData.allNames.count > 0
+	
+	override func viewDidAppear(_ animated: Bool) {
+		if !didSegueFromMainView {
+			showGarantueeAlert()
+		}
+	}
+	func showGarantueeAlert() {
+		let a = UIAlertController(title: "The Averages are without Guarantee.", message: "They only give an estimate for the actual Average.", preferredStyle: .alert)
+		a.addAction(UIAlertAction(title: "OK", style: .default))
+		self.present(a, animated: true, completion: nil)
+	}
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
 		return showsCustomYears ? 3 : 2

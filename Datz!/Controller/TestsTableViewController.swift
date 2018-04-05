@@ -19,7 +19,7 @@ extension SubjectViewController : UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		if let c = subject.combiSubjects {
-			return "\(c.subjects[section].name) | coef: \(Int(c.subjects[section].coef))/\(c.subjects.count)"
+			return "    \(c.subjects[section].name) | coef: \(format(c.subjects[section].coef))/\(format(subject.coef))"
 		}
 		return ""
 	}
@@ -52,13 +52,12 @@ extension SubjectViewController : UITableViewDataSource, UITableViewDelegate {
 	}
 
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-		tableView.beginUpdates()
 		if subject.combiSubjects != nil {
 			subject.combiSubjects!.subjects[indexPath.section].tests.remove(at: indexPath.row)
 		} else {
 			subject.tests.remove(at: indexPath.row)
 		}
-		tableView.endUpdates()
+		tableView.deleteRows(at: [indexPath], with: .automatic)
 		setInfos()
 	}
 

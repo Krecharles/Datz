@@ -71,7 +71,7 @@ struct Year : Codable {
 		for i in 0..<subjects.count {
 			
 			if isSubjectAvgCalculable(subject: i) {
-				out += Float(getSubjectAvg(subject: i) * subjects[i].coef)
+				out += Float(getSubjectFinalAvg(subject: i)) * subjects[i].coef
 				gradeNumber += subjects[i].coef
 			}
 			

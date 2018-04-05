@@ -26,7 +26,8 @@ currentCombiNames = []
 currentCombiCoefs = []
 
 for i in range(len(classNames)):
-    if subjectNames[i] == "none"  and combiNames[i] == "none":
+
+    if subjectNames[i] == "none"  and combiNames[i] == "none": # row is empty, new subject starts
         if currentClass != "none": #check if it's not the first row
             # get the output
             out += 'add("{}"'.format(currentClass) + ", " + str(currentMetas[:-2]) + '])  \n'
@@ -36,28 +37,34 @@ for i in range(len(classNames)):
         currentMetas = "["
         continue
 
-    if coefs[i] != "none":
+    if subjectNames[i] != "none" and len(currentCombiNames) > 0: # check if combi streak ended
+        # print and reset the combi subjects
+        subIndex = i-len(currentCombiCoefs)
+        currentMetas += 'mc("{}", {}, co({}, {})), '.format(subjectNames[subIndex], lastCoef, currentCombiNames, currentCombiCoefs)
+        currentCombiNames = []
+        currentCombiCoefs = []
+
+        if coefs[i] != "none":
+            lastCoef = coefs[i]
+
+    if coefs[i] != "none": # always check if coef got updated
         lastCoef = coefs[i]
 
-    if combiNames[i] != "none":
+    if combiNames[i] != "none": # check if this is a combi subject
         # this is a combi subject
         currentCombiNames.append(combiNames[i])
         currentCombiCoefs.append(combiCoefs[i])
         continue
-    elif len(currentCombiNames) > 0:
-        # print and reset the combi subjects
-        subIndex = i-len(currentCombiCoefs)
-        currentMetas += 'mc("{}", {}, co({}, {})), '.format(subjectNames[subIndex], coefs[subIndex], currentCombiNames, currentCombiCoefs)
-        currentCombiNames = []
-        currentCombiCoefs = []
-        continue
 
-    name = subjectNames[i]
-    currentMetas += 'ms("{}", {}), '.format(name, lastCoef)
+    currentMetas += 'ms("{}", {}), '.format(subjectNames[i], lastCoef)
 
 out = out.replace("'", '"')
 
 import codecs
 f = codecs.open("output.txt", "w", "utf-8")
 f.write(out)
+f.close()
+
+f = codecs.open("console.txt", "w", "utf-8")
+f.write(str(df.SubjectName.unique().tolist()))
 f.close()
