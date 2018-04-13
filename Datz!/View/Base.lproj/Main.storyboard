@@ -33,10 +33,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                <color key="value" red="0.51883417369999996" green="0.54559355970000001" blue="0.67682391409999998" alpha="0.71018835616438358" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.51764705882352935" green="0.54509803921568623" blue="0.67843137254901964" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                <color key="value" red="0.72769826650000002" green="0.61787182090000003" blue="0.70234090090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.72941176470588232" green="0.61960784313725492" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -426,7 +426,6 @@
         <!--Class Config Table View Controller-->
         <scene sceneID="Dyz-hl-gLs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ri9-2v-Uqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="ClassConfigTableViewController" id="jm2-j0-zno" customClass="ClassConfigTableViewController" customModule="Datz_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qI1-x5-kd4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -461,6 +460,7 @@
                         <segue destination="2K7-Ab-Tzd" kind="show" identifier="ClassMakerSegue" id="jTc-3E-Sje"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri9-2v-Uqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="-728"/>
         </scene>
@@ -480,21 +480,34 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-YN-hdN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-ux-cum">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oan-56-p3a" userLabel="Return">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                                                    <state key="normal" title="Return"/>
+                                                    <connections>
+                                                        <action selector="returnButtonPressed:" destination="2K7-Ab-Tzd" eventType="touchUpInside" id="wuh-WU-yQk"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-YN-hdN">
+                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                                                    <state key="normal" title="Done"/>
+                                                    <connections>
+                                                        <action selector="doneButtonPressed:" destination="2K7-Ab-Tzd" eventType="touchUpInside" id="78D-0c-PUY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="43.5" id="sxH-v7-jNU"/>
+                                                <constraint firstAttribute="height" constant="44" id="kRV-2J-U0l"/>
                                             </constraints>
-                                            <state key="normal" title="Done"/>
-                                            <connections>
-                                                <action selector="doneButtonPressed:" destination="2K7-Ab-Tzd" eventType="touchUpInside" id="78D-0c-PUY"/>
-                                            </connections>
-                                        </button>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="eTu-YN-hdN" firstAttribute="leading" secondItem="iRN-t3-bc0" secondAttribute="leading" id="9GJ-L1-zS2"/>
-                                        <constraint firstAttribute="trailing" secondItem="eTu-YN-hdN" secondAttribute="trailing" id="NtD-Bn-iav"/>
-                                        <constraint firstItem="eTu-YN-hdN" firstAttribute="top" secondItem="iRN-t3-bc0" secondAttribute="top" id="YAR-VA-XVy"/>
+                                        <constraint firstItem="Otz-ux-cum" firstAttribute="leading" secondItem="iRN-t3-bc0" secondAttribute="leading" id="JAM-Lx-1Xg"/>
+                                        <constraint firstAttribute="bottom" secondItem="Otz-ux-cum" secondAttribute="bottom" id="X4w-PS-RuF"/>
+                                        <constraint firstAttribute="trailing" secondItem="Otz-ux-cum" secondAttribute="trailing" id="pbY-so-fOc"/>
+                                        <constraint firstItem="Otz-ux-cum" firstAttribute="top" secondItem="iRN-t3-bc0" secondAttribute="top" id="tUo-dc-eqV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -859,7 +872,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-100" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-mB-8Qd">
-                                        <rect key="frame" x="246" y="61.5" width="94" height="29"/>
+                                        <rect key="frame" x="246" y="62" width="94" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="kML-bq-VsF"/>
                                             <constraint firstAttribute="height" constant="30" id="qTo-zZ-6Iz"/>

@@ -63,6 +63,10 @@ class ClassMakerTableViewController: UITableViewController {
 		tableView.reloadData()
 	}
 	
+	@IBAction func returnButtonPressed(_ sender: Any) {
+		self.dismiss(animated: true, completion: nil)
+	}
+	
 	@IBAction func doneButtonPressed(_ sender: UIButton) {
 		if let name = (tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as! ClassNameTableViewCell).classNameTextField.text {
 			print(name)

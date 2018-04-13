@@ -66,6 +66,11 @@ class MyData {
 	// MARK: saving
 	
 	static func save() {
+		
+		if activeYear == nil {
+			return
+		}
+		
 		save(year: activeYear) // since it has been edited
 		saveActiveIndex()
 		saveAllNames()
@@ -139,6 +144,7 @@ class MyData {
 			presetYears.append(Year(name: name, subjects: subjects))
 		}
 		
+		// classique
 		add("7e", [ms("Français", 4.0), ms("Allemand", 4.0), ms("Mathématiques", 4.0), ms("SciNa", 3.0), ms("Histoire", 2.0), ms("VieSo", 2.0), ms("Géographie", 2.0), ms("Artistique", 1.0), ms("EduMusic", 1.0), ms("Luxembourgeois", 1.0), ms("EduPhys", 1.0)])
 		add("6C", [ms("Français", 4.0), ms("Allemand", 4.0), ms("Latin", 4.0), ms("Mathématiques", 4.0), ms("SciNa", 3.0), ms("Histoire", 2.0), ms("VieSo", 2.0), ms("Géographie", 2.0), ms("Artistique", 1.0), ms("EduPhys", 1.0)])
 		add("6M", [ms("Français", 4.0), ms("Allemand", 4.0), ms("Anglais", 4.0), ms("Mathématiques", 4.0), ms("SciNa", 3.0), ms("Histoire", 2.0), ms("VieSo", 2.0), ms("Géographie", 2.0), ms("Artistique", 1.0), ms("EduPhys", 1.0)])
@@ -173,17 +179,10 @@ class MyData {
 		add("2MF", [ms("EduMusic 1", 4.0), ms("EduMusic 2", 3.0), ms("Français ", 3.0), ms("Allemand", 3.0), ms("Anglais", 3.0), mc("Histo/Civique", 3.0, co(["Histoire", "Civique"], [2.0, 1.0])), ms("Mathématiques", 2.0), ms("Economie", 2.0), ms("Physique", 2.0), ms("Artistique", 2.0), ms("Option", 2.0), ms("EduPhys", 1.0)])
 		add("2CF", [ms("EduMusic 1", 4.0), ms("EduMusic 2", 3.0), ms("Français ", 3.0), ms("Allemand", 3.0), ms("Anglais", 3.0), ms("Latin", 3.0), mc("Histo/Civique", 3.0, co(["Histoire", "Civique"], [2.0, 1.0])), ms("Mathématiques", 2.0), ms("Economie", 2.0), ms("Physique", 2.0), ms("Artistique", 2.0), ms("Option", 2.0), ms("EduPhys", 1.0)])
 		add("2MG", [ms("Economie", 4.0), ms("Français ", 3.0), ms("Allemand", 3.0), ms("Anglais", 3.0), mc("Histo/Civique", 3.0, co(["Histoire", "Civique"], [2.0, 1.0])), ms("EcoPol", 2.0), ms("Philosophie", 2.0), ms("Mathématiques", 2.0), ms("Option", 2.0), ms("Géographie", 2.0), ms("EduMusic", 2.0), ms("Artistique", 2.0), ms("EduPhys", 1.0)])
+		add("2CG", [ms("Economie", 4.0), ms("Français ", 3.0), ms("Allemand", 3.0), ms("Anglais", 3.0), ms("Latin", 3.0), mc("Histo/Civique", 3.0, co(["Histoire", "Civique"], [2, 1])), ms("EcoPol", 2.0), ms("Philosophie", 2.0), ms("Mathématiques", 2.0), ms("Option", 2.0), ms("Géographie", 2.0), ms("EduMusic", 2.0), ms("Artistique", 2.0), ms("EduPhys", 1.0)])
 
-		
-//		createYear("7e", ["Français", "Allemand", "Mathématiques", "SciNa", "Histoire", "VieSo", "Géographie", "Artistique", "EduMusic", "Luxembourgeois", "EduPhys"], [4, 4, 4, 3, 2, 2, 2, 1, 1, 1, 1])
-//		createYear("6C", ["Français", "Allemand", "Latin", "Mathématiques", "SciNa", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 3, 2, 2, 2, 1, 1])
-//		createYear("6M", ["Français", "Allemand", "Anglais", "Mathématiques", "SciNa", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 3, 2, 2, 2, 1, 1])
-//		createYear("5C", ["Français", "Allemand", "Anglais", "Latin", "Mathématiques", "Biologie", "Chimie/Physique", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 1])
-//		createYear("5M", ["Français", "Allemand", "Anglais", "Mathématiques", "Biologie", "Chimie/Physique", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 1])
-//		createYear("4C", ["Français", "Allemand", "Anglais", "Latin", "Mathématiques", "Biologie", "Chimie/Physique", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 1])
-//		createYear("4M", ["Français", "Allemand", "Anglais", "Mathématiques", "Biologie", "Chimie/Physique", "Histoire", "VieSo", "Géographie", "Artistique", "EduPhys"], [4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 1])
-//		createYear("3MA", ["Français", "Allemand", "Anglais", "4e Langue", "Mathématiques", "Biologie", "Chimie", "Histoire", "VieSo", "Physique", "Artistique", "Option", "EduPhys"], [4, 4, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1])
-//		createYear("3CA", ["Français", "Allemand", "Anglais", "Latin", "Mathématiques", "Biologie", "Chimie", "Histoire", "VieSo", "Physique", "Artistique", "Option", "EduPhys"], [4, 4, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1])
+		// technique
+		add("4GSN", [ms("Biologie", 4.0), ms("Chimie", 4.0), ms("Physique", 4.0), ms("Mathématiques", 4.0), ms("Allemand", 3.0), ms("Français", 3.0), ms("Anglais", 3.0), ms("Informatique", 2.0), ms("EduArt&Music", 2.0), ms("EduCitoyen", 2.0), ms("VieSo", 2.0)])
 
 	}
 	
