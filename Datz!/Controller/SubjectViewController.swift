@@ -86,12 +86,37 @@ class SubjectViewController: UIViewController {
 		
 		avgLabelGroup.transform = CGAffineTransform(translationX: 400, y: 0)
 		
-		if let img = UIImage(named: subject.name.folding(options: .diacriticInsensitive, locale: .current)) {
-			backgroundImageView.image = img
-		} else {
-			backgroundImageView.image = #imageLiteral(resourceName: "LearnWallpaper")
-			print("There is no file named '\(subject.name)'")
+		backgroundImageView.image = getBackgroundImage(for: subject.name)
+	}
+	
+	func getBackgroundImage(for name: String) -> UIImage {
+		
+		let dic: [String: String] = ["Chimie/Physique": "ChimiePhysique",
+									 "Mathématiques 1": "Mathematiques",
+									 "Artistique 1": "Artistique",
+									 "Artistique 2": "Artistique",
+									 "EduMusic 1": "EduMusic",
+									 "EduMusic 2": "EduMusic",
+									 "Français " : "Francais"]
+		
+		if let fileName = dic[name] {
+			if let image =  UIImage(named: fileName) {
+				return image
+			} else {
+				print("ERROR: image named \(fileName) does not exist!")
+				return #imageLiteral(resourceName: "LearnWallpaper")
+			}
 		}
+		
+		let simplified = name.folding(options: .diacriticInsensitive, locale: .current)
+		
+		if let img = UIImage(named: simplified) {
+			return img
+		} else {
+			print("There is no file named '\(simplified)'")
+			return #imageLiteral(resourceName: "LearnWallpaper")
+		}
+		
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -110,6 +135,7 @@ class SubjectViewController: UIViewController {
 		}
 		else if sender.text == "" {
 			subject.goal = nil
+			setInfos()
 		}
 		else {
 			sender.text = nil

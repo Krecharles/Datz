@@ -92,6 +92,7 @@ class ViewController: UIViewController {
 		displaysYear = false
 		setInfo()
 		animateMenuButton()
+		animateTrimesterIndicatorLabel()
 	}
 	
 	@IBAction func trimester2ButtonPressed(_ sender: UIButtonX) {
@@ -99,6 +100,7 @@ class ViewController: UIViewController {
 		displaysYear = false
 		setInfo()
 		animateMenuButton()
+		animateTrimesterIndicatorLabel()
 	}
 	
 	@IBAction func trimester3ButtonPressed(_ sender: UIButtonX) {
@@ -106,12 +108,14 @@ class ViewController: UIViewController {
 		displaysYear = false
 		setInfo()
 		animateMenuButton()
+		animateTrimesterIndicatorLabel()
 	}
 	
 	@IBAction func yearButtonPressed(_ sender: UIButtonX) {
 		displaysYear = true
 		setInfo()
 		animateMenuButton()
+		animateTrimesterIndicatorLabel()
 	}
 	
 }

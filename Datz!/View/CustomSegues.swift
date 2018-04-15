@@ -76,7 +76,6 @@ class FadeUpSegue: UIStoryboardSegue {
 			cell.alpha = 0
 		}, completion: { succes in
 			self.source.present(self.destination, animated: false, completion: nil)
-			self.destination.view.removeFromSuperview()
 			cell.removeFromSuperview()
 			newLabel.removeFromSuperview()
 			desVC.subjectNameLabel!.alpha = 1

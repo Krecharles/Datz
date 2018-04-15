@@ -58,4 +58,18 @@ extension ViewController {
 		}, completion: nil)
 	}
 	
+	func animateTrimesterIndicatorLabel() {
+		UIView.animate(withDuration: 0.1, animations:{
+			self.trimesterIndicatorLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.3)
+		}, completion: { _ in
+			UIView.animate(withDuration: 0.1, animations:{
+				self.trimesterIndicatorLabel.transform = CGAffineTransform.identity
+			})
+		})
+	}
+	
 }
+
+
+
+
