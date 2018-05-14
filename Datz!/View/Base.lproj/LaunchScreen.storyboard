@@ -22,23 +22,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datz!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="654-5i-Z97">
-                                <rect key="frame" x="64" y="170" width="248" height="130"/>
+                                <rect key="frame" x="64" y="95" width="248" height="130"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="100"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made by Charles Kremer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v4-Rd-jhC">
-                                <rect key="frame" x="88" y="350" width="200" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with ❤️     by Charles Kremer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v4-Rd-jhC">
+                                <rect key="frame" x="72.5" y="245" width="230" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="HQC-lh-p9R"/>
-                                    <constraint firstAttribute="width" constant="200" id="eD9-jX-l3m"/>
+                                    <constraint firstAttribute="width" constant="230" id="eD9-jX-l3m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with the help of Lenny Care" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhn-ch-QKU">
-                                <rect key="frame" x="94" y="428" width="187.5" height="19.5"/>
+                                <rect key="frame" x="94" y="323" width="187.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Involved on this open-source Project on Github" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkH-4v-7bk">
+                                <rect key="frame" x="38" y="387.5" width="300" height="101.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="rea-Th-zHm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every helper is welcome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Two-r0-IrB">
+                                <rect key="frame" x="88" y="497" width="200" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Duj-nX-ePW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,16 +64,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="654-5i-Z97" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="07n-Q7-46V"/>
+                            <constraint firstItem="654-5i-Z97" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="07n-Q7-46V"/>
                             <constraint firstItem="9v4-Rd-jhC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GBe-Mr-Fye"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pK5-yw-yGu" secondAttribute="trailing" id="H2G-OA-dZD"/>
                             <constraint firstItem="pK5-yw-yGu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MiE-MU-t4V"/>
                             <constraint firstAttribute="bottom" secondItem="pK5-yw-yGu" secondAttribute="bottom" id="PHj-KD-Tp3"/>
-                            <constraint firstItem="9v4-Rd-jhC" firstAttribute="top" secondItem="654-5i-Z97" secondAttribute="bottom" constant="50" id="YdT-IL-how"/>
+                            <constraint firstItem="JkH-4v-7bk" firstAttribute="top" secondItem="Nhn-ch-QKU" secondAttribute="bottom" constant="45" id="Sda-sz-s1b"/>
+                            <constraint firstItem="9v4-Rd-jhC" firstAttribute="top" secondItem="654-5i-Z97" secondAttribute="bottom" constant="20" id="YdT-IL-how"/>
                             <constraint firstItem="Nhn-ch-QKU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="d2C-L2-5kd"/>
+                            <constraint firstItem="Two-r0-IrB" firstAttribute="top" secondItem="JkH-4v-7bk" secondAttribute="bottom" constant="8" id="jYX-kc-2kB"/>
                             <constraint firstItem="654-5i-Z97" firstAttribute="centerX" secondItem="pK5-yw-yGu" secondAttribute="centerX" id="mhO-Rb-WhK"/>
+                            <constraint firstItem="Two-r0-IrB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qoY-iL-1jk"/>
                             <constraint firstItem="pK5-yw-yGu" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="sjz-d7-xhd"/>
                             <constraint firstItem="Nhn-ch-QKU" firstAttribute="top" secondItem="9v4-Rd-jhC" secondAttribute="bottom" constant="8" symbolic="YES" id="wDG-p7-tAL"/>
+                            <constraint firstItem="JkH-4v-7bk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="z4L-Jb-VrY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
