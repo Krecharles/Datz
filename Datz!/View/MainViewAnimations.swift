@@ -9,7 +9,7 @@
 import UIKit
 
 extension ViewController {
-	
+    
 	func animateMenuButton() {
 		let isCollapsing = expandMenu.transform == .identity
 		
@@ -33,7 +33,7 @@ extension ViewController {
 			}
 		}, completion: nil)
 		
-		UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
+		UIView.animate(withDuration: 0.5, delay: 0.25, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
 			if !isCollapsing {
 				self.trimester2Button.transform = CGAffineTransform(translationX: 7, y: 7)
 			} else {
@@ -41,7 +41,7 @@ extension ViewController {
 			}
 		}, completion: nil)
 		
-		UIView.animate(withDuration: 0.5, delay: 0.4, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
+		UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
 			if !isCollapsing {
 				self.trimester3Button.transform = CGAffineTransform(translationX: 10, y: 0)
 			} else {
@@ -49,7 +49,7 @@ extension ViewController {
 			}
 		}, completion: nil)
 		
-		UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
+		UIView.animate(withDuration: 0.5, delay: 0.35, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
 			if !isCollapsing {
 				self.yearButton.transform = CGAffineTransform(translationX: 0, y: -10)
 			} else {
@@ -69,7 +69,6 @@ extension ViewController {
 	}
 	
 }
-
 
 
 

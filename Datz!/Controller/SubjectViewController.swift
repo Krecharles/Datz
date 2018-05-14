@@ -85,6 +85,7 @@ class SubjectViewController: UIViewController {
 		setInfos()
 		
 		avgLabelGroup.transform = CGAffineTransform(translationX: 400, y: 0)
+		avgLabelGroup.alpha = 0
 		
 		backgroundImageView.image = getBackgroundImage(for: subject.name)
 	}

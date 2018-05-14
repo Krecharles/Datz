@@ -14,6 +14,7 @@ extension SubjectViewController {
 		
 		UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
 			self.avgLabelGroup.transform = .identity
+			self.avgLabelGroup.alpha = 1
 		})
 	}
 	

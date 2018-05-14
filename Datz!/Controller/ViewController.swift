@@ -26,7 +26,11 @@ class ViewController: UIViewController {
 	
 	var displaysYear = false
 	
-	var trimIndex = 0
+    var trimIndex = 0 {
+        didSet {
+            UserDefaults.standard.set(trimIndex, forKey: "trimIndex")
+        }
+    }
 	var activeTrimester: Trimester! {
 		get {
 			return MyData.activeYear.trimesters[trimIndex]
@@ -38,15 +42,20 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		trimIndex = 0
-		setInfo()
-		
-		expandMenu.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-		
+        
 		mainTableView.delegate = self
 		mainTableView.dataSource = self
 		mainTableView.backgroundColor = .clear
+        
+        if MyData.isKeyPresentInUserDefaults(key: "trimIndex")  {
+            trimIndex = UserDefaults.standard.integer(forKey: "trimIndex")
+        } else {
+            trimIndex = 0
+        }
+        
+        setInfo()
+        
+        expandMenu.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
 		
 	}
 	

@@ -28,6 +28,10 @@ class MyData {
 		let index = s.index(s.startIndex, offsetBy: 4)
 		return String(s.suffix(from: index))
 	}
+    
+    static func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
+    }
 	
 	// MARK: loading
 	

@@ -346,8 +346,8 @@
                                         <rect key="frame" x="70" y="70" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.99957007170000001" green="0.19517198199999999" blue="0.39105466010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="LkT-ff-efc"/>
                                             <constraint firstAttribute="width" constant="60" id="Voy-G7-gJx"/>
+                                            <constraint firstAttribute="height" constant="60" id="nkI-vC-pTk"/>
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="Hamburger">
@@ -421,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="34"/>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
         <!--Class Config Table View Controller-->
         <scene sceneID="Dyz-hl-gLs">
@@ -872,7 +872,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-100" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-mB-8Qd">
-                                        <rect key="frame" x="246" y="62" width="94" height="29"/>
+                                        <rect key="frame" x="246" y="61.5" width="94" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="kML-bq-VsF"/>
                                             <constraint firstAttribute="height" constant="30" id="qTo-zZ-6Iz"/>
@@ -1014,7 +1014,7 @@
     </scenes>
     <resources>
         <image name="Chimie" width="1928" height="1244"/>
-        <image name="Hamburger" width="1024" height="1024"/>
+        <image name="Hamburger" width="48" height="48"/>
         <image name="LearnWallpaper" width="364" height="243"/>
     </resources>
     <inferredMetricsTieBreakers>
