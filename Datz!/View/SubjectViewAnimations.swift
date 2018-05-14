@@ -9,13 +9,13 @@
 import UIKit
 
 extension SubjectViewController {
-	
-	func swipeInGrade() {
-		
-		UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
-			self.avgLabelGroup.transform = .identity
-			self.avgLabelGroup.alpha = 1
-		})
-	}
-	
+    
+    func swipeInGrade() {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
+            self.avgLabelGroup.transform = .identity
+            self.avgLabelGroup.alpha = 1
+        })
+    }
+    
 }
