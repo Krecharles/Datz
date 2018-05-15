@@ -22,6 +22,10 @@ class SubjectViewController: UIViewController {
 	
 	@IBOutlet weak var testsTableView: UITableView!
 	
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 	var trimIndex = 0
 	var activeTrimester: Trimester! {
 		get {

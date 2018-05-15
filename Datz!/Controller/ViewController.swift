@@ -39,6 +39,10 @@ class ViewController: UIViewController {
 			MyData.activeYear.trimesters[trimIndex] = newValue
 		}
 	}
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
