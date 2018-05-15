@@ -31,6 +31,16 @@
                                     </imageView>
                                     <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-Za-pGl" customClass="UIViewX" customModule="Datz_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcI-iz-2lx">
+                                                <rect key="frame" x="335" y="28" width="32" height="32"/>
+                                                <state key="normal" image="Github-Logo"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="lcI-iz-2lx" secondAttribute="trailing" constant="8" id="0VC-0Q-PZP"/>
+                                            <constraint firstItem="lcI-iz-2lx" firstAttribute="top" secondItem="rbG-Za-pGl" secondAttribute="top" constant="28" id="7bT-eE-yhI"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.51764705882352935" green="0.54509803921568623" blue="0.67843137254901964" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1014,6 +1024,7 @@
     </scenes>
     <resources>
         <image name="Chimie" width="1928" height="1244"/>
+        <image name="Github-Logo" width="32" height="32"/>
         <image name="Hamburger" width="48" height="48"/>
         <image name="LearnWallpaper" width="364" height="243"/>
         <image name="baseline_edit_black_24pt" width="24" height="24"/>
