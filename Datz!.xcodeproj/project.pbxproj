@@ -32,6 +32,7 @@
 		2B8EF2E1206E71CE00EACEE0 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */; };
 		2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */; };
 		2BBA11052072AC0A0006F6E3 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */; };
+		2BD3BDF720AB05EB00B4E272 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */; };
 		2BEACD4A206D8288007A1B58 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEACD49206D8288007A1B58 /* SubjectViewController.swift */; };
 		2BED8082206CF5BF0056CCC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8081206CF5BF0056CCC9 /* AppDelegate.swift */; };
 		2BED8084206CF5BF0056CCC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8083206CF5BF0056CCC9 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 		2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMakerTableViewController.swift; sourceTree = "<group>"; };
 		2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
+		2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		2BEACD49206D8288007A1B58 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		2BED807E206CF5BF0056CCC9 /* Datz!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Datz!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BED8081206CF5BF0056CCC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */,
 				2B8003C52072665A00777ED9 /* ClassConfigTableViewController.swift */,
 				2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */,
+				2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				2B65DE42206D02B600450F2D /* UIViewAnchorPoint.swift in Sources */,
 				2B65DE3D206D02B600450F2D /* UIImageViewX.swift in Sources */,
 				2B65DE43206D02B600450F2D /* UIButtonX.swift in Sources */,
+				2BD3BDF720AB05EB00B4E272 /* CreditsViewController.swift in Sources */,
 				2B65DE46206D049500450F2D /* AngleView.swift in Sources */,
 				2B8003C420725B1500777ED9 /* UtilExtensions.swift in Sources */,
 				2B65DE3C206D02B600450F2D /* UIViewXRadialGradient.swift in Sources */,
