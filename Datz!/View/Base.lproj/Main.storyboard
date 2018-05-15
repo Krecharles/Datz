@@ -515,7 +515,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Xc-JmQ">
-                                <rect key="frame" x="81.5" y="410" width="212.5" height="38"/>
+                                <rect key="frame" x="80" y="410" width="215.5" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get involved on " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdQ-7y-G1m">
                                         <rect key="frame" x="0.0" y="0.0" width="150.5" height="38"/>
@@ -527,9 +527,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u13-IF-m2d">
-                                        <rect key="frame" x="150.5" y="0.0" width="62" height="38"/>
+                                        <rect key="frame" x="150.5" y="0.0" width="65" height="38"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <state key="normal" title="Github"/>
+                                        <state key="normal" title="GitHub"/>
                                         <connections>
                                             <action selector="showGithub:" destination="cVf-OW-lh5" eventType="touchUpInside" id="2MU-PH-qSN"/>
                                         </connections>
