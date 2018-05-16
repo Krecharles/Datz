@@ -8,6 +8,10 @@ You are very welcome to help on this project. There are serveral tasks you can d
 - Take/Search new pictures as subject backgrounds
 - Write a better description for the app store
 - Give new Ideas/Features that improve the app  
+- Translate the app
+- Improve this README
 - Code n' stuff (contact me if you want to help here)
 
 Don't hesitate to contact me for other questions!
+
+Every helper is welcome!
