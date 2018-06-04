@@ -75,6 +75,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         else if avgLabelGroupHeightConstraint.constant > minHeight && lastScrollOffset >= 0 {
             // scrolling down
             avgLabelGroupHeightConstraint.constant -= offset
+            if avgLabelGroupHeightConstraint.constant < minHeight {
+                avgLabelGroupHeightConstraint.constant = minHeight
+            }
             scrollView.contentOffset.y = 0
         }
         
