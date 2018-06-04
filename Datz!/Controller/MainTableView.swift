@@ -56,6 +56,33 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 		performSegue(withIdentifier: "SubjectSegue", sender: self)
 		
 	}
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offset = scrollView.contentOffset.y
+        
+        let delta = offset - lastScrollOffset
+        
+        let minHeight: CGFloat = 150
+        let maxHeight: CGFloat = 250
+        
+        if offset < 0 {
+            // pinched from above
+            let newHeight = min(avgLabelGroupHeightConstraint.constant - delta + 10, maxHeight) // add 10 else stagnates at 249.5
+            avgLabelGroupHeightConstraint.constant = newHeight
+        }
+
+        else if avgLabelGroupHeightConstraint.constant > minHeight && lastScrollOffset >= 0 {
+            // scrolling down
+            avgLabelGroupHeightConstraint.constant -= offset
+            scrollView.contentOffset.y = 0
+        }
+        
+        angleView.setNeedsDisplay()
+//        TODO: change angleview angle?
+        
+        lastScrollOffset = offset
+    }
 	
 	
 }

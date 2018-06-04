@@ -30,6 +30,7 @@
 		2B8EF2DD206E6B2700EACEE0 /* SubjectViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2DC206E6B2700EACEE0 /* SubjectViewAnimations.swift */; };
 		2B8EF2DF206E700800EACEE0 /* TestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */; };
 		2B8EF2E1206E71CE00EACEE0 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */; };
+		2BB3C75520C5A75800A76369 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3C75420C5A75800A76369 /* Util.swift */; };
 		2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */; };
 		2BBA11052072AC0A0006F6E3 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */; };
 		2BD3BDF720AB05EB00B4E272 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */; };
@@ -65,6 +66,7 @@
 		2B8EF2DC206E6B2700EACEE0 /* SubjectViewAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewAnimations.swift; sourceTree = "<group>"; };
 		2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsTableViewController.swift; sourceTree = "<group>"; };
 		2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		2BB3C75420C5A75800A76369 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMakerTableViewController.swift; sourceTree = "<group>"; };
 		2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
 		2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				2BED8088206CF5BF0056CCC9 /* Assets.xcassets */,
 				2B65DE44206D02C700450F2D /* DesignableX */,
 				2B8003C320725B1500777ED9 /* UtilExtensions.swift */,
+				2BB3C75420C5A75800A76369 /* Util.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				2B65DE3B206D02B600450F2D /* UIViewX.swift in Sources */,
 				2BED8082206CF5BF0056CCC9 /* AppDelegate.swift in Sources */,
 				2B04406B206D712B00DB3F49 /* CustomSegues.swift in Sources */,
+				2BB3C75520C5A75800A76369 /* Util.swift in Sources */,
 				2B42BAFC206D496500C64951 /* MainTableViewCell.swift in Sources */,
 				2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */,
 				2B6700D5206E466B00B54616 /* Model.swift in Sources */,

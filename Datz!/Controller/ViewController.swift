@@ -24,7 +24,12 @@ class ViewController: UIViewController {
 	@IBOutlet weak var finalAvgLabel: UILabel!
 	@IBOutlet weak var exactAvgLabel: UILabel!
 	
-	var displaysYear = false
+    @IBOutlet weak var avgLabelGroupHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var angleView: AngleView!
+    
+    var displaysYear = false
+    
+    var lastScrollOffset: CGFloat = 0
 	
     var trimIndex = 0 {
         didSet {
