@@ -44,7 +44,7 @@ struct Year : Codable {
 		for t in trimesters {
 			if t.subjects[subject].isAvgCalculable() {
 				valids += 1
-				out += t.subjects[subject].getAvg()
+				out += Float(t.subjects[subject].getFinalAvg())
 			}
 		}
 		return out/valids
