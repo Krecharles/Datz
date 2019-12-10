@@ -16,3 +16,5 @@ You are very welcome to help on this project. There are serveral tasks you can d
 Don't hesitate to contact me for other questions!
 
 Every helper is welcome!
+
+(Note: I will soon have some time to work on the project. Feel free to give feedback what you want to be improved)
