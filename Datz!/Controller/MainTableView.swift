@@ -50,12 +50,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
-		FadeUpSegue.viewToAnimate = tableView.cellForRow(at: indexPath) as? MainTableViewCell
-		
-		performSegue(withIdentifier: "SubjectSegue", sender: self)
-		
-	}
+        print("Did select")
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.selectedIndexPath = indexPath
+        performSegue(withIdentifier: "SubjectSegue", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indxexPath: IndexPath) {
+        
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         

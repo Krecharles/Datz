@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     var displaysYear = false
     
     var lastScrollOffset: CGFloat = 0
+    
+    var selectedIndexPath: IndexPath?
 	
     var trimIndex = 0 {
         didSet {
@@ -76,7 +78,7 @@ class ViewController: UIViewController {
 		if segue.identifier == "SubjectSegue" {
 			let des = segue.destination as! SubjectViewController
 			des.trimIndex = trimIndex
-			des.subjectIndex = mainTableView.indexPathForSelectedRow!.row
+            des.subjectIndex = self.selectedIndexPath!.row
 		}
 		if segue.identifier == "ClassConfigSegue" {
 			MyData.save()

@@ -107,7 +107,7 @@
                                         <rect key="frame" x="0.0" y="90" width="375" height="377"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prototype" id="hsm-Wc-gv0" customClass="MainTableViewCell" customModule="Datz_" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prototype" id="hsm-Wc-gv0" customClass="MainTableViewCell" customModule="Datz_" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hsm-Wc-gv0" id="3ji-fV-xyW">
@@ -438,7 +438,7 @@
                         <outlet property="trimesterIndicatorLabel" destination="O1V-9R-TtS" id="AiP-n3-Zxh"/>
                         <outlet property="yearButton" destination="UNr-b9-fHk" id="3td-iG-R43"/>
                         <outlet property="yearNameLabel" destination="9t0-HG-e1S" id="aLa-cP-q6x"/>
-                        <segue destination="t72-BI-1xN" kind="custom" identifier="SubjectSegue" customClass="FadeUpSegue" customModule="Datz_" customModuleProvider="target" id="NdB-CQ-QS8"/>
+                        <segue destination="t72-BI-1xN" kind="show" identifier="SubjectSegue" id="NdB-CQ-QS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -806,11 +806,11 @@
             <objects>
                 <viewController id="t72-BI-1xN" customClass="SubjectViewController" customModule="Datz_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CoG-iF-6WA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mB4-7W-J6W" userLabel="Background Group">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Chimie" translatesAutoresizingMaskIntoConstraints="NO" id="gsd-4e-1ND">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -819,7 +819,7 @@
                                         </constraints>
                                     </imageView>
                                     <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pap-Oj-Kp4" customClass="UIViewX" customModule="Datz_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hU-gS-kcv">
                                                 <rect key="frame" x="37" y="37" width="301" height="132"/>
@@ -879,7 +879,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GN9-hd-kpT" customClass="AngleView" customModule="Datz_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="447"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chimie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNQ-uY-1D3">
                                         <rect key="frame" x="31" y="25" width="69" height="29"/>
@@ -888,14 +888,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-iF-CwF" userLabel="Vertical Bar">
-                                        <rect key="frame" x="16" y="129" width="1" height="338"/>
+                                        <rect key="frame" x="16" y="129" width="1" height="318"/>
                                         <color key="backgroundColor" red="0.69411764710000001" green="0.69411764710000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="2KR-ZZ-ZSA"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5M0-Rh-nJZ">
-                                        <rect key="frame" x="0.0" y="129" width="375" height="338"/>
+                                        <rect key="frame" x="0.0" y="129" width="375" height="318"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prototype" id="Xap-vS-CS8" customClass="TestTableViewCell" customModule="Datz_" customModuleProvider="target">
@@ -981,7 +981,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXd-LI-xhC" customClass="AngleView" customModule="Datz_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="417" width="75" height="50"/>
+                                        <rect key="frame" x="0.0" y="397" width="75" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wge-00-jwL">
                                                 <rect key="frame" x="0.0" y="13" width="67" height="37"/>
@@ -1045,7 +1045,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95P-1J-HbL" customClass="UIButtonX" customModule="Datz_" customModuleProvider="target">
-                                        <rect key="frame" x="307" y="399" width="60" height="60"/>
+                                        <rect key="frame" x="307" y="379" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.99499589200000005" green="0.21543195840000001" blue="0.41055676340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="iR0-Qh-CkW"/>
@@ -1148,6 +1148,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IZM-ZJ-czW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kd7-s6-fr1"/>
                     <connections>
                         <outlet property="avgLabelGroup" destination="8hU-gS-kcv" id="TmF-df-Rgi"/>
                         <outlet property="backgroundImageView" destination="gsd-4e-1ND" id="cH9-UQ-nS8"/>

@@ -88,9 +88,6 @@ class SubjectViewController: UIViewController {
 	
 		setInfos()
 		
-		avgLabelGroup.transform = CGAffineTransform(translationX: 400, y: 0)
-		avgLabelGroup.alpha = 0
-		
 		backgroundImageView.image = getBackgroundImage(for: subject.name)
 	}
 	
@@ -122,10 +119,6 @@ class SubjectViewController: UIViewController {
 			return #imageLiteral(resourceName: "LearnWallpaper")
 		}
 		
-	}
-
-	override func viewDidAppear(_ animated: Bool) {
-		swipeInGrade()
 	}
 	
 	@IBAction func bonusStepperChanged(_ sender: UIStepper) {

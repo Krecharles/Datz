@@ -12,7 +12,7 @@ extension SubjectViewController {
     
     func swipeInGrade() {
         
-        UIView.animate(withDuration: 0.5, delay: 0.6, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, animations: {
             self.avgLabelGroup.transform = .identity
             self.avgLabelGroup.alpha = 1
         })
