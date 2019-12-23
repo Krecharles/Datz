@@ -15,8 +15,7 @@ class SubjectViewController: UIViewController {
 	@IBOutlet weak var finalAvgLabel: UILabel!
 	@IBOutlet weak var exactAvgLabel: UILabel!
 	@IBOutlet weak var coefLabel: UILabel!
-	@IBOutlet weak var bonusLabel: UILabel!
-	@IBOutlet weak var bonusStepper: UIStepper!
+	@IBOutlet weak var bonusStepper: ValueStepper!
 	@IBOutlet weak var backgroundImageView: UIImageView!
 	@IBOutlet weak var goalTextField: UITextField!
 	
@@ -47,16 +46,6 @@ class SubjectViewController: UIViewController {
 	}
 	
 	func setInfos() {
-		if subject.plusPoints < 0 {
-			bonusLabel.text = "Bonus \(Int(subject.plusPoints))"
-		}
-		else if subject.plusPoints > 0 {
-			bonusLabel.text = "Bonus +\(Int(subject.plusPoints))"
-		}
-		else {
-			bonusLabel.text = "Bonus"
-		}
-	
 		if subject.isAvgCalculable() {
 			finalAvgLabel.text = "\(subject.getFinalAvg())"
 			exactAvgLabel.text = "\(format(subject.getAvg()))"
@@ -121,11 +110,11 @@ class SubjectViewController: UIViewController {
 		
 	}
 	
-	@IBAction func bonusStepperChanged(_ sender: UIStepper) {
-		subject.plusPoints = Float(sender.value)
-		setInfos()
-	}
-	
+    @IBAction func bonusStepperChanged(_ sender: ValueStepper) {
+        subject.plusPoints = Float(sender.value)
+        setInfos()
+    }
+    
 	@IBAction func goalTextChanged(_ sender: UITextField) {
 		
 		if let v = Float(sender.text!) {

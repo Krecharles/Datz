@@ -10,6 +10,7 @@
 		2B04406B206D712B00DB3F49 /* CustomSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04406A206D712B00DB3F49 /* CustomSegues.swift */; };
 		2B42BAFA206D453A00C64951 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAF9206D453A00C64951 /* MainTableView.swift */; };
 		2B42BAFC206D496500C64951 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAFB206D496500C64951 /* MainTableViewCell.swift */; };
+		2B5C4BAE23B0C54300F9D436 /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C4BAD23B0C54300F9D436 /* ValueStepper.swift */; };
 		2B65DE3A206D02B600450F2D /* UIVisualEffectViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65DE30206D02B500450F2D /* UIVisualEffectViewX.swift */; };
 		2B65DE3B206D02B600450F2D /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65DE31206D02B500450F2D /* UIViewX.swift */; };
 		2B65DE3C206D02B600450F2D /* UIViewXRadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65DE32206D02B600450F2D /* UIViewXRadialGradient.swift */; };
@@ -46,6 +47,7 @@
 		2B04406A206D712B00DB3F49 /* CustomSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
 		2B42BAF9206D453A00C64951 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		2B42BAFB206D496500C64951 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		2B5C4BAD23B0C54300F9D436 /* ValueStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueStepper.swift; sourceTree = "<group>"; };
 		2B65DE30206D02B500450F2D /* UIVisualEffectViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewX.swift; sourceTree = "<group>"; };
 		2B65DE31206D02B500450F2D /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		2B65DE32206D02B600450F2D /* UIViewXRadialGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewXRadialGradient.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				2B65DE44206D02C700450F2D /* DesignableX */,
 				2B8003C320725B1500777ED9 /* UtilExtensions.swift */,
 				2BB3C75420C5A75800A76369 /* Util.swift */,
+				2B5C4BAD23B0C54300F9D436 /* ValueStepper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */,
 				2B6700D5206E466B00B54616 /* Model.swift in Sources */,
 				2B65DE40206D02B600450F2D /* UITextFieldX.swift in Sources */,
+				2B5C4BAE23B0C54300F9D436 /* ValueStepper.swift in Sources */,
 				2B65DE3E206D02B600450F2D /* UILabelX.swift in Sources */,
 				2B42BAFA206D453A00C64951 /* MainTableView.swift in Sources */,
 				2B65DE42206D02B600450F2D /* UIViewAnchorPoint.swift in Sources */,
