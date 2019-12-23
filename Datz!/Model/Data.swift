@@ -127,7 +127,7 @@ class MyData {
             presetYears.append(Year(name: name, subjects: metas))
         }
         
-        // because of combi subjects -.-
+        // because of combi subjects
         func co(_ names: [String], _ coefs: [Float]) -> CombiMeta {
             var subs = [SubjectMeta]()
             for i in 0..<names.count {
@@ -192,7 +192,7 @@ class MyData {
     
     
     
-    // is called manually
+    // is called manually from the debugger console
     static func reset() {
         UserDefaults.standard.set(nil, forKey: "firstLaunch")
         print("reset successfully")

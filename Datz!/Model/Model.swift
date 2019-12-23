@@ -1,6 +1,6 @@
 //
 //  Data.swift
-//  Grades
+//  Datz!
 //
 //  Created by Charel Kremer on 22.03.18.
 //  Copyright © 2018 charelkremer. All rights reserved.

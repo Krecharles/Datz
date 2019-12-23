@@ -619,45 +619,25 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Done" id="xzL-zD-1gC" customClass="SubjectTableViewCell" customModule="Datz_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44.5"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzL-zD-1gC" id="iRN-t3-bc0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-ux-cum">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oan-56-p3a" userLabel="Return">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44.5"/>
-                                                    <state key="normal" title="Return"/>
-                                                    <connections>
-                                                        <action selector="returnButtonPressed:" destination="2K7-Ab-Tzd" eventType="touchUpInside" id="wuh-WU-yQk"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-YN-hdN">
-                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44.5"/>
-                                                    <state key="normal" title="Done"/>
-                                                    <connections>
-                                                        <action selector="doneButtonPressed:" destination="2K7-Ab-Tzd" eventType="touchUpInside" id="78D-0c-PUY"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="kRV-2J-U0l"/>
-                                            </constraints>
-                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-YN-hdN">
+                                            <rect key="frame" x="0.0" y="-0.5" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Done"/>
+                                            <connections>
+                                                <action selector="doneButtonPressed:" destination="2K7-Ab-Tzd" eventType="touchUpInside" id="78D-0c-PUY"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Otz-ux-cum" firstAttribute="leading" secondItem="iRN-t3-bc0" secondAttribute="leading" id="JAM-Lx-1Xg"/>
-                                        <constraint firstAttribute="bottom" secondItem="Otz-ux-cum" secondAttribute="bottom" id="X4w-PS-RuF"/>
-                                        <constraint firstAttribute="trailing" secondItem="Otz-ux-cum" secondAttribute="trailing" id="pbY-so-fOc"/>
-                                        <constraint firstItem="Otz-ux-cum" firstAttribute="top" secondItem="iRN-t3-bc0" secondAttribute="top" id="tUo-dc-eqV"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassName" id="7UR-be-fN5" customClass="ClassNameTableViewCell" customModule="Datz_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="99" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7UR-be-fN5" id="Xa8-ZS-XZN">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -669,7 +649,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45v-5g-1q6">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2MB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45v-5g-1q6">
                                             <rect key="frame" x="264" y="5" width="95" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="95" id="9v9-xk-TUh"/>
@@ -693,7 +673,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubjectCount" id="lit-em-7CD" customClass="SubjectCountTableViewCell" customModule="Datz_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="143.5" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="142.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lit-em-7CD" id="MUe-fs-CdN">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -724,7 +704,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Subject" id="lyG-dz-zT3" customClass="SubjectTableViewCell" customModule="Datz_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="187" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="186" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lyG-dz-zT3" id="WHn-cY-A5Q">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>

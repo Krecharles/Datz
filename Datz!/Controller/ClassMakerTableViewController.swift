@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ClassMakerTableViewController: UITableViewController {
+class ClassMakerTableViewController: UITableViewController, UITextFieldDelegate {
 
 	var subjectCount = 4
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,9 +24,9 @@ class ClassMakerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
 		switch section {
-		case 0: return 1
-		case 1: return 2
-		case 2: return subjectCount
+        case 0: return 2
+        case 1: return subjectCount
+        case 2: return 1
 		default: return 0
 		}
 		
@@ -34,37 +34,31 @@ class ClassMakerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		if indexPath.section == 0 {
+		if indexPath.section == 2 {
 			return tableView.dequeueReusableCell(withIdentifier: "Done")!
 		}
 		
-		if indexPath.section == 1 {
+		if indexPath.section == 0 {
 			if indexPath.row == 0 {
 				let cell = tableView.dequeueReusableCell(withIdentifier: "ClassName") as! ClassNameTableViewCell
+                cell.classNameTextField.delegate = self // necessary for dismissing the keyboard
 				return cell
 			} else {
 				let cell = tableView.dequeueReusableCell(withIdentifier: "SubjectCount") as! SubjectCountTableViewCell
+                cell.subjectCountStepper.value = Double(subjectCount)
 				return cell
 			}
 		}
 		
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Subject", for: indexPath)
-		
-        // Configure the cell...
-
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Subject", for: indexPath) as! SubjectTableViewCell
+        cell.subjectNameTextField.delegate = self
         return cell
-	}
-	
-	@IBAction func classNameEditingDidEnd(_ sender: UITextField) {
 	}
 	
 	@IBAction func subjectCountStepperValueChanged(_ sender: UIStepper) {
 		subjectCount = Int(sender.value)
+        print("WHAT IS GOING ON?? SUBJECCTCOUNT\(subjectCount)")
 		tableView.reloadData()
-	}
-	
-	@IBAction func returnButtonPressed(_ sender: Any) {
-		self.dismiss(animated: true, completion: nil)
 	}
 	
 	@IBAction func doneButtonPressed(_ sender: UIButton) {
@@ -98,51 +92,21 @@ class ClassMakerTableViewController: UITableViewController {
 		}
 		MyData.allNames.append(MyData.activeYear.name)
 	}
-	
-	func navigateToMainView() {
-		performSegue(withIdentifier: "Unwind", sender: self)
-	}
-	
-	func showInvalid() {
-		let a = UIAlertController(title: "Invalid Class", message: "Please enter a valid Class!", preferredStyle: .alert)
-		a.addAction(UIAlertAction(title: "OK", style: .default))
-		self.present(a, animated: true, completion: nil)
-	}
-	
-	/*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func showInvalid() {
+        let a = UIAlertController(title: "Invalid Class", message: "Please enter a valid Class!", preferredStyle: .alert)
+        a.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(a, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func navigateToMainView() {
+        performSegue(withIdentifier: "Unwind", sender: self)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
