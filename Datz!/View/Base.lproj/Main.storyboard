@@ -899,15 +899,15 @@
                                         <rect key="frame" x="0.0" y="129" width="375" height="318"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prototype" id="Xap-vS-CS8" customClass="TestTableViewCell" customModule="Datz_" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prototype" id="Xap-vS-CS8" customClass="TestTableViewCell" customModule="Datz_" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xap-vS-CS8" id="uK9-Q8-8bJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="53 / 60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEj-Zf-92c">
-                                                            <rect key="frame" x="261.5" y="0.0" width="79.5" height="44"/>
+                                                            <rect key="frame" x="280.5" y="0.0" width="79.5" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="OZz-Ka-KN8"/>
                                                             </constraints>
@@ -916,7 +916,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28f-hp-k2m" userLabel="horizontal bar">
-                                                            <rect key="frame" x="21" y="21.5" width="232.5" height="1"/>
+                                                            <rect key="frame" x="21" y="21.5" width="251.5" height="1"/>
                                                             <color key="backgroundColor" red="0.69411764710000001" green="0.69411764710000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="X0h-kP-com"/>
@@ -1038,7 +1038,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-E9-r2k" customClass="ValueStepper" customModule="Datz_" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.5" width="100" height="29"/>
+                                                <rect key="frame" x="213" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
