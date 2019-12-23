@@ -495,29 +495,6 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z56-mf-iSX">
-                                <rect key="frame" x="129" y="254" width="117" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lVr-Tj-Fgs">
-                                <rect key="frame" x="129.5" y="288" width="116.5" height="47"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charles Kremer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKT-Vp-Mzt">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenny Care" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DO-3f-xze">
-                                        <rect key="frame" x="0.0" y="23.5" width="116.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-Xc-JmQ">
                                 <rect key="frame" x="80" y="410" width="215.5" height="38"/>
                                 <subviews>
@@ -552,26 +529,36 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP6-D7-q9l">
+                                <rect key="frame" x="67.5" y="237" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="40D-gM-1v0"/>
+                                    <constraint firstAttribute="height" constant="128" id="jHe-4f-sZ2"/>
+                                </constraints>
+                                <string key="text">If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KPf-Xc-JmQ" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="1sJ-da-0Tn"/>
                             <constraint firstItem="E3r-Nn-KtJ" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="2BK-zu-cey"/>
-                            <constraint firstItem="z56-mf-iSX" firstAttribute="top" secondItem="1ms-is-lHi" secondAttribute="bottom" constant="64" id="Dks-tW-12x"/>
                             <constraint firstItem="f9Z-qh-uZF" firstAttribute="top" secondItem="KPf-Xc-JmQ" secondAttribute="bottom" constant="8" id="FrP-qM-ghz"/>
-                            <constraint firstItem="KPf-Xc-JmQ" firstAttribute="top" secondItem="lVr-Tj-Fgs" secondAttribute="bottom" constant="75" id="KXM-Td-FRZ"/>
-                            <constraint firstItem="lVr-Tj-Fgs" firstAttribute="top" secondItem="z56-mf-iSX" secondAttribute="bottom" constant="8" id="Mha-G0-S6U"/>
+                            <constraint firstItem="ZP6-D7-q9l" firstAttribute="top" secondItem="1ms-is-lHi" secondAttribute="bottom" constant="47" id="J7O-p8-iJz"/>
+                            <constraint firstItem="ZP6-D7-q9l" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="OYA-bU-6ja"/>
                             <constraint firstItem="E3r-Nn-KtJ" firstAttribute="top" secondItem="4Wo-SP-7jj" secondAttribute="top" constant="28" id="Q0K-kj-Ohd"/>
                             <constraint firstItem="DhQ-rI-oWN" firstAttribute="bottom" secondItem="1Jk-RS-u2D" secondAttribute="bottom" id="Qqa-IQ-inf"/>
                             <constraint firstItem="pSy-te-nAA" firstAttribute="bottom" secondItem="1Jk-RS-u2D" secondAttribute="bottom" id="TtM-Oj-ZPS"/>
+                            <constraint firstItem="KPf-Xc-JmQ" firstAttribute="top" secondItem="ZP6-D7-q9l" secondAttribute="bottom" constant="45" id="UWl-1g-VPf"/>
                             <constraint firstItem="pSy-te-nAA" firstAttribute="leading" secondItem="DhQ-rI-oWN" secondAttribute="leading" id="Vl7-sA-m49"/>
                             <constraint firstItem="DhQ-rI-oWN" firstAttribute="leading" secondItem="4Wo-SP-7jj" secondAttribute="leading" id="Xxw-HA-weo"/>
                             <constraint firstItem="1ms-is-lHi" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="ar7-cM-EXn"/>
                             <constraint firstAttribute="trailing" secondItem="DhQ-rI-oWN" secondAttribute="trailing" id="fBB-NY-9om"/>
                             <constraint firstItem="f9Z-qh-uZF" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="gq4-Ul-r1B"/>
-                            <constraint firstItem="lVr-Tj-Fgs" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="iNb-rc-o6O"/>
                             <constraint firstItem="1ms-is-lHi" firstAttribute="top" secondItem="E3r-Nn-KtJ" secondAttribute="bottom" constant="32" id="l2X-dN-oWV"/>
-                            <constraint firstItem="z56-mf-iSX" firstAttribute="centerX" secondItem="4Wo-SP-7jj" secondAttribute="centerX" id="lr7-Ot-t37"/>
                             <constraint firstItem="DhQ-rI-oWN" firstAttribute="top" secondItem="4Wo-SP-7jj" secondAttribute="top" id="wHd-xn-903"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Jk-RS-u2D"/>
