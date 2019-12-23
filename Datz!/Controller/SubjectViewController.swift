@@ -21,9 +21,7 @@ class SubjectViewController: UIViewController {
 	
 	@IBOutlet weak var testsTableView: UITableView!
 	
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    var home: ViewController?
     
 	var trimIndex = 0
 	var activeTrimester: Trimester! {
@@ -57,6 +55,10 @@ class SubjectViewController: UIViewController {
 		testsTableView.reloadData()
 	}
 	
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -197,10 +199,11 @@ class SubjectViewController: UIViewController {
     }
     
 	@IBAction func unwind(_ sender: Any) {
-	
-		dismiss(animated: true, completion: nil)
-	
-	}
-	
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        home!.notifyComingHome()
+    }
 
 }

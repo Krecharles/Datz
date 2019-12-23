@@ -79,6 +79,7 @@ class ViewController: UIViewController {
 			let des = segue.destination as! SubjectViewController
 			des.trimIndex = trimIndex
             des.subjectIndex = self.selectedIndexPath!.row
+            des.home = self
 		}
 		if segue.identifier == "ClassConfigSegue" {
 			MyData.save()
