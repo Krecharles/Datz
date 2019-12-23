@@ -50,7 +50,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Did select")
         tableView.deselectRow(at: indexPath, animated: true)
         self.selectedIndexPath = indexPath
         performSegue(withIdentifier: "SubjectSegue", sender: self)

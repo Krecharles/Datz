@@ -70,9 +70,9 @@ class ViewController: UIViewController {
 		
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-		setInfo()
-	}
+    func notifyComingHome() {
+        setInfo()
+    }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "SubjectSegue" {
@@ -83,6 +83,7 @@ class ViewController: UIViewController {
 		if segue.identifier == "ClassConfigSegue" {
 			MyData.save()
 			let des = segue.destination as! ClassConfigTableViewController
+            des.home = self
 			des.didSegueFromMainView = true
 		}
 	}
@@ -139,8 +140,5 @@ class ViewController: UIViewController {
 	}
 	
 }
-
-
-
 
 

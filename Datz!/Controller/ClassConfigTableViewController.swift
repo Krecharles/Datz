@@ -10,12 +10,20 @@ import UIKit
 
 class ClassConfigTableViewController: UITableViewController {
     
+    /// the viewcontroller that presents this viewcontroller.
+    /// it is the main viewcontroller in this case and needs to be notified
+    /// when this popover is dismissed
+    var home: ViewController?
+    
     var didSegueFromMainView = false // means that it is the first launch
     
+    /// indicates if the user has already used a class or not
+    /// if not, the first section of the tableview is not shown
     var showsCustomYears = MyData.allNames.count > 0
     
     override func viewDidAppear(_ animated: Bool) {
         if !didSegueFromMainView {
+            // this is the first launch
             showGarantueeAlert()
         }
     }
@@ -157,6 +165,7 @@ class ClassConfigTableViewController: UITableViewController {
     
     func segue() {
         if didSegueFromMainView {
+            home!.notifyComingHome()
             self.dismiss(animated: true)
         }
         else {
@@ -165,7 +174,4 @@ class ClassConfigTableViewController: UITableViewController {
     }
     
 }
-
-
-
 
