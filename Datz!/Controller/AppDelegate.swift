@@ -23,8 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window = UIWindow(frame: UIScreen.main.bounds)
 		let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 		var vc: UIViewController
-		
-		if MyData.isFirstLaunch() {
+
+// RELEASE
+//		if MyData.isFirstLaunch() {
+        if true {
 			// show the onboarding screen
 			MyData.loadDefaultValues()
 			vc = storyBoard.instantiateViewController(withIdentifier: "ClassConfigTableViewController")

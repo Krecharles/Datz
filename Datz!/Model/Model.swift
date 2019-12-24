@@ -12,10 +12,12 @@ struct Year : Codable {
 	var name: String // 3MB
 	var subjects: [SubjectMeta]
 	var trimesters: [Trimester]
+    var isPremiere: Bool
 	
-	init(name: String, subjects: [SubjectMeta], trimesterCount: Int = 3) {
+    init(name: String, subjects: [SubjectMeta], isPremiere: Bool = false) {
 		self.name = name
 		self.subjects = subjects
+        self.isPremiere = isPremiere
 		
 		var subs = [Subject]()
 		for s in subjects {
@@ -23,7 +25,7 @@ struct Year : Codable {
 		}
 		
 		trimesters = []
-		for _ in 0..<trimesterCount {
+		for _ in 0..<3 {
 			trimesters.append(Trimester(subjects: subs))
 		}
 		
@@ -41,10 +43,15 @@ struct Year : Codable {
 	func getSubjectAvg(subject: Int) -> Float {
 		var out: Float = 0
 		var valids: Float = 0
-		for t in trimesters {
+        for (i, t) in trimesters.enumerated() {
 			if t.subjects[subject].isAvgCalculable() {
-				valids += 1
-				out += Float(t.subjects[subject].getFinalAvg())
+                if self.isPremiere && i == 2 {
+                    valids += 4
+                    out += Float(t.subjects[subject].getFinalAvg())
+                } else {
+                    valids += 1
+                    out += Float(t.subjects[subject].getFinalAvg())
+                }
 			}
 		}
 		return out/valids
@@ -240,6 +247,6 @@ struct Test: Codable {
 	
 }
 
-
+let EMPTY_YEAR = Year(name: "XXX", subjects: [])
 
 
