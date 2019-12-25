@@ -12,7 +12,7 @@ struct Year : Codable {
 	var name: String // 3MB
 	var subjects: [SubjectMeta]
 	var trimesters: [Trimester]
-    var isPremiere: Bool
+    var isPremiere: Bool? // needs to be a optional to load old classes who don't have this field
 	
     init(name: String, subjects: [SubjectMeta], isPremiere: Bool = false) {
 		self.name = name
@@ -45,10 +45,12 @@ struct Year : Codable {
 		var valids: Float = 0
         for (i, t) in trimesters.enumerated() {
 			if t.subjects[subject].isAvgCalculable() {
-                if self.isPremiere && i == 2 {
+                if isTrue(self.isPremiere) && i == 2{
+                    // this is the examen
                     valids += 4
-                    out += Float(t.subjects[subject].getFinalAvg())
-                } else {
+                    out += Float(t.subjects[subject].getFinalAvg()) * 4
+                }
+                else {
                     valids += 1
                     out += Float(t.subjects[subject].getFinalAvg())
                 }

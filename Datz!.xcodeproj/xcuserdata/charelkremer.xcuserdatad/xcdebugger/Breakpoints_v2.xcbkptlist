@@ -7,23 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CE6EBCD9-7A4F-4801-BCA8-2EF154FA5A78"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            condition = "year[&quot;name&quot;].string! == &quot;2MB&quot;"
-            continueAfterRunningActions = "No"
-            filePath = "Datz!/Model/PresetLoader.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "readPresetYears()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "60776C46-E2DD-4878-8614-893973D97E2D"
             shouldBeEnabled = "No"
             ignoreCount = "0"

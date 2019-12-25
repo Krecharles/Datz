@@ -188,7 +188,7 @@ class MyData {
     }
     
     static func loadPresetYears() {
-        presetYears = readPresetYears()
+        presetYears = PresetLoader.readPresetYears()
     }
     
     

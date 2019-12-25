@@ -48,3 +48,11 @@ class Defaults {
 	}
 	
 }
+
+func isTrue(_ bool: Bool?) -> Bool {
+    guard let b = bool else {
+        return false
+    }
+    return b
+}
+

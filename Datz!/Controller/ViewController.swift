@@ -113,6 +113,26 @@ class ViewController: UIViewController {
 		
 		trimesterIndicatorLabel.text = displaysYear ? "Year Average" : "Trimester \(trimIndex+1)"
 		
+        if isTrue(MyData.activeYear.isPremiere) {
+            trimester1Button.setTitle("S1", for: .normal)
+            trimester2Button.setTitle("S2", for: .normal)
+            trimester3Button.setTitle("EX", for: .normal)
+            if displaysYear {
+                trimesterIndicatorLabel.text = "Year Average"
+            } else {
+                trimesterIndicatorLabel.text = ["Semester 1", "Semester 2", "Examen"][trimIndex]
+            }
+        } else {
+            trimester1Button.setTitle("T1", for: .normal)
+            trimester2Button.setTitle("T2", for: .normal)
+            trimester3Button.setTitle("T3", for: .normal)
+            if displaysYear {
+                trimesterIndicatorLabel.text = "Year Average"
+            } else {
+                trimesterIndicatorLabel.text = ["Trimester 1", "Trimester 2", "Trimester 3"][trimIndex]
+            }
+        }
+        
 		mainTableView.reloadData()
 	}
 	
