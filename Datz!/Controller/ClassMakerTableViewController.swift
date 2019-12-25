@@ -11,11 +11,6 @@ import UIKit
 class ClassMakerTableViewController: UITableViewController, UITextFieldDelegate {
 
 	var subjectCount = 4
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -57,30 +52,47 @@ class ClassMakerTableViewController: UITableViewController, UITextFieldDelegate 
 	
 	@IBAction func subjectCountStepperValueChanged(_ sender: UIStepper) {
 		subjectCount = Int(sender.value)
-        print("WHAT IS GOING ON?? SUBJECCTCOUNT\(subjectCount)")
 		tableView.reloadData()
 	}
 	
+    func parseClassInput(name: String?, subjects: [(String?, String?)]) throws -> Year {
+        
+        guard let yearName = name else {
+            throw "Something went wrong."
+        }
+        
+        if yearName == "" { throw "Class Name must not be empty." }
+        if yearName.count > 5 { throw "Class Name must not be longer than 5 characters." }
+        
+        var out = [SubjectMeta]()
+        for sub in subjects {
+            guard let subName = sub.0 else { throw "Subject Name must not be empty." }
+            guard let subCoef = Float(sub.1!) else { throw "Something went wrong." }
+            out.append(SubjectMeta(name: subName, coef: subCoef))
+        }
+        
+        return Year(name: yearName, subjects: out)
+    }
+    
 	@IBAction func doneButtonPressed(_ sender: UIButton) {
-		if let name = (tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as! ClassNameTableViewCell).classNameTextField.text {
-			print(name)
-			var subs = [SubjectMeta]()
-			for i in 0..<subjectCount {
-				if let subName = (tableView.cellForRow(at: IndexPath(row: i, section: 2)) as! SubjectTableViewCell).subjectNameTextField.text,
-					let coef = Float((tableView.cellForRow(at: IndexPath(row: i, section: 2)) as! SubjectTableViewCell).subjectCoefLabel.text!) {
-					subs.append(SubjectMeta(name: subName, coef: coef))
-				} else {
-					showInvalid()
-					return
-				}
-			}
-			let year = Year(name: name, subjects: subs)
-			setYear(year: year)
-			navigateToMainView()
-		} else {
-			showInvalid()
-		}
-	}
+		
+        let name = (tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! ClassNameTableViewCell).classNameTextField.text
+        var subs = [(String?, String?)]()
+        for i in 0..<subjectCount {
+            let subName = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! SubjectTableViewCell).subjectNameTextField.text
+            let coef = (tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! SubjectTableViewCell).subjectCoefLabel.text
+            subs.append((subName, coef))
+        }
+        
+        do {
+            let year = try parseClassInput(name: name, subjects: subs)
+            setYear(year: year)
+            navigateToMainView()
+        } catch {
+            showInvalid(errorMessage: "\(error)")
+        }
+
+    }
 	
 	func setYear(year: Year) {
 		MyData.activeYear = year
@@ -93,29 +105,21 @@ class ClassMakerTableViewController: UITableViewController, UITextFieldDelegate 
 		MyData.allNames.append(MyData.activeYear.name)
 	}
     
-    func showInvalid() {
-        let a = UIAlertController(title: "Invalid Class", message: "Please enter a valid Class!", preferredStyle: .alert)
+    func showInvalid(errorMessage: String) {
+        let a = UIAlertController(title: "Invalid Class", message: errorMessage, preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(a, animated: true, completion: nil)
     }
     
     func navigateToMainView() {
-        performSegue(withIdentifier: "Unwind", sender: self)
+        self.presentingViewController!.presentingViewController!.dismiss(animated: true, completion: nil)
+        viewControllerInstance.notifyComingHome()
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

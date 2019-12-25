@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="Datz_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-vB-oXX" userLabel="Background Group">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="LearnWallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="oaG-oF-s39">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -27,7 +27,7 @@
                                         </constraints>
                                     </imageView>
                                     <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-Za-pGl" customClass="UIViewX" customModule="Datz_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcI-iz-2lx">
                                                 <rect key="frame" x="335" y="28" width="32" height="32"/>
@@ -95,17 +95,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdv-sf-PAp" customClass="AngleView" customModule="Datz_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="180" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="180" width="375" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtK-fM-Zen" userLabel="Vertical Bar">
-                                        <rect key="frame" x="16" y="90" width="1" height="377"/>
+                                        <rect key="frame" x="16" y="90" width="1" height="397"/>
                                         <color key="backgroundColor" red="0.69411764705882351" green="0.69411764705882351" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="6fl-v9-In1"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-77-NuN">
-                                        <rect key="frame" x="0.0" y="90" width="375" height="377"/>
+                                        <rect key="frame" x="0.0" y="90" width="375" height="397"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Prototype" id="hsm-Wc-gv0" customClass="MainTableViewCell" customModule="Datz_" customModuleProvider="target">
@@ -601,7 +601,6 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="BackSegue" id="YpD-N9-9yE"/>
                         <segue destination="2K7-Ab-Tzd" kind="show" identifier="ClassMakerSegue" id="jTc-3E-Sje"/>
                     </connections>
                 </tableViewController>
@@ -656,9 +655,6 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="classNameEditingDidEnd:" destination="2K7-Ab-Tzd" eventType="editingDidEnd" id="5RK-Be-ODy"/>
-                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>
@@ -761,9 +757,6 @@
                             <outlet property="delegate" destination="2K7-Ab-Tzd" id="bvN-zk-oY0"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="Unwind" id="1Ew-0N-J5d"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3r-kI-bxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1005,7 +998,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-E9-r2k" customClass="ValueStepper" customModule="Datz_" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="100" height="30"/>
+                                                <rect key="frame" x="213" y="0.5" width="100" height="29"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1168,7 +1161,4 @@
         <image name="background" width="1024" height="1024"/>
         <image name="baseline_edit_black_24pt" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1Ew-0N-J5d"/>
-    </inferredMetricsTieBreakers>
 </document>

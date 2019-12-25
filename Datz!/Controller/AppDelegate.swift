@@ -13,34 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	let reset = true
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-
+        
+        Updates.performUpdatesIfNecessary()
+        
 		MyData.loadPresetYears()
 		
-		window = UIWindow(frame: UIScreen.main.bounds)
-		let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-		var vc: UIViewController
-
-// RELEASE
-//		if MyData.isFirstLaunch() {
-        if true {
-			// show the onboarding screen
+        if MyData.isFirstLaunch() {
 			MyData.loadDefaultValues()
-			vc = storyBoard.instantiateViewController(withIdentifier: "ClassConfigTableViewController")
 			print("This is the first launch")
 		} else {
 			MyData.load()
-			vc = storyBoard.instantiateInitialViewController()!
 		}
 		
-		window?.rootViewController = vc
-		window?.makeKeyAndVisible()
-		
-//		MyData.loadValues()
-//
+        // CLEAN: is this safe to delete?
 //		if !isKeyPresentInUserDefaults(key: "FirstLaunch") || reset {
 //			print("this is the first launch")
 //			MyData.loadValues()

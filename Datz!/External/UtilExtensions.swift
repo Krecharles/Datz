@@ -65,4 +65,4 @@ func format(_ x: Float) -> String {
 }
 
 
-
+extension String: Error {}

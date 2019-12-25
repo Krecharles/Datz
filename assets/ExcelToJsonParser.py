@@ -1,0 +1,78 @@
+import codecs
+import pandas as pd
+import json
+
+df = pd.read_excel("All Classes.xlsx")
+
+df.fillna("none", inplace=True)
+
+
+def getColumn(name):
+    return df[name].values
+
+
+classNames = getColumn("ClassNames")
+subjectNames = getColumn("SubjectName")
+coefs = getColumn("SubjectCoef")
+combiNames = getColumn("CombiName")
+combiCoefs = getColumn("CombiCoef")
+
+out = []
+
+lastCoef = -1
+currentClass = {}
+currentCombiSubject = {
+    "subSubjects": []
+}
+
+for i in range(len(classNames)):
+
+    if coefs[i] != "none":  # always check if coef got updated
+        lastCoef = coefs[i]
+
+    # row is empty, new subject starts
+    if subjectNames[i] == "none" and combiNames[i] == "none":
+
+        # keep the computed class
+        if currentClass != {}:  # check if not the first row
+            out.append(currentClass)
+
+        # start a new class
+        currentClass = {
+            "name": classNames[i+1],
+            "subjects": []
+        }
+        continue
+
+    if subjectNames[i] != "none" and combiNames[i] != "none":
+        # new combi subject has started
+        currentCombiSubject = {
+            "name": subjectNames[i],
+            "coef": lastCoef,
+            "subSubjects": []
+        }
+
+    if combiNames[i] != "none":
+        # add row to subSubjects
+        currentCombiSubject["subSubjects"].append({
+            "name": combiNames[i],
+            "coef": combiCoefs[i]
+        })
+        continue
+
+    if subjectNames[i] != "none" and combiNames[i-1] != "none":
+        # combi subject has ended!
+        print("called")
+        currentClass["subjects"].append(currentCombiSubject)
+
+    # if the code gets here it is a normal subject
+    currentClass["subjects"].append({
+        "name": subjectNames[i],
+        "coef": lastCoef
+    })
+
+j = json.dumps(out, indent=2)
+
+f = codecs.open("outputJSON.json", "w", "utf-8")
+f.write(j)
+f.close()

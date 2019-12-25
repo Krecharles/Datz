@@ -36,6 +36,7 @@
 		2BB5A8C923B17434006312B5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8C823B17434006312B5 /* SwiftyJSON.swift */; };
 		2BB5A8CC23B1749D006312B5 /* PresetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */; };
 		2BB5A8D023B223AE006312B5 /* classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BB5A8CF23B223AD006312B5 /* classes.json */; };
+		2BB5A8D223B25041006312B5 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8D123B25041006312B5 /* Updates.swift */; };
 		2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */; };
 		2BBA11052072AC0A0006F6E3 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */; };
 		2BD3BDF720AB05EB00B4E272 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */; };
@@ -78,6 +79,7 @@
 		2BB5A8C823B17434006312B5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetLoader.swift; sourceTree = "<group>"; };
 		2BB5A8CF23B223AD006312B5 /* classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = classes.json; path = assets/classes.json; sourceTree = SOURCE_ROOT; };
+		2BB5A8D123B25041006312B5 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
 		2BBA11022072976D0006F6E3 /* ClassMakerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMakerTableViewController.swift; sourceTree = "<group>"; };
 		2BBA11042072AC0A0006F6E3 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
 		2BD3BDF620AB05EB00B4E272 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				2BB5A8C323B135A0006312B5 /* ModelProtocols.swift */,
 				2BB5A8C523B13B7F006312B5 /* ModelImplementations.swift */,
 				2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */,
+				2BB5A8D123B25041006312B5 /* Updates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				2B6700D5206E466B00B54616 /* Model.swift in Sources */,
 				2B65DE40206D02B600450F2D /* UITextFieldX.swift in Sources */,
 				2B5C4BAE23B0C54300F9D436 /* ValueStepper.swift in Sources */,
+				2BB5A8D223B25041006312B5 /* Updates.swift in Sources */,
 				2B65DE3E206D02B600450F2D /* UILabelX.swift in Sources */,
 				2BB5A8CC23B1749D006312B5 /* PresetLoader.swift in Sources */,
 				2B42BAFA206D453A00C64951 /* MainTableView.swift in Sources */,

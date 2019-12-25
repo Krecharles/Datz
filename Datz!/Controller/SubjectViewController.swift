@@ -20,8 +20,6 @@ class SubjectViewController: UIViewController {
 	@IBOutlet weak var goalTextField: UITextField!
 	
 	@IBOutlet weak var testsTableView: UITableView!
-	
-    var home: ViewController?
     
 	var trimIndex = 0
 	var activeTrimester: Trimester! {
@@ -200,10 +198,7 @@ class SubjectViewController: UIViewController {
     
 	@IBAction func unwind(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        home!.notifyComingHome()
+        viewControllerInstance.notifyComingHome()
     }
 
 }

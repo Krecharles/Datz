@@ -10,23 +10,18 @@ import UIKit
 
 class ClassConfigTableViewController: UITableViewController {
     
-    /// the viewcontroller that presents this viewcontroller.
-    /// it is the main viewcontroller in this case and needs to be notified
-    /// when this popover is dismissed
-    var home: ViewController?
-    
-    var didSegueFromMainView = false // means that it is the first launch
-    
     /// indicates if the user has already used a class or not
     /// if not, the first section of the tableview is not shown
     var showsCustomYears = MyData.allNames.count > 0
     
     override func viewDidAppear(_ animated: Bool) {
-        if !didSegueFromMainView {
-            // this is the first launch
+
+        if MyData.isFirstLaunch() {
             showGarantueeAlert()
         }
+
     }
+    
     func showGarantueeAlert() {
         let a = UIAlertController(title: "The Averages are without Guarantee.", message: "They only give an estimate for the actual Average.", preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "OK", style: .default))
@@ -120,7 +115,8 @@ class ClassConfigTableViewController: UITableViewController {
             } else {
                 performSegue(withIdentifier: "ClassMakerSegue", sender: self)
             }
-        case 2: 
+        case 2:
+            tableView.deselectRow(at: indexPath, animated: true)
             performSegue(withIdentifier: "ClassMakerSegue", sender: self)
         default: break
         }
@@ -146,7 +142,7 @@ class ClassConfigTableViewController: UITableViewController {
     }
     
     func delete(indexPath: IndexPath) {
-        MyData.delete(yearName: MyData.allNames[indexPath.row])
+        MyData.deleteYear(yearName: MyData.allNames[indexPath.row])
         self.tableView.beginUpdates()
         self.tableView.deleteRows(at: [indexPath], with: .automatic)
         self.tableView.endUpdates()
@@ -164,13 +160,8 @@ class ClassConfigTableViewController: UITableViewController {
     }
     
     func segue() {
-        if didSegueFromMainView {
-            home!.notifyComingHome()
-            self.dismiss(animated: true)
-        }
-        else {
-            performSegue(withIdentifier: "BackSegue", sender: self)
-        }
+        self.dismiss(animated: true)
+        viewControllerInstance.notifyComingHome()
     }
     
 }

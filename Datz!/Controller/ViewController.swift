@@ -8,6 +8,9 @@
 
 import UIKit
 
+// really bad code but fuck apple
+var viewControllerInstance: ViewController!
+
 class ViewController: UIViewController {
 
 	@IBOutlet weak var expandMenu: UIViewX!
@@ -54,6 +57,8 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
         
+        viewControllerInstance = self
+        
 		mainTableView.delegate = self
 		mainTableView.dataSource = self
 		mainTableView.backgroundColor = .clear
@@ -68,9 +73,19 @@ class ViewController: UIViewController {
         
         expandMenu.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
 		
-	}
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if MyData.isFirstLaunch() {
+            // the first time the app is opened it imposes to choose a year
+            performSegue(withIdentifier: "ClassConfigSegue", sender: self)
+        }
+        
+    }
 	
     func notifyComingHome() {
+        print("Coming Home")
         setInfo()
     }
 	
@@ -79,13 +94,9 @@ class ViewController: UIViewController {
 			let des = segue.destination as! SubjectViewController
 			des.trimIndex = trimIndex
             des.subjectIndex = self.selectedIndexPath!.row
-            des.home = self
 		}
 		if segue.identifier == "ClassConfigSegue" {
 			MyData.save()
-			let des = segue.destination as! ClassConfigTableViewController
-            des.home = self
-			des.didSegueFromMainView = true
 		}
 	}
 	
@@ -141,5 +152,4 @@ class ViewController: UIViewController {
 	}
 	
 }
-
 

@@ -34,9 +34,6 @@ func load(filename: String) -> JSON {
 }
 
 func readSubjectMeta(json: JSON, combiMeta: CombiMeta?) -> SubjectMeta {
-    if let co = combiMeta {
-        print(co)
-    }
     return SubjectMeta(name: json["name"].string!, coef: json["coef"].float!, combiMeta: combiMeta)
 }
 
