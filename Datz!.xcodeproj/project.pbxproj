@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B04406B206D712B00DB3F49 /* CustomSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04406A206D712B00DB3F49 /* CustomSegues.swift */; };
 		2B3DAFB623B3789000E603DB /* classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DAFB523B3789000E603DB /* classes.json */; };
+		2B3DAFB823B382CF00E603DB /* premiereClasses.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DAFB723B382CF00E603DB /* premiereClasses.json */; };
 		2B42BAFA206D453A00C64951 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAF9206D453A00C64951 /* MainTableView.swift */; };
 		2B42BAFC206D496500C64951 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAFB206D496500C64951 /* MainTableViewCell.swift */; };
 		2B5C4BAE23B0C54300F9D436 /* ValueStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C4BAD23B0C54300F9D436 /* ValueStepper.swift */; };
@@ -52,6 +53,7 @@
 		2B04221E207628750069DDF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B04406A206D712B00DB3F49 /* CustomSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
 		2B3DAFB523B3789000E603DB /* classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classes.json; sourceTree = "<group>"; };
+		2B3DAFB723B382CF00E603DB /* premiereClasses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = premiereClasses.json; sourceTree = "<group>"; };
 		2B42BAF9206D453A00C64951 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		2B42BAFB206D496500C64951 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		2B5C4BAD23B0C54300F9D436 /* ValueStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueStepper.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				2B3DAFB523B3789000E603DB /* classes.json */,
+				2B3DAFB723B382CF00E603DB /* premiereClasses.json */,
 				2B6700D4206E466B00B54616 /* Model.swift */,
 				2B6700D6206E4C7900B54616 /* Data.swift */,
 				2BB5A8C323B135A0006312B5 /* ModelProtocols.swift */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BED808C206CF5BF0056CCC9 /* LaunchScreen.storyboard in Resources */,
+				2B3DAFB823B382CF00E603DB /* premiereClasses.json in Resources */,
 				2B3DAFB623B3789000E603DB /* classes.json in Resources */,
 				2BED8089206CF5BF0056CCC9 /* Assets.xcassets in Resources */,
 				2BED8087206CF5BF0056CCC9 /* Main.storyboard in Resources */,

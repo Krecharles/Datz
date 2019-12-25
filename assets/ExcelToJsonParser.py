@@ -11,11 +11,13 @@ def getColumn(name):
     return df[name].values
 
 
-classNames = getColumn("ClassNames")
-subjectNames = getColumn("SubjectName")
-coefs = getColumn("SubjectCoef")
-combiNames = getColumn("CombiName")
-combiCoefs = getColumn("CombiCoef")
+# insert a .1 or .2 to find the differen columns
+# example: ClassNames or ClassNames.1 or ClassNames.2
+classNames = getColumn("ClassNames.2")
+subjectNames = getColumn("SubjectName.2")
+coefs = getColumn("SubjectCoef.2")
+combiNames = getColumn("CombiName.2")
+combiCoefs = getColumn("CombiCoef.2")
 
 out = []
 
@@ -25,7 +27,7 @@ currentCombiSubject = {
     "subSubjects": []
 }
 
-for i in range(len(classNames)):
+for i in range(len(classNames)-1):
 
     if coefs[i] != "none":  # always check if coef got updated
         lastCoef = coefs[i]
@@ -35,7 +37,8 @@ for i in range(len(classNames)):
 
         # keep the computed class
         if currentClass != {}:  # check if not the first row
-            out.append(currentClass)
+            if currentClass["name"] != "none":  # check if not empty finishing part
+                out.append(currentClass)
 
         # start a new class
         currentClass = {
@@ -62,7 +65,6 @@ for i in range(len(classNames)):
 
     if subjectNames[i] != "none" and combiNames[i-1] != "none":
         # combi subject has ended!
-        print("called")
         currentClass["subjects"].append(currentCombiSubject)
 
     # if the code gets here it is a normal subject
@@ -76,3 +78,5 @@ j = json.dumps(out, indent=2)
 f = codecs.open("outputJSON.json", "w", "utf-8")
 f.write(j)
 f.close()
+
+print("Finshed successfully")

@@ -1,0 +1,61 @@
+[
+  {
+    "name": "1MB",
+    "subjects": [
+      {
+        "name": "Math\u00e92/Info",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "Math\u00e9matiques 2",
+            "coef": 2.0
+          },
+          {
+            "name": "Informatique",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques 1",
+        "coef": 3.0
+      },
+      {
+        "name": "Physique",
+        "coef": 3.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 3.0
+      },
+      {
+        "name": "Histo/Civique",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  }
+]
