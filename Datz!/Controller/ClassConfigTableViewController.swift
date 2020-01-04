@@ -161,6 +161,10 @@ class ClassConfigTableViewController: UITableViewController {
     
     func segue() {
         self.dismiss(animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         viewControllerInstance.notifyComingHome()
     }
     

@@ -44,15 +44,26 @@ class Updates {
 //        let activeIndex = UserDefaults.standard.integer(forKey: "activeIndex")
 //        let activeYearName = loadAllNames()
         
-        print("Updated to 2.0 successfull")
+        let activeIndex = UserDefaults.standard.integer(forKey: "activeIndex")
+        MyData.loadAllNames()
+        if activeIndex < MyData.allNames.count {
+            let activeName = MyData.allNames[activeIndex]
+            UserDefaults.standard.set(activeName, forKey: "activeYearName")
+        } else {
+            print("WARNING: Tried to migrate from activeIndex to activeName but activIndex: \(activeIndex) out of bounds \(MyData.allNames)")
+            
+        }
+        
+        
+        print("INFO: Updated to 2.0 successfull")
     }
     
     /// This function is the very first function to be called
     /// so very few variables are set at that point
     static func performUpdatesIfNecessary() {
-        if !MyData.isKeyPresentInUserDefaults(key: "UPDATES_2.0") {
+        if !MyData.isKeyPresentInUserDefaults(key: "UPDATED_2.0") {
             update20()
-            UserDefaults.standard.set(true, forKey: "UPDATES_2.0")
+            UserDefaults.standard.set(true, forKey: "UPDATED_2.0")
         }
     }
     

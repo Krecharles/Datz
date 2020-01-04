@@ -33,8 +33,6 @@
 		2B8EF2DF206E700800EACEE0 /* TestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */; };
 		2B8EF2E1206E71CE00EACEE0 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */; };
 		2BB3C75520C5A75800A76369 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3C75420C5A75800A76369 /* Util.swift */; };
-		2BB5A8C423B135A0006312B5 /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8C323B135A0006312B5 /* ModelProtocols.swift */; };
-		2BB5A8C623B13B7F006312B5 /* ModelImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8C523B13B7F006312B5 /* ModelImplementations.swift */; };
 		2BB5A8C923B17434006312B5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8C823B17434006312B5 /* SwiftyJSON.swift */; };
 		2BB5A8CC23B1749D006312B5 /* PresetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */; };
 		2BB5A8D223B25041006312B5 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8D123B25041006312B5 /* Updates.swift */; };
@@ -77,8 +75,6 @@
 		2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsTableViewController.swift; sourceTree = "<group>"; };
 		2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2BB3C75420C5A75800A76369 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		2BB5A8C323B135A0006312B5 /* ModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
-		2BB5A8C523B13B7F006312B5 /* ModelImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelImplementations.swift; sourceTree = "<group>"; };
 		2BB5A8C823B17434006312B5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetLoader.swift; sourceTree = "<group>"; };
 		2BB5A8D123B25041006312B5 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
@@ -161,8 +157,6 @@
 				2B3DAFB723B382CF00E603DB /* premiereClasses.json */,
 				2B6700D4206E466B00B54616 /* Model.swift */,
 				2B6700D6206E4C7900B54616 /* Data.swift */,
-				2BB5A8C323B135A0006312B5 /* ModelProtocols.swift */,
-				2BB5A8C523B13B7F006312B5 /* ModelImplementations.swift */,
 				2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */,
 				2BB5A8D123B25041006312B5 /* Updates.swift */,
 			);
@@ -291,7 +285,6 @@
 				2B65DE3B206D02B600450F2D /* UIViewX.swift in Sources */,
 				2BED8082206CF5BF0056CCC9 /* AppDelegate.swift in Sources */,
 				2B04406B206D712B00DB3F49 /* CustomSegues.swift in Sources */,
-				2BB5A8C423B135A0006312B5 /* ModelProtocols.swift in Sources */,
 				2BB3C75520C5A75800A76369 /* Util.swift in Sources */,
 				2B42BAFC206D496500C64951 /* MainTableViewCell.swift in Sources */,
 				2BBA11032072976D0006F6E3 /* ClassMakerTableViewController.swift in Sources */,
@@ -318,7 +311,6 @@
 				2B8EF2E1206E71CE00EACEE0 /* TestTableViewCell.swift in Sources */,
 				2B8EF2DB206E5E6700EACEE0 /* MainViewAnimations.swift in Sources */,
 				2B65DE3F206D02B600450F2D /* UIViewControllerX.swift in Sources */,
-				2BB5A8C623B13B7F006312B5 /* ModelImplementations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

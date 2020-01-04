@@ -109,7 +109,8 @@ class MyData {
     // MARK: saving
     
     static func save() {
-        
+        // saving approximately takes 0.001s
+        Benchmark.start()
         print("INFO: attempting to save.")
         
         if activeYear.name == EMPTY_YEAR.name {
@@ -124,6 +125,7 @@ class MyData {
         UserDefaults.standard.set("not first launch", forKey: "firstLaunch")
         
         print("INFO: Finished saving.")
+        Benchmark.stop()
     }
     
     static func saveAllNames() {

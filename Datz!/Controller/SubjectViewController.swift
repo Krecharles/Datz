@@ -24,6 +24,7 @@ class SubjectViewController: UIViewController {
 	var trimIndex = 0
 	var activeTrimester: Trimester! {
 		get {
+            MyData.save() // Quick fix. Thus the data displayed in the subject view is always equal to the saved data. 
 			return MyData.activeYear.trimesters[trimIndex]
 		}
 		set {
@@ -59,7 +60,7 @@ class SubjectViewController: UIViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+        
 		subjectNameLabel.text = subject.name
 		coefLabel.text = "coef: \(Int(subject.coef))"
 		
@@ -198,6 +199,10 @@ class SubjectViewController: UIViewController {
     
 	@IBAction func unwind(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         viewControllerInstance.notifyComingHome()
     }
 

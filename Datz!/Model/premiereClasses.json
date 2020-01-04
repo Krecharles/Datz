@@ -1,6 +1,47 @@
 [
   {
-    "name": "1MB",
+    "name": "1A",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "4e langue",
+        "coef": 4.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 3.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Economie",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1B",
     "subjects": [
       {
         "name": "Math\u00e92/Info",
@@ -41,11 +82,209 @@
         "coef": 3.0
       },
       {
-        "name": "Histo/Civique",
+        "name": "Histo/Eco",
         "coef": 2.0
       },
       {
         "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1C",
+    "subjects": [
+      {
+        "name": "Biologie",
+        "coef": 4.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Physique",
+        "coef": 3.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Histo/Eco",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1D",
+    "subjects": [
+      {
+        "name": "EcoPol",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "EcoGest",
+        "coef": 3.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosphie",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1E",
+    "subjects": [
+      {
+        "name": "EduArt2",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Concep3D",
+            "coef": 2.0
+          },
+          {
+            "name": "DessinGeo",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "EduArt3",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduMusic",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1F",
+    "subjects": [
+      {
+        "name": "EduMusic 1",
+        "coef": 4.0
+      },
+      {
+        "name": "EduMusic 2",
+        "coef": 3.0
+      },
+      {
+        "name": "EduMusic 3",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduArt",
         "coef": 2.0
       },
       {

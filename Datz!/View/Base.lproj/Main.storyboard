@@ -998,7 +998,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-E9-r2k" customClass="ValueStepper" customModule="Datz_" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="0.0" width="100" height="30"/>
+                                                <rect key="frame" x="213" y="0.5" width="100" height="29"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
