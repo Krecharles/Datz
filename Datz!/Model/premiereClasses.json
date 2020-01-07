@@ -194,6 +194,65 @@
     ]
   },
   {
+    "name": "1G",
+    "subjects": [
+      {
+        "name": "SciSoc",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Histo/Geo",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Histoire",
+            "coef": 1.0
+          },
+          {
+            "name": "G\u00e9ographie",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduArt",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
     "name": "1E",
     "subjects": [
       {

@@ -79,4 +79,4 @@ f = codecs.open("outputJSON.json", "w", "utf-8")
 f.write(j)
 f.close()
 
-print("Finshed successfully")
+print("Wrote successfully to outputJSON.json")
