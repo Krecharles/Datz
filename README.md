@@ -1,6 +1,6 @@
 # Datz!
 An open-source Grade Calculator for Luxembourgish Grades which are based on 60.
-You can download this app for iOS on the Appstore. It currently has over 7500 downloads.
+You can download this app for iOS on the Appstore. It currently has over 1000 downloads.
 
 ## How to Contribute
 You are very welcome to help on this project. There are serveral tasks you can do, **even if you can't code**:
