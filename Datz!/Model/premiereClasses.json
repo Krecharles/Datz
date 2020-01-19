@@ -355,5 +355,664 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "1GCG",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "EcoGest",
+        "coef": 4.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 4.0
+      },
+      {
+        "name": "Compta",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Informatique",
+        "coef": 3.0
+      },
+      {
+        "name": "ConMon",
+        "coef": 3.0
+      },
+      {
+        "name": "GestProj",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GCC",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "EcoGest",
+        "coef": 4.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 4.0
+      },
+      {
+        "name": "ComProf",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Compta",
+        "coef": 3.0
+      },
+      {
+        "name": "OrgaGest",
+        "coef": 3.0
+      },
+      {
+        "name": "TechnoInfo",
+        "coef": 3.0
+      },
+      {
+        "name": "ConMon",
+        "coef": 3.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GGH",
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "GestHotel",
+        "coef": 3.0
+      },
+      {
+        "name": "GestResto",
+        "coef": 3.0
+      },
+      {
+        "name": "Geo/Touri",
+        "coef": 3.0
+      },
+      {
+        "name": "Gest/Orga/Promo",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 2.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 2.0
+      },
+      {
+        "name": "Math\u00e9/Info",
+        "coef": 2.0
+      },
+      {
+        "name": "Art/Culture",
+        "coef": 2.0
+      },
+      {
+        "name": "Cuisine",
+        "coef": 2.0
+      },
+      {
+        "name": "ApprofResto",
+        "coef": 2.0
+      },
+      {
+        "name": "ConMonde",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GED",
+    "subjects": [
+      {
+        "name": "PratProf",
+        "coef": 4.0
+      },
+      {
+        "name": "P\u00e9dagogie",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "SocEd",
+        "coef": 3.0
+      },
+      {
+        "name": "D\u00e9vVie",
+        "coef": 3.0
+      },
+      {
+        "name": "Expre/Anim",
+        "coef": 3.0
+      },
+      {
+        "name": "Psychologie",
+        "coef": 2.0
+      },
+      {
+        "name": "Biologie",
+        "coef": 2.0
+      },
+      {
+        "name": "Ethique/D\u00e9on",
+        "coef": 2.0
+      },
+      {
+        "name": "EduM\u00e9d",
+        "coef": 2.0
+      }
+    ]
+  },
+  {
+    "name": "1GSI",
+    "subjects": [
+      {
+        "name": "BioHum",
+        "coef": 4.0
+      },
+      {
+        "name": "ConProf",
+        "coef": 4.0
+      },
+      {
+        "name": "SciM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "Soins/Infirm",
+        "coef": 4.0
+      },
+      {
+        "name": "ConRel/ConD\u00e9o",
+        "coef": 4.0
+      },
+      {
+        "name": "SciHum",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GSH",
+    "subjects": [
+      {
+        "name": "BioHum",
+        "coef": 4.0
+      },
+      {
+        "name": "SciHum",
+        "coef": 4.0
+      },
+      {
+        "name": "ChimiM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "PhysM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "SciM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Info/Stat",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GSHAN",
+    "subjects": [
+      {
+        "name": "ConSci 2",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "BioHum",
+            "coef": 2.0
+          },
+          {
+            "name": "BioCell",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "SciM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "TravEnv",
+        "coef": 4.0
+      }
+    ]
+  },
+  {
+    "name": "1GSH",
+    "subjects": [
+      {
+        "name": "BioHum",
+        "coef": 4.0
+      },
+      {
+        "name": "SciHum",
+        "coef": 4.0
+      },
+      {
+        "name": "ChimiM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "PhysM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "SciM\u00e9d",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Info/Stat",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GSO",
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "ConMon",
+        "coef": 3.0
+      },
+      {
+        "name": "Sociologie",
+        "coef": 3.0
+      },
+      {
+        "name": "Psycho/Commu",
+        "coef": 3.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 3.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "P\u00e9dagogie",
+        "coef": 2.0
+      },
+      {
+        "name": "Arts/Culture",
+        "coef": 1.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      },
+      {
+        "name": "Option",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GIG",
+    "subjects": [
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 4.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 4.0
+      },
+      {
+        "name": "Physique",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 3.0
+      },
+      {
+        "name": "Informatique",
+        "coef": 3.0
+      },
+      {
+        "name": "M\u00e9canique",
+        "coef": 3.0
+      },
+      {
+        "name": "Technologie",
+        "coef": 3.0
+      },
+      {
+        "name": "ConMon",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GSE",
+    "subjects": [
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 4.0
+      },
+      {
+        "name": "Ecologie",
+        "coef": 4.0
+      },
+      {
+        "name": "Environ/Tech",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "AEJDD",
+        "coef": 3.0
+      },
+      {
+        "name": "Physique",
+        "coef": 3.0
+      },
+      {
+        "name": "ProjetPerso",
+        "coef": 3.0
+      },
+      {
+        "name": "EtudeCas",
+        "coef": 2.0
+      },
+      {
+        "name": "ConMon",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GSN",
+    "subjects": [
+      {
+        "name": "Biologie",
+        "coef": 4.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 4.0
+      },
+      {
+        "name": "Physique",
+        "coef": 4.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "G\u00e9ographie",
+        "coef": 3.0
+      },
+      {
+        "name": "ConMonde",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GACV",
+    "subjects": [
+      {
+        "name": "LangPlaBidim",
+        "coef": 4.0
+      },
+      {
+        "name": "Histoire Art",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "CommuGraphInfo",
+        "coef": 3.0
+      },
+      {
+        "name": "Volume",
+        "coef": 3.0
+      },
+      {
+        "name": "Langage M\u00e9dias",
+        "coef": 2.0
+      },
+      {
+        "name": "Travail Personnel",
+        "coef": 2.0
+      },
+      {
+        "name": "ConMon",
+        "coef": 2.0
+      },
+      {
+        "name": "Sciences",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]

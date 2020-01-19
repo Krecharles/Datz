@@ -191,6 +191,9 @@ class MyData {
     
     static func loadPresetYears() {
         presetYears = PresetLoader.readPresetYears()
+        presetYears.sort {
+            $0.name > $1.name
+        }
     }
     
     

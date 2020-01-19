@@ -791,15 +791,15 @@
         "subSubjects": [
           {
             "name": "Dessin",
-            "coef": 1.33
+            "coef": 1.25
           },
           {
             "name": "Graphisme",
-            "coef": 1.33
+            "coef": 1.25
           },
           {
             "name": "HistoArt",
-            "coef": 1.33
+            "coef": 1.25
           }
         ]
       },
@@ -858,15 +858,15 @@
         "subSubjects": [
           {
             "name": "Dessin",
-            "coef": 1.33
+            "coef": 1.0
           },
           {
             "name": "Graphisme",
-            "coef": 1.33
+            "coef": 1.0
           },
           {
             "name": "HistoArt",
-            "coef": 1.33
+            "coef": 1.0
           }
         ]
       },
@@ -1272,7 +1272,7 @@
         ]
       },
       {
-        "name": "Fran\u00e7ais ",
+        "name": "Fran\u00e7ais",
         "coef": 3.0
       },
       {
@@ -1905,6 +1905,77 @@
       },
       {
         "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Histo/Civique",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Histoire",
+            "coef": 2.0
+          },
+          {
+            "name": "Civique",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "EcoPol",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "G\u00e9ographie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduMusic",
+        "coef": 2.0
+      },
+      {
+        "name": "Artistique",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "2CG",
+    "subjects": [
+      {
+        "name": "Economie",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Latin",
         "coef": 3.0
       },
       {

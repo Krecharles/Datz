@@ -43,7 +43,8 @@ class PresetLoader {
     /// it takes about 0.05 seconds
     static func readPresetYears() -> [Year] {
         var allYears = [Year]()
-        allYears += readPresetFile(fileName: "classes.json", isPremiere: false)
+        allYears += readPresetFile(fileName: "classiqueClasses.json", isPremiere: false)
+        allYears += readPresetFile(fileName: "techniqueClasses.json", isPremiere: false)
         allYears += readPresetFile(fileName: "premiereClasses.json", isPremiere: true)
         return allYears
     }

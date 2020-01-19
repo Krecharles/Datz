@@ -11,13 +11,13 @@ def getColumn(name):
     return df[name].values
 
 
-# insert a .1 or .2 to find the differen columns
+# insert a .1 or .2 to access the differen columns
 # example: ClassNames or ClassNames.1 or ClassNames.2
-classNames = getColumn("ClassNames.2")
-subjectNames = getColumn("SubjectName.2")
-coefs = getColumn("SubjectCoef.2")
-combiNames = getColumn("CombiName.2")
-combiCoefs = getColumn("CombiCoef.2")
+classNames = getColumn("ClassNames.1")
+subjectNames = getColumn("SubjectName.1")
+coefs = getColumn("SubjectCoef.1")
+combiNames = getColumn("CombiName.1")
+combiCoefs = getColumn("CombiCoef.1")
 
 out = []
 

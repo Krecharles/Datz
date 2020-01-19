@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B04406B206D712B00DB3F49 /* CustomSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04406A206D712B00DB3F49 /* CustomSegues.swift */; };
-		2B3DAFB623B3789000E603DB /* classes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DAFB523B3789000E603DB /* classes.json */; };
+		2B3DAFB623B3789000E603DB /* classiqueClasses.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DAFB523B3789000E603DB /* classiqueClasses.json */; };
 		2B3DAFB823B382CF00E603DB /* premiereClasses.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DAFB723B382CF00E603DB /* premiereClasses.json */; };
 		2B42BAFA206D453A00C64951 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAF9206D453A00C64951 /* MainTableView.swift */; };
 		2B42BAFC206D496500C64951 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42BAFB206D496500C64951 /* MainTableViewCell.swift */; };
@@ -33,6 +33,7 @@
 		2B8EF2DF206E700800EACEE0 /* TestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */; };
 		2B8EF2E1206E71CE00EACEE0 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */; };
 		2BB3C75520C5A75800A76369 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3C75420C5A75800A76369 /* Util.swift */; };
+		2BB4D9BB23D492370014CA06 /* techniqueClasses.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BB4D9BA23D492370014CA06 /* techniqueClasses.json */; };
 		2BB5A8C923B17434006312B5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8C823B17434006312B5 /* SwiftyJSON.swift */; };
 		2BB5A8CC23B1749D006312B5 /* PresetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */; };
 		2BB5A8D223B25041006312B5 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5A8D123B25041006312B5 /* Updates.swift */; };
@@ -50,7 +51,7 @@
 /* Begin PBXFileReference section */
 		2B04221E207628750069DDF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B04406A206D712B00DB3F49 /* CustomSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegues.swift; sourceTree = "<group>"; };
-		2B3DAFB523B3789000E603DB /* classes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classes.json; sourceTree = "<group>"; };
+		2B3DAFB523B3789000E603DB /* classiqueClasses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classiqueClasses.json; sourceTree = "<group>"; };
 		2B3DAFB723B382CF00E603DB /* premiereClasses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = premiereClasses.json; sourceTree = "<group>"; };
 		2B42BAF9206D453A00C64951 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		2B42BAFB206D496500C64951 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		2B8EF2DE206E700800EACEE0 /* TestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsTableViewController.swift; sourceTree = "<group>"; };
 		2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		2BB3C75420C5A75800A76369 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		2BB4D9BA23D492370014CA06 /* techniqueClasses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = techniqueClasses.json; sourceTree = "<group>"; };
 		2BB5A8C823B17434006312B5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetLoader.swift; sourceTree = "<group>"; };
 		2BB5A8D123B25041006312B5 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
@@ -153,8 +155,9 @@
 		2B6700D3206E464300B54616 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B3DAFB523B3789000E603DB /* classes.json */,
+				2B3DAFB523B3789000E603DB /* classiqueClasses.json */,
 				2B3DAFB723B382CF00E603DB /* premiereClasses.json */,
+				2BB4D9BA23D492370014CA06 /* techniqueClasses.json */,
 				2B6700D4206E466B00B54616 /* Model.swift */,
 				2B6700D6206E4C7900B54616 /* Data.swift */,
 				2BB5A8CB23B1749D006312B5 /* PresetLoader.swift */,
@@ -265,9 +268,10 @@
 			files = (
 				2BED808C206CF5BF0056CCC9 /* LaunchScreen.storyboard in Resources */,
 				2B3DAFB823B382CF00E603DB /* premiereClasses.json in Resources */,
-				2B3DAFB623B3789000E603DB /* classes.json in Resources */,
+				2B3DAFB623B3789000E603DB /* classiqueClasses.json in Resources */,
 				2BED8089206CF5BF0056CCC9 /* Assets.xcassets in Resources */,
 				2BED8087206CF5BF0056CCC9 /* Main.storyboard in Resources */,
+				2BB4D9BB23D492370014CA06 /* techniqueClasses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +458,7 @@
 				INFOPLIST_FILE = "Datz!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.charelkremer.Datz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -475,7 +479,7 @@
 				INFOPLIST_FILE = "Datz!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.charelkremer.Datz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
