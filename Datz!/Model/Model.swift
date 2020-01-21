@@ -22,7 +22,7 @@ struct Year : Codable {
 		var subs = [Subject]()
 		for s in subjects {
 			subs.append(Subject(meta: s))
-		}
+		}   
 		
 		trimesters = []
 		for _ in 0..<3 {
@@ -170,6 +170,14 @@ struct CombiSubject: Codable {
 		return out/gradeNumber
 	}
 	
+    func getCombiCoefSum() -> Float {
+        var coefSum = Float(0)
+        for c in subjects {
+            coefSum += c.coef
+        }
+        return coefSum
+    }
+    
 	func isAvgCalculable() -> Bool {
 		for s in subjects {
 			if s.isAvgCalculable() {
@@ -187,6 +195,7 @@ struct Subject: Codable  {
 	var coef: Float
 	var plusPoints: Float
 	var goal: Float?
+    // this should be called combiSubject without s but i cannot change it because of the Codable protocol
 	var combiSubjects: CombiSubject?
 	
 	// Structs can't inherit structs, so I have to do this

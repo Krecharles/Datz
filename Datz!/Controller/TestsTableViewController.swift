@@ -19,7 +19,7 @@ extension SubjectViewController : UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		if let c = subject.combiSubjects {
-			return "    \(c.subjects[section].name) | coef: \(format(c.subjects[section].coef))/\(format(subject.coef))"
+			return "    \(c.subjects[section].name) | coef: \(format(c.subjects[section].coef))/\(format(c.getCombiCoefSum()))"
 		}
 		return ""
 	}
