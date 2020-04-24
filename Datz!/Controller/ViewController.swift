@@ -111,25 +111,29 @@ class ViewController: UIViewController {
 			exactAvgLabel.text = MyData.activeYear.isAvgCalculable() ? "\(format(MyData.activeYear.getAvg()))" : ""
 		}
 		
-		trimesterIndicatorLabel.text = displaysYear ? "Year Average" : "Trimester \(trimIndex+1)"
-		
         if isTrue(MyData.activeYear.isPremiere) {
             trimester1Button.setTitle("S1", for: .normal)
             trimester2Button.setTitle("S2", for: .normal)
             trimester3Button.setTitle("EX", for: .normal)
             if displaysYear {
-                trimesterIndicatorLabel.text = "Year Average"
+                trimesterIndicatorLabel.text = NSLocalizedString("Year Average", comment: "")
             } else {
-                trimesterIndicatorLabel.text = ["Semester 1", "Semester 2", "Examen"][trimIndex]
+                trimesterIndicatorLabel.text = [
+                    "\(NSLocalizedString("Semester", comment: "")) 1",
+                    "\(NSLocalizedString("Semester", comment: "")) 2",
+                    NSLocalizedString("Examen", comment: "")][trimIndex]
             }
         } else {
             trimester1Button.setTitle("T1", for: .normal)
             trimester2Button.setTitle("T2", for: .normal)
             trimester3Button.setTitle("T3", for: .normal)
             if displaysYear {
-                trimesterIndicatorLabel.text = "Year Average"
+                trimesterIndicatorLabel.text = NSLocalizedString("Year Average", comment: "")
             } else {
-                trimesterIndicatorLabel.text = ["Trimester 1", "Trimester 2", "Trimester 3"][trimIndex]
+                trimesterIndicatorLabel.text = [
+                "\(NSLocalizedString("Semester", comment: "")) 1",
+                "\(NSLocalizedString("Semester", comment: "")) 2",
+                "\(NSLocalizedString("Semester", comment: "")) 3"][trimIndex]
             }
         }
         

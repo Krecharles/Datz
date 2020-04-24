@@ -23,7 +23,9 @@ class ClassConfigTableViewController: UITableViewController {
     }
     
     func showGarantueeAlert() {
-        let a = UIAlertController(title: "The Averages are without Guarantee.", message: "They only give an estimate for the actual Average.", preferredStyle: .alert)
+        let a = UIAlertController(title: NSLocalizedString("The Averages are without Guarantee.", comment: ""),
+                                  message: NSLocalizedString("They only give an estimate for the actual Average.", comment: ""),
+                                  preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(a, animated: true, completion: nil)
     }

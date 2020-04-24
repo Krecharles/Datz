@@ -82,7 +82,7 @@ class SubjectViewController: UIViewController {
 	}
 	
 	func getBackgroundImage(for name: String) -> UIImage {
-		
+		// TODO: implement this better and add more images
 		let dic: [String: String] = ["Chimie/Physique": "ChimiePhysique",
 									 "Mathématiques 1": "Mathematiques",
 									 "Artistique 1": "Artistique",
@@ -127,7 +127,9 @@ class SubjectViewController: UIViewController {
 		}
 		else {
 			sender.text = nil
-			let a = UIAlertController(title: "Unable to parse your goal.", message: "Please enter a valid goal!", preferredStyle: .alert)
+			let a = UIAlertController(title: NSLocalizedString("Unable to parse your goal.", comment: ""),
+                                      message: NSLocalizedString("Please enter a valid goal!", comment: ""),
+                                      preferredStyle: .alert)
 			a.addAction(UIAlertAction(title: "OK", style: .default))
 			self.present(a, animated: true, completion: nil)
 		}
@@ -138,11 +140,11 @@ class SubjectViewController: UIViewController {
 	
 	@IBAction func addTestButtonPressed(_ sender: Any) {
 		
-		let alert = UIAlertController(title: "Add a new Test", message: "", preferredStyle: .alert)
+		let alert = UIAlertController(title: NSLocalizedString("Add a new Test", comment: ""), message: "", preferredStyle: .alert)
         
         // presentation propreties shared between combi an non combi subjects
 		alert.addTextField(configurationHandler: { (textField) in
-			textField.placeholder = "Enter Test Grade"
+			textField.placeholder = NSLocalizedString("Enter Test Grade", comment: "")
 			textField.textAlignment = .center
 			textField.keyboardType = .decimalPad
 		})
@@ -151,7 +153,7 @@ class SubjectViewController: UIViewController {
 			textField.textAlignment = .center
 			textField.keyboardType = .decimalPad
 		})
-		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+		alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { action in
 		}))
 		
         // differentiate if it is a combi subject or not
@@ -165,7 +167,7 @@ class SubjectViewController: UIViewController {
 				}))
 			}
 		} else {
-			alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
+			alert.addAction(UIAlertAction(title: NSLocalizedString("Add", comment: "Add a test"), style: .default, handler: { action in
                 if let (grade, maxGrade) = self.checkValidGrade(grade: alert.textFields![0].text!, maxGrade: alert.textFields![1].text!) {
 					self.subject.tests.append(Test(grade: grade, maxGrade: maxGrade))
 					self.setInfos()
@@ -191,7 +193,10 @@ class SubjectViewController: UIViewController {
             return (numGrade, numMaxGrade)
         }
         
-        let a = UIAlertController(title: "Unable to parse your grade.", message: "Please enter a valid grade!", preferredStyle: .alert)
+        
+        let a = UIAlertController(title: NSLocalizedString("Unable to parse your goal.", comment: ""),
+                                  message: NSLocalizedString("Please enter a valid goal!", comment: ""),
+                                  preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(a, animated: true, completion: nil)
         return nil

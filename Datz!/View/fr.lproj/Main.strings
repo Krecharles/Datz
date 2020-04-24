@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "Datz! is an open-source Project"; ObjectID = "1ms-is-lHi"; */
+"1ms-is-lHi.text" = "Datz! is an open-source Project";
+
+/* Class = "UITextField"; placeholder = "2MB"; ObjectID = "45v-5g-1q6"; */
+"45v-5g-1q6.placeholder" = "2MB";
+
+/* Class = "UILabel"; text = "56"; ObjectID = "4og-0h-mC8"; */
+"4og-0h-mC8.text" = "56";
+
+/* Class = "UILabel"; text = "56"; ObjectID = "51y-ex-hYF"; */
+"51y-ex-hYF.text" = "56";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "95P-1J-HbL"; */
+"95P-1J-HbL.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "3MB"; ObjectID = "9t0-HG-e1S"; */
+"9t0-HG-e1S.text" = "3MB";
+
+/* Class = "UILabel"; text = "Coef: "; ObjectID = "BMh-PU-6Jr"; */
+"BMh-PU-6Jr.text" = "Coef: ";
+
+/* Class = "UILabel"; text = "Goal"; ObjectID = "C5c-eG-vly"; */
+"C5c-eG-vly.text" = "Goal";
+
+/* Class = "UILabel"; text = "Datz!"; ObjectID = "E3r-Nn-KtJ"; */
+"E3r-Nn-KtJ.text" = "Datz!";
+
+/* Class = "UILabel"; text = "Subject count"; ObjectID = "Et0-hc-R3F"; */
+"Et0-hc-R3F.text" = "Subject count";
+
+/* Class = "UILabel"; text = "coef: 3"; ObjectID = "H2p-hO-dba"; */
+"H2p-hO-dba.text" = "coef: 3";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Lh3-3P-dbl"; */
+"Lh3-3P-dbl.text" = "1";
+
+/* Class = "UILabel"; text = "Mathématiques"; ObjectID = "M7q-P0-IEN"; */
+"M7q-P0-IEN.text" = "Mathématiques";
+
+/* Class = "UILabel"; text = "Trimester 1"; ObjectID = "O1V-9R-TtS"; */
+"O1V-9R-TtS.text" = "Trimester 1";
+
+/* Class = "UILabel"; text = "Class Name"; ObjectID = "Phr-Ym-eJZ"; */
+"Phr-Ym-eJZ.text" = "Class Name";
+
+/* Class = "UIButton"; normalTitle = "Year"; ObjectID = "UNr-b9-fHk"; */
+"UNr-b9-fHk.normalTitle" = "Year";
+
+/* Class = "UITextField"; placeholder = "30"; ObjectID = "ZCa-ib-IFb"; */
+"ZCa-ib-IFb.placeholder" = "30";
+
+/* Class = "UITextView"; text = "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. "; ObjectID = "ZP6-D7-q9l"; */
+"ZP6-D7-q9l.text" = "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. ";
+
+/* Class = "UILabel"; text = "53"; ObjectID = "bHB-ht-dMz"; */
+"bHB-ht-dMz.text" = "53";
+
+/* Class = "UILabel"; text = "53 / 60"; ObjectID = "cEj-Zf-92c"; */
+"cEj-Zf-92c.text" = "53 / 60";
+
+/* Class = "UIButton"; normalTitle = "T1"; ObjectID = "dS2-RV-zt2"; */
+"dS2-RV-zt2.normalTitle" = "T1";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "eTu-YN-hdN"; */
+"eTu-YN-hdN.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "52,50"; ObjectID = "eaN-QK-Wq3"; */
+"eaN-QK-Wq3.text" = "52,50";
+
+/* Class = "UILabel"; text = "Made with ❤️"; ObjectID = "f9Z-qh-uZF"; */
+"f9Z-qh-uZF.text" = "Made with ❤️";
+
+/* Class = "UILabel"; text = "Get involved on "; ObjectID = "hdQ-7y-G1m"; */
+"hdQ-7y-G1m.text" = "Get involved on ";
+
+/* Class = "UILabel"; text = "3MB"; ObjectID = "lcJ-UR-mq8"; */
+"lcJ-UR-mq8.text" = "3MB";
+
+/* Class = "UILabel"; text = "Bonus"; ObjectID = "lmj-XH-voT"; */
+"lmj-XH-voT.text" = "Bonus";
+
+/* Class = "UILabel"; text = "55,7461"; ObjectID = "mDE-3U-7dA"; */
+"mDE-3U-7dA.text" = "55,7461";
+
+/* Class = "UIButton"; normalTitle = "T2"; ObjectID = "pfc-zy-9SV"; */
+"pfc-zy-9SV.normalTitle" = "T2";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "q8m-eE-OTJ"; */
+"q8m-eE-OTJ.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "GitHub"; ObjectID = "u13-IF-m2d"; */
+"u13-IF-m2d.normalTitle" = "GitHub";
+
+/* Class = "UILabel"; text = "Chimie"; ObjectID = "vNQ-uY-1D3"; */
+"vNQ-uY-1D3.text" = "Chimie";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "wge-00-jwL"; */
+"wge-00-jwL.normalTitle" = "Back";
+
+/* Class = "UITextField"; placeholder = "Subject Name"; ObjectID = "x5c-vB-ag3"; */
+"x5c-vB-ag3.placeholder" = "Subject Name";
+
+/* Class = "UIButton"; normalTitle = "T3"; ObjectID = "xXa-lI-vdV"; */
+"xXa-lI-vdV.normalTitle" = "T3";

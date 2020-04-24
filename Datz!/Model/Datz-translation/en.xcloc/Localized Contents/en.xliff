@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Datz!/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.2.1" build-num="11B500"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Datz!</source>
+        <target>Datz!</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Datz!</source>
+        <target>Datz!</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Datz!/View/Base.lproj/LaunchScreen.storyboard" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.2.1" build-num="11B500"/>
+    </header>
+    <body>
+      <trans-unit id="654-5i-Z97.text" xml:space="preserve">
+        <source>Datz!</source>
+        <target>Datz!</target>
+        <note>Class = "UILabel"; text = "Datz!"; ObjectID = "654-5i-Z97";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Datz!/View/Base.lproj/Main.storyboard" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.2.1" build-num="11B500"/>
+    </header>
+    <body>
+      <trans-unit id="1ms-is-lHi.text" xml:space="preserve">
+        <source>Datz! is an open-source Project</source>
+        <target>Datz! is an open-source Project</target>
+        <note>Class = "UILabel"; text = "Datz! is an open-source Project"; ObjectID = "1ms-is-lHi";</note>
+      </trans-unit>
+      <trans-unit id="4og-0h-mC8.text" xml:space="preserve">
+        <source>56</source>
+        <target>56</target>
+        <note>Class = "UILabel"; text = "56"; ObjectID = "4og-0h-mC8";</note>
+      </trans-unit>
+      <trans-unit id="9t0-HG-e1S.text" xml:space="preserve">
+        <source>3MB</source>
+        <target>3MB</target>
+        <note>Class = "UILabel"; text = "3MB"; ObjectID = "9t0-HG-e1S";</note>
+      </trans-unit>
+      <trans-unit id="45v-5g-1q6.placeholder" xml:space="preserve">
+        <source>2MB</source>
+        <target>2MB</target>
+        <note>Class = "UITextField"; placeholder = "2MB"; ObjectID = "45v-5g-1q6";</note>
+      </trans-unit>
+      <trans-unit id="51y-ex-hYF.text" xml:space="preserve">
+        <source>56</source>
+        <target>56</target>
+        <note>Class = "UILabel"; text = "56"; ObjectID = "51y-ex-hYF";</note>
+      </trans-unit>
+      <trans-unit id="95P-1J-HbL.normalTitle" xml:space="preserve">
+        <source>+</source>
+        <target>+</target>
+        <note>Class = "UIButton"; normalTitle = "+"; ObjectID = "95P-1J-HbL";</note>
+      </trans-unit>
+      <trans-unit id="BMh-PU-6Jr.text" xml:space="preserve">
+        <source>Coef: </source>
+        <target>Coef: </target>
+        <note>Class = "UILabel"; text = "Coef: "; ObjectID = "BMh-PU-6Jr";</note>
+      </trans-unit>
+      <trans-unit id="C5c-eG-vly.text" xml:space="preserve">
+        <source>Goal</source>
+        <target>Goal</target>
+        <note>Class = "UILabel"; text = "Goal"; ObjectID = "C5c-eG-vly";</note>
+      </trans-unit>
+      <trans-unit id="E3r-Nn-KtJ.text" xml:space="preserve">
+        <source>Datz!</source>
+        <target>Datz!</target>
+        <note>Class = "UILabel"; text = "Datz!"; ObjectID = "E3r-Nn-KtJ";</note>
+      </trans-unit>
+      <trans-unit id="Et0-hc-R3F.text" xml:space="preserve">
+        <source>Subject count</source>
+        <target>Subject count</target>
+        <note>Class = "UILabel"; text = "Subject count"; ObjectID = "Et0-hc-R3F";</note>
+      </trans-unit>
+      <trans-unit id="H2p-hO-dba.text" xml:space="preserve">
+        <source>coef: 3</source>
+        <target>coef: 3</target>
+        <note>Class = "UILabel"; text = "coef: 3"; ObjectID = "H2p-hO-dba";</note>
+      </trans-unit>
+      <trans-unit id="Lh3-3P-dbl.text" xml:space="preserve">
+        <source>1</source>
+        <target>1</target>
+        <note>Class = "UILabel"; text = "1"; ObjectID = "Lh3-3P-dbl";</note>
+      </trans-unit>
+      <trans-unit id="M7q-P0-IEN.text" xml:space="preserve">
+        <source>Mathématiques</source>
+        <target>Mathématiques</target>
+        <note>Class = "UILabel"; text = "Mathématiques"; ObjectID = "M7q-P0-IEN";</note>
+      </trans-unit>
+      <trans-unit id="O1V-9R-TtS.text" xml:space="preserve">
+        <source>Trimester 1</source>
+        <target>Trimester 1</target>
+        <note>Class = "UILabel"; text = "Trimester 1"; ObjectID = "O1V-9R-TtS";</note>
+      </trans-unit>
+      <trans-unit id="Phr-Ym-eJZ.text" xml:space="preserve">
+        <source>Class Name</source>
+        <target>Class Name</target>
+        <note>Class = "UILabel"; text = "Class Name"; ObjectID = "Phr-Ym-eJZ";</note>
+      </trans-unit>
+      <trans-unit id="UNr-b9-fHk.normalTitle" xml:space="preserve">
+        <source>Year</source>
+        <target>Year</target>
+        <note>Class = "UIButton"; normalTitle = "Year"; ObjectID = "UNr-b9-fHk";</note>
+      </trans-unit>
+      <trans-unit id="ZCa-ib-IFb.placeholder" xml:space="preserve">
+        <source>30</source>
+        <target>30</target>
+        <note>Class = "UITextField"; placeholder = "30"; ObjectID = "ZCa-ib-IFb";</note>
+      </trans-unit>
+      <trans-unit id="ZP6-D7-q9l.text" xml:space="preserve">
+        <source>If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. </source>
+        <target>If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. </target>
+        <note>Class = "UITextView"; text = "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. "; ObjectID = "ZP6-D7-q9l";</note>
+      </trans-unit>
+      <trans-unit id="bHB-ht-dMz.text" xml:space="preserve">
+        <source>53</source>
+        <target>53</target>
+        <note>Class = "UILabel"; text = "53"; ObjectID = "bHB-ht-dMz";</note>
+      </trans-unit>
+      <trans-unit id="cEj-Zf-92c.text" xml:space="preserve">
+        <source>53 / 60</source>
+        <target>53 / 60</target>
+        <note>Class = "UILabel"; text = "53 / 60"; ObjectID = "cEj-Zf-92c";</note>
+      </trans-unit>
+      <trans-unit id="dS2-RV-zt2.normalTitle" xml:space="preserve">
+        <source>T1</source>
+        <target>T1</target>
+        <note>Class = "UIButton"; normalTitle = "T1"; ObjectID = "dS2-RV-zt2";</note>
+      </trans-unit>
+      <trans-unit id="eTu-YN-hdN.normalTitle" xml:space="preserve">
+        <source>Done</source>
+        <target>Done</target>
+        <note>Class = "UIButton"; normalTitle = "Done"; ObjectID = "eTu-YN-hdN";</note>
+      </trans-unit>
+      <trans-unit id="eaN-QK-Wq3.text" xml:space="preserve">
+        <source>52,50</source>
+        <target>52,50</target>
+        <note>Class = "UILabel"; text = "52,50"; ObjectID = "eaN-QK-Wq3";</note>
+      </trans-unit>
+      <trans-unit id="f9Z-qh-uZF.text" xml:space="preserve">
+        <source>Made with ❤️</source>
+        <target>Made with ❤️</target>
+        <note>Class = "UILabel"; text = "Made with ❤️"; ObjectID = "f9Z-qh-uZF";</note>
+      </trans-unit>
+      <trans-unit id="hdQ-7y-G1m.text" xml:space="preserve">
+        <source>Get involved on </source>
+        <target>Get involved on </target>
+        <note>Class = "UILabel"; text = "Get involved on "; ObjectID = "hdQ-7y-G1m";</note>
+      </trans-unit>
+      <trans-unit id="lcJ-UR-mq8.text" xml:space="preserve">
+        <source>3MB</source>
+        <target>3MB</target>
+        <note>Class = "UILabel"; text = "3MB"; ObjectID = "lcJ-UR-mq8";</note>
+      </trans-unit>
+      <trans-unit id="lmj-XH-voT.text" xml:space="preserve">
+        <source>Bonus</source>
+        <target>Bonus</target>
+        <note>Class = "UILabel"; text = "Bonus"; ObjectID = "lmj-XH-voT";</note>
+      </trans-unit>
+      <trans-unit id="mDE-3U-7dA.text" xml:space="preserve">
+        <source>55,7461</source>
+        <target>55,7461</target>
+        <note>Class = "UILabel"; text = "55,7461"; ObjectID = "mDE-3U-7dA";</note>
+      </trans-unit>
+      <trans-unit id="pfc-zy-9SV.normalTitle" xml:space="preserve">
+        <source>T2</source>
+        <target>T2</target>
+        <note>Class = "UIButton"; normalTitle = "T2"; ObjectID = "pfc-zy-9SV";</note>
+      </trans-unit>
+      <trans-unit id="q8m-eE-OTJ.normalTitle" xml:space="preserve">
+        <source>Back</source>
+        <target>Back</target>
+        <note>Class = "UIButton"; normalTitle = "Back"; ObjectID = "q8m-eE-OTJ";</note>
+      </trans-unit>
+      <trans-unit id="u13-IF-m2d.normalTitle" xml:space="preserve">
+        <source>GitHub</source>
+        <target>GitHub</target>
+        <note>Class = "UIButton"; normalTitle = "GitHub"; ObjectID = "u13-IF-m2d";</note>
+      </trans-unit>
+      <trans-unit id="vNQ-uY-1D3.text" xml:space="preserve">
+        <source>Chimie</source>
+        <target>Chimie</target>
+        <note>Class = "UILabel"; text = "Chimie"; ObjectID = "vNQ-uY-1D3";</note>
+      </trans-unit>
+      <trans-unit id="wge-00-jwL.normalTitle" xml:space="preserve">
+        <source>Back</source>
+        <target>Back</target>
+        <note>Class = "UIButton"; normalTitle = "Back"; ObjectID = "wge-00-jwL";</note>
+      </trans-unit>
+      <trans-unit id="x5c-vB-ag3.placeholder" xml:space="preserve">
+        <source>Subject Name</source>
+        <target>Subject Name</target>
+        <note>Class = "UITextField"; placeholder = "Subject Name"; ObjectID = "x5c-vB-ag3";</note>
+      </trans-unit>
+      <trans-unit id="xXa-lI-vdV.normalTitle" xml:space="preserve">
+        <source>T3</source>
+        <target>T3</target>
+        <note>Class = "UIButton"; normalTitle = "T3"; ObjectID = "xXa-lI-vdV";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
