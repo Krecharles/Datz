@@ -16,7 +16,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func getCell(name: String, grade: String, color: UIColor = UIColor.lightGray) -> MainTableViewCell {
 		let cell = mainTableView.dequeueReusableCell(withIdentifier: "Prototype") as! MainTableViewCell
-        print(name, NSLocalizedString(name, comment: "Name of the subject"))
         cell.subjectNameLabel.text = NSLocalizedString(name, comment: "Name of the subject")
 		cell.subjectGradeLabel.text = grade
 		cell.circle.backgroundColor = color

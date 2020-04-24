@@ -61,7 +61,7 @@ class SubjectViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-		subjectNameLabel.text = subject.name
+		subjectNameLabel.text = NSLocalizedString(subject.name, comment: "")
 		coefLabel.text = "coef: \(Int(subject.coef))"
 		
 		

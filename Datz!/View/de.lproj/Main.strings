@@ -50,9 +50,6 @@
 /* Class = "UITextField"; placeholder = "30"; ObjectID = "ZCa-ib-IFb"; */
 "ZCa-ib-IFb.placeholder" = "30";
 
-/* Class = "UITextView"; text = "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. "; ObjectID = "ZP6-D7-q9l"; */
-"ZP6-D7-q9l.text" = "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. ";
-
 /* Class = "UILabel"; text = "53"; ObjectID = "bHB-ht-dMz"; */
 "bHB-ht-dMz.text" = "53";
 

@@ -18,7 +18,7 @@ def print_all_subject_names():
     arr = list(df["SubjectName"].unique()) + \
         list(df["SubjectName.1"].unique()) + list(df["SubjectName.2"].unique())
     arr = list(filter(lambda x: x != "none", arr))
-    # print(", ".join(arr))
+    arr = pd.Series(arr).drop_duplicates().tolist()
     for n in arr:
         print(f'"{n}" = "{n}";')
 
