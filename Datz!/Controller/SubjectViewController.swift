@@ -159,7 +159,7 @@ class SubjectViewController: UIViewController {
         // differentiate if it is a combi subject or not
 		if let c = subject.combiSubjects {
 			for (i, s) in c.subjects.enumerated() {
-				alert.addAction(UIAlertAction(title: "Add to \(s.name)", style: .default, handler: { action in
+				alert.addAction(UIAlertAction(title: "\(NSLocalizedString("Add to", comment: "")) \(NSLocalizedString(s.name, comment: ""))", style: .default, handler: { action in
                     if let (grade, maxGrade) = self.checkValidGrade(grade: alert.textFields![0].text!, maxGrade: alert.textFields![1].text!) {
                         self.subject.combiSubjects!.subjects[i].tests.append(Test(grade: grade, maxGrade: maxGrade))
                         self.setInfos()
@@ -194,8 +194,8 @@ class SubjectViewController: UIViewController {
         }
         
         
-        let a = UIAlertController(title: NSLocalizedString("Unable to parse your goal.", comment: ""),
-                                  message: NSLocalizedString("Please enter a valid goal!", comment: ""),
+        let a = UIAlertController(title: NSLocalizedString("Unable to parse your grade.", comment: ""),
+                                  message: NSLocalizedString("Please enter a valid grade!", comment: ""),
                                   preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(a, animated: true, completion: nil)

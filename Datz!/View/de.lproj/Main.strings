@@ -21,13 +21,13 @@
 "BMh-PU-6Jr.text" = "Coef: ";
 
 /* Class = "UILabel"; text = "Goal"; ObjectID = "C5c-eG-vly"; */
-"C5c-eG-vly.text" = "Goal";
+"C5c-eG-vly.text" = "Ziel";
 
 /* Class = "UILabel"; text = "Datz!"; ObjectID = "E3r-Nn-KtJ"; */
 "E3r-Nn-KtJ.text" = "Datz!";
 
 /* Class = "UILabel"; text = "Subject count"; ObjectID = "Et0-hc-R3F"; */
-"Et0-hc-R3F.text" = "Subject count";
+"Et0-hc-R3F.text" = "Anzahl an Fächern";
 
 /* Class = "UILabel"; text = "coef: 3"; ObjectID = "H2p-hO-dba"; */
 "H2p-hO-dba.text" = "coef: 3";
@@ -36,16 +36,16 @@
 "Lh3-3P-dbl.text" = "1";
 
 /* Class = "UILabel"; text = "Mathématiques"; ObjectID = "M7q-P0-IEN"; */
-"M7q-P0-IEN.text" = "Mathématiques";
+"M7q-P0-IEN.text" = "Mathematik";
 
 /* Class = "UILabel"; text = "Trimester 1"; ObjectID = "O1V-9R-TtS"; */
 "O1V-9R-TtS.text" = "Trimester 1";
 
 /* Class = "UILabel"; text = "Class Name"; ObjectID = "Phr-Ym-eJZ"; */
-"Phr-Ym-eJZ.text" = "Class Name";
+"Phr-Ym-eJZ.text" = "Klassenname";
 
 /* Class = "UIButton"; normalTitle = "Year"; ObjectID = "UNr-b9-fHk"; */
-"UNr-b9-fHk.normalTitle" = "Year";
+"UNr-b9-fHk.normalTitle" = "Jahr";
 
 /* Class = "UITextField"; placeholder = "30"; ObjectID = "ZCa-ib-IFb"; */
 "ZCa-ib-IFb.placeholder" = "30";
@@ -60,16 +60,16 @@
 "dS2-RV-zt2.normalTitle" = "T1";
 
 /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "eTu-YN-hdN"; */
-"eTu-YN-hdN.normalTitle" = "Done";
+"eTu-YN-hdN.normalTitle" = "Fertig";
 
 /* Class = "UILabel"; text = "52,50"; ObjectID = "eaN-QK-Wq3"; */
 "eaN-QK-Wq3.text" = "52,50";
 
 /* Class = "UILabel"; text = "Made with ❤️"; ObjectID = "f9Z-qh-uZF"; */
-"f9Z-qh-uZF.text" = "Made with ❤️";
+"f9Z-qh-uZF.text" = "Gemacht mit ❤️";
 
 /* Class = "UILabel"; text = "Get involved on "; ObjectID = "hdQ-7y-G1m"; */
-"hdQ-7y-G1m.text" = "Get involved on ";
+"hdQ-7y-G1m.text" = "Mache mit auf";
 
 /* Class = "UILabel"; text = "3MB"; ObjectID = "lcJ-UR-mq8"; */
 "lcJ-UR-mq8.text" = "3MB";
@@ -84,19 +84,19 @@
 "pfc-zy-9SV.normalTitle" = "T2";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "q8m-eE-OTJ"; */
-"q8m-eE-OTJ.normalTitle" = "Back";
+"q8m-eE-OTJ.normalTitle" = "Zurück";
 
 /* Class = "UIButton"; normalTitle = "GitHub"; ObjectID = "u13-IF-m2d"; */
 "u13-IF-m2d.normalTitle" = "GitHub";
 
 /* Class = "UILabel"; text = "Chimie"; ObjectID = "vNQ-uY-1D3"; */
-"vNQ-uY-1D3.text" = "Chimie";
+"vNQ-uY-1D3.text" = "Chemie";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "wge-00-jwL"; */
-"wge-00-jwL.normalTitle" = "Back";
+"wge-00-jwL.normalTitle" = "Zurück";
 
 /* Class = "UITextField"; placeholder = "Subject Name"; ObjectID = "x5c-vB-ag3"; */
-"x5c-vB-ag3.placeholder" = "Subject Name";
+"x5c-vB-ag3.placeholder" = "Fachname";
 
 /* Class = "UIButton"; normalTitle = "T3"; ObjectID = "xXa-lI-vdV"; */
 "xXa-lI-vdV.normalTitle" = "T3";

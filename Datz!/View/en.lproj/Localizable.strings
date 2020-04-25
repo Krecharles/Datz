@@ -9,22 +9,24 @@
 "Year Average" = "Year Average";
 "Trimester" = "Trimester";
 "Semester" = "Semester";
-"Examen" = "Exam";
+"Examen" = "Examen";
 "Unable to parse your goal." = "Unable to parse your goal.";
 "Please enter a valid goal!" = "Please enter a valid goal!";
+"Unable to parse your grade." = "Unable to parse your grade.";
+"Please enter a valid grade!" = "Please enter a valid grade!";
 "Add a new Test" = "Add a new Test";
 "Enter Test Grade" = "Enter Test Grade";
 "Cancel" = "Cancel";
 "Add" = "Add";
+"Add to" = "Add to";
 "The Averages are without Guarantee." = "The Averages are without Guarantee.";
 "They only give an estimate for the actual Average." = "They only give an estimate for the actual Average.";
 "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. " = "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. ";
 
 
-
 /* Subject Translations */
-"Français" = "French";
-"Allemand" = "German";
+"Français" = "Français";
+"Allemand" = "Allemand";
 "Mathématiques" = "Mathématiques";
 "SciNa" = "SciNa";
 "Histoire" = "Histoire";
@@ -48,6 +50,7 @@
 "Philosophie" = "Philosophie";
 "Mathé2/Info" = "Mathé2/Info";
 "Mathématiques 1" = "Mathématiques 1";
+"Mathématiques 2" = "Mathématiques 2";
 "Français " = "Français ";
 "EcoPol" = "EcoPol";
 "Philosphie" = "Philosphie";
