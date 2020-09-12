@@ -13,11 +13,11 @@ def getColumn(name):
 
 # insert a .1 or .2 to access the differen columns
 # example: ClassNames or ClassNames.1 or ClassNames.2
-classNames = getColumn("ClassNames.1")
-subjectNames = getColumn("SubjectName.1")
-coefs = getColumn("SubjectCoef.1")
-combiNames = getColumn("CombiName.1")
-combiCoefs = getColumn("CombiCoef.1")
+classNames = getColumn("ClassNames")
+subjectNames = getColumn("SubjectName")
+coefs = getColumn("SubjectCoef")
+combiNames = getColumn("CombiName")
+combiCoefs = getColumn("CombiCoef")
 
 out = []
 

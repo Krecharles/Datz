@@ -944,6 +944,10 @@
         "coef": 2.0
       },
       {
+        "name": "Biologie",
+        "coef": 2.0
+      },
+      {
         "name": "Chimie",
         "coef": 2.0
       },
@@ -998,6 +1002,10 @@
       },
       {
         "name": "Physique",
+        "coef": 2.0
+      },
+      {
+        "name": "Biologie",
         "coef": 2.0
       },
       {
