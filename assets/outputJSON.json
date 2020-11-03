@@ -1619,6 +1619,14 @@
         "coef": 2.0
       },
       {
+        "name": "Philosphie",
+        "coef": 2.0
+      },
+      {
+        "name": "G\u00e9ographie",
+        "coef": 2.0
+      },
+      {
         "name": "EduPhys",
         "coef": 1.0
       }
