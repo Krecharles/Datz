@@ -1014,5 +1014,56 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "1I",
+    "subjects": [
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Math\u00e9 1",
+            "coef": 1.0
+          },
+          {
+            "name": "Math\u00e9 2",
+            "coef": 2.0
+          }
+        ]
+      },
+      {
+        "name": "M\u00e9dia",
+        "coef": 3.0
+      },
+      {
+        "name": "Pogrammation",
+        "coef": 3.0
+      },
+      {
+        "name": "AmInf",
+        "coef": 3.0
+      },
+      {
+        "name": "MaiOuv",
+        "coef": 2.0
+      },
+      {
+        "name": "Physique",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Economie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPys",
+        "coef": 1.0
+      }
+    ]
   }
 ]

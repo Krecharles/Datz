@@ -2041,5 +2041,66 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "3I",
+    "subjects": [
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 4.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Physique",
+        "coef": 3.0
+      },
+      {
+        "name": "Programmation",
+        "coef": 3.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Biologie",
+        "coef": 2.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 2.0
+      },
+      {
+        "name": "Design graphique",
+        "coef": 2.0
+      },
+      {
+        "name": "TechIn",
+        "coef": 2.0
+      },
+      {
+        "name": "ComMed",
+        "coef": 2.0
+      },
+      {
+        "name": "VieSo",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]

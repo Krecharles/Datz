@@ -10,14 +10,15 @@ df.fillna("none", inplace=True)
 def getColumn(name):
     return df[name].values
 
-
+# TODO select Column
 # insert a .1 or .2 to access the differen columns
 # example: ClassNames or ClassNames.1 or ClassNames.2
-classNames = getColumn("ClassNames")
-subjectNames = getColumn("SubjectName")
-coefs = getColumn("SubjectCoef")
-combiNames = getColumn("CombiName")
-combiCoefs = getColumn("CombiCoef")
+add = ".2" # "", ".1", ".2"
+classNames = getColumn("ClassNames" + add)
+subjectNames = getColumn("SubjectName" + add)
+coefs = getColumn("SubjectCoef" + add)
+combiNames = getColumn("CombiName" + add)
+combiCoefs = getColumn("CombiCoef" + add)
 
 out = []
 
