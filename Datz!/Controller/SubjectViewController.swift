@@ -182,7 +182,9 @@ class SubjectViewController: UIViewController {
     func checkValidGrade(grade: String, maxGrade: String) -> (Float, Float)? {
         if let numGrade = Float(grade),
             let numMaxGrade = Float(maxGrade) {
-            return (numGrade, numMaxGrade)
+            if (numMaxGrade != 0) {
+                return (numGrade, numMaxGrade)
+            }
         }
 
         // I think either the above or below replacements are obsolete
@@ -190,7 +192,11 @@ class SubjectViewController: UIViewController {
         let maxGradeStr = maxGrade.replacingOccurrences(of: ",", with: ".")
         if let numGrade = Float(gradeStr),
             let numMaxGrade = Float(maxGradeStr) {
-            return (numGrade, numMaxGrade)
+            
+            if (numMaxGrade != 0) {
+                return (numGrade, numMaxGrade)
+            }
+            
         }
         
         
