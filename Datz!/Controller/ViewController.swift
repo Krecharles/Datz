@@ -131,9 +131,9 @@ class ViewController: UIViewController {
                 trimesterIndicatorLabel.text = NSLocalizedString("Year Average", comment: "")
             } else {
                 trimesterIndicatorLabel.text = [
-                "\(NSLocalizedString("Semester", comment: "")) 1",
-                "\(NSLocalizedString("Semester", comment: "")) 2",
-                "\(NSLocalizedString("Semester", comment: "")) 3"][trimIndex]
+                "\(NSLocalizedString("Trimester", comment: "")) 1",
+                "\(NSLocalizedString("Trimester", comment: "")) 2",
+                "\(NSLocalizedString("Trimester", comment: "")) 3"][trimIndex]
             }
         }
         
