@@ -65,7 +65,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let delta = offset - lastScrollOffset
         
-        let minHeight: CGFloat = 150
+        let minHeight: CGFloat = 175
         let maxHeight: CGFloat = 250
         
         if offset < 0 {

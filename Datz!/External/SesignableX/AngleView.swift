@@ -17,7 +17,9 @@ class AngleView: UIView {
 	override func draw(_ rect: CGRect) {
 		// Drawing code
 		// Get Height and Width
-		let layerHeight = layer.frame.height
+        // note: the +30 is there because if the user scrolls the modal up, there is a small space between
+        // the bottom of this view and the bottom of the screen that is not rendered.
+		let layerHeight = layer.frame.height + 30
 		let layerWidth = layer.frame.width
 		// Create Path
 		let bezierPath = UIBezierPath()
