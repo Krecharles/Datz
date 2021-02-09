@@ -134,8 +134,8 @@
 				2B05BAFF2452F9230097ED3B /* Localizable.strings */,
 				2BED808A206CF5BF0056CCC9 /* LaunchScreen.storyboard */,
 				2BED8085206CF5BF0056CCC9 /* Main.storyboard */,
-				2B42BAFB206D496500C64951 /* MainTableViewCell.swift */,
 				2B04406A206D712B00DB3F49 /* CustomSegues.swift */,
+				2B42BAFB206D496500C64951 /* MainTableViewCell.swift */,
 				2B8EF2DA206E5E6700EACEE0 /* MainViewAnimations.swift */,
 				2B8EF2DC206E6B2700EACEE0 /* SubjectViewAnimations.swift */,
 				2B8EF2E0206E71CE00EACEE0 /* TestTableViewCell.swift */,
@@ -482,7 +482,7 @@
 				INFOPLIST_FILE = "Datz!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.charelkremer.Datz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -504,7 +504,7 @@
 				INFOPLIST_FILE = "Datz!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.charelkremer.Datz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

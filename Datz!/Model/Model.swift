@@ -219,11 +219,15 @@ struct Subject: Codable  {
 				return combi.getAvg() + plusPoints
 			}
 		}
-		var out: Float = 0.0
-		for test in tests {
-			out += test.grade/test.maxGrade
-		}
-		return out * 60.0 / Float(tests.count) + plusPoints
+        
+        var testSum: Float = 0.0
+        var testMaxSum: Float = 0.0
+        for test in tests {
+            testSum += test.grade
+            testMaxSum += test.maxGrade
+        }
+        return (testSum / testMaxSum) * 60 + plusPoints
+        
 	}
 
 
