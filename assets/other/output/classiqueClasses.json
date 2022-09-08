@@ -2148,5 +2148,68 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "2I",
+    "subjects": [
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais ",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "AmInf",
+        "coef": 3.0
+      },
+      {
+        "name": "Programmation",
+        "coef": 3.0
+      },
+      {
+        "name": "CommMedia",
+        "coef": 3.0
+      },
+      {
+        "name": "TechApp",
+        "coef": 2.0,
+        "subSubjects": [
+          {
+            "name": "TechInn",
+            "coef": 1.0
+          },
+          {
+            "name": "MaiOu",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Civique",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Physique",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]

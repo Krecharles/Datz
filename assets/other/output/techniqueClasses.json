@@ -2056,5 +2056,54 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "2GMMA",
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "Marketing",
+        "coef": 4.0
+      },
+      {
+        "name": "Comep",
+        "coef": 4.0
+      },
+      {
+        "name": "Medias",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 3.0
+      },
+      {
+        "name": "Conmo",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Droit/Finance",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]

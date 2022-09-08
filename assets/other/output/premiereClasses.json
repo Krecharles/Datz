@@ -1151,5 +1151,103 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "1GMMA",
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "Marketing",
+        "coef": 4.0
+      },
+      {
+        "name": "Projet",
+        "coef": 4.0
+      },
+      {
+        "name": "Medias",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 3.0
+      },
+      {
+        "name": "Conmo",
+        "coef": 3.0
+      },
+      {
+        "name": "Comep",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 1.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GMMF",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Marketing",
+        "coef": 4.0
+      },
+      {
+        "name": "Projet",
+        "coef": 4.0
+      },
+      {
+        "name": "Medias",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "EcoPol",
+        "coef": 3.0
+      },
+      {
+        "name": "Conmo",
+        "coef": 3.0
+      },
+      {
+        "name": "Comep",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 1.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]
