@@ -44,6 +44,9 @@
     "name": "1B",
     "subjects": [
       {
+        "subSubjects": []
+      },
+      {
         "name": "Math\u00e92/Info",
         "coef": 4.0,
         "subSubjects": [
@@ -255,6 +258,20 @@
   {
     "name": "1E",
     "subjects": [
+      {
+        "name": "EduArt1",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "Dessin",
+            "coef": 2.0
+          },
+          {
+            "name": "Projets",
+            "coef": 1.0
+          }
+        ]
+      },
       {
         "name": "EduArt2",
         "coef": 3.0,
@@ -588,7 +605,7 @@
         "coef": 4.0
       },
       {
-        "name": "SciHum",
+        "name": "Schus",
         "coef": 4.0
       },
       {
@@ -617,7 +634,7 @@
         "coef": 4.0
       },
       {
-        "name": "SciHum",
+        "name": "Schus",
         "coef": 4.0
       },
       {
@@ -666,6 +683,56 @@
     "name": "1GSHAN",
     "subjects": [
       {
+        "name": "ConLan",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "Fran\u00e7ais",
+            "coef": 1.0
+          },
+          {
+            "name": "Allemand/Anglais",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "ConCul",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "Schus",
+            "coef": 3.0
+          },
+          {
+            "name": "ConSan",
+            "coef": 2.0
+          },
+          {
+            "name": "EduPhys",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "ConSci 1",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "Math\u00e9matiques",
+            "coef": 1.0
+          },
+          {
+            "name": "ChimieM\u00e9d",
+            "coef": 1.0
+          },
+          {
+            "name": "PhysiqueM\u00e9d",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
         "name": "ConSci 2",
         "coef": 4.0,
         "subSubjects": [
@@ -697,7 +764,7 @@
         "coef": 4.0
       },
       {
-        "name": "SciHum",
+        "name": "Schus",
         "coef": 4.0
       },
       {
