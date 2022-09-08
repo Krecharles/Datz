@@ -17,7 +17,6 @@ class SubjectViewController: UIViewController {
 	@IBOutlet weak var coefLabel: UILabel!
 	@IBOutlet weak var bonusStepper: ValueStepper!
 	@IBOutlet weak var backgroundImageView: UIImageView!
-	@IBOutlet weak var goalTextField: UITextField!
 	
 	@IBOutlet weak var testsTableView: UITableView!
     
@@ -64,14 +63,8 @@ class SubjectViewController: UIViewController {
 		subjectNameLabel.text = NSLocalizedString(subject.name, comment: "")
 		coefLabel.text = "coef: \(Int(subject.coef))"
 		
-		
 		bonusStepper.value = Double(subject.plusPoints)
-		goalTextField.addDoneToolbar()
-		if let g = subject.goal {
-			goalTextField.text = "\(format(g))"
-		}
-		
-		
+        
 		testsTableView.dataSource = self
 		testsTableView.delegate = self
 		testsTableView.backgroundColor = .clear
@@ -116,28 +109,6 @@ class SubjectViewController: UIViewController {
         setInfos()
     }
     
-	@IBAction func goalTextChanged(_ sender: UITextField) {
-		
-		if let v = Float(sender.text!) {
-			subject.goal = v
-		}
-		else if sender.text == "" {
-			subject.goal = nil
-			setInfos()
-		}
-		else {
-			sender.text = nil
-			let a = UIAlertController(title: NSLocalizedString("Unable to parse your goal.", comment: ""),
-                                      message: NSLocalizedString("Please enter a valid goal!", comment: ""),
-                                      preferredStyle: .alert)
-			a.addAction(UIAlertAction(title: "OK", style: .default))
-			self.present(a, animated: true, completion: nil)
-		}
-		
-		setInfos()
-		
-	}
-	
 	@IBAction func addTestButtonPressed(_ sender: Any) {
 		
 		let alert = UIAlertController(title: NSLocalizedString("Add a new Test", comment: ""), message: "", preferredStyle: .alert)

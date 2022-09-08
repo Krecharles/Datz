@@ -20,9 +20,6 @@
 /* Class = "UILabel"; text = "Coef: "; ObjectID = "BMh-PU-6Jr"; */
 "BMh-PU-6Jr.text" = "Coef: ";
 
-/* Class = "UILabel"; text = "Goal"; ObjectID = "C5c-eG-vly"; */
-"C5c-eG-vly.text" = "Ziel";
-
 /* Class = "UILabel"; text = "Datz!"; ObjectID = "E3r-Nn-KtJ"; */
 "E3r-Nn-KtJ.text" = "Datz!";
 

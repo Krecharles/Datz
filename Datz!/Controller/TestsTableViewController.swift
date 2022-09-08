@@ -41,9 +41,6 @@ extension SubjectViewController : UITableViewDataSource, UITableViewDelegate {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Prototype") as! TestTableViewCell
 		let ns = formatter
 		cell.testLabel.text = "\(ns.string(from: NSNumber(value: test.grade))!) / \(ns.string(from: NSNumber(value: test.maxGrade))!)"
-		if let g = subject.goal {
-			cell.circle.backgroundColor = Float(test.grade) >= g ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-		}
 		return cell
 	}
 	

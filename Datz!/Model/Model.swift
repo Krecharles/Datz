@@ -194,7 +194,6 @@ struct Subject: Codable  {
 	var tests : [Test]
 	var coef: Float
 	var plusPoints: Float
-	var goal: Float?
     // this should be called combiSubject without s but i cannot change it because of the Codable protocol
 	var combiSubjects: CombiSubject?
 	

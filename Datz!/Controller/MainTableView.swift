@@ -28,10 +28,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 			let name = sub.name
 			if sub.isAvgCalculable() {
 				let grade = sub.getFinalAvg()
-				if let g = sub.goal {
-//					let f = CGFloat(Float(grade) - g) / 10 + 0.5 // will be used for a later update
-					return getCell(name: name, grade: "\(grade)", color: Float(grade) >= g ? #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) : #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1) )
-				}
 				return getCell(name: name, grade: "\(grade)")
 			}
 			return getCell(name: name, grade: "")

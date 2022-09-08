@@ -10,8 +10,6 @@
 "Trimester" = "Trimester";
 "Semester" = "Semester";
 "Examen" = "Examen";
-"Unable to parse your goal." = "Unable to parse your goal.";
-"Please enter a valid goal!" = "Please enter a valid goal!";
 "Unable to parse your grade." = "Unable to parse your grade.";
 "Please enter a valid grade!" = "Please enter a valid grade!";
 "Add a new Test" = "Add a new Test";
