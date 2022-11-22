@@ -917,6 +917,71 @@
     ]
   },
   {
+    "name": "1GIN",
+    "subjects": [
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 4.0,
+        "subSubjects": [
+          {
+            "name": "Math\u00e9matique 1",
+            "coef": 2.0
+          },
+          {
+            "name": "Math\u00e9matique 2",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Programmation",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      },
+      {
+        "name": "Teinf",
+        "coef": 3.0
+      },
+      {
+        "name": "Basdo",
+        "coef": 3.0
+      },
+      {
+        "name": "Sntec",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Sntec Devoirs",
+            "coef": 3.0
+          },
+          {
+            "name": "Tp",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Conmo",
+        "coef": 2.0
+      },
+      {
+        "name": "Sport",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
     "name": "1GSE",
     "subjects": [
       {
