@@ -1271,6 +1271,59 @@
     ]
   },
   {
+    "name": "2CI",
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 3.0
+      }
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "CommMedia",
+        "coef": 3.0
+      },
+      {
+        "name": "Science de la programmation",
+        "coef": 3.0
+      },
+      {
+        "name": "Analyse et mod\u00e9lisation d'informations",
+        "coef": 3.0
+      },
+      {
+        "name": "Technologies appliqu\u00e9es et projets",
+        "coef": 2.0
+      },
+      {
+        "name": "Physique",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Civique",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
     "name": "2MB",
     "subjects": [
       {
