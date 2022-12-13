@@ -2211,5 +2211,123 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "2CA-MAT",
+    "subjects": [
+      {
+        "name": "Franc\u0327ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "4e langue",
+        "coef": 3.0
+      },
+      {
+        "name": "Histo/Civique",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Histoire",
+            "coef": 2.0
+          },
+          {
+            "name": "Civique",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Artistique",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire musique",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "2CLA-MAT",
+    "subjects": [
+      {
+        "name": "Franc\u0327ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "Latin",
+        "coef": 3.0
+      },
+      {
+        "name": "4e langue vivante",
+        "coef": 3.0
+      },
+      {
+        "name": "Histo/Civique",
+        "coef": 3.0,
+        "subSubjects": [
+          {
+            "name": "Histoire",
+            "coef": 2.0
+          },
+          {
+            "name": "Civique",
+            "coef": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2.0
+      },
+      {
+        "name": "Artistique",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire musique",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]

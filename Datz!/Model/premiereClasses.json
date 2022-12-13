@@ -586,7 +586,11 @@
         "coef": 4.0
       },
       {
-        "name": "ConProf",
+        "name": "ConProf 1",
+        "coef": 4.0
+      },
+      {
+        "name": "ConProf 2",
         "coef": 4.0
       },
       {
@@ -1243,6 +1247,157 @@
       {
         "name": "Math\u00e9matiques",
         "coef": 1.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1CA-MAT",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "4e langue",
+        "coef": 4.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Economie",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1CLA-MAT",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "4e langue vivante",
+        "coef": 4.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 3.0
+      },
+      {
+        "name": "Latin",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Economie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1GA3D",
+    "subjects": [
+      {
+        "name": "Architecture",
+        "coef": 4.0
+      },
+      {
+        "name": "Construction",
+        "coef": 4.0
+      },
+      {
+        "name": "Design",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Francais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 3.0
+      },
+      {
+        "name": "Physique",
+        "coef": 3.0
+      },
+      {
+        "name": "D\u00e9veloppment durable",
+        "coef": 2.0
+      },
+      {
+        "name": "Questions philosophiques",
+        "coef": 2.0
+      },
+      {
+        "name": "ConMo",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
       },
       {
         "name": "EduPhys",
