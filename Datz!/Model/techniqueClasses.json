@@ -2154,5 +2154,66 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "2GA3D",
+    "subjects": [
+      {
+        "name": "Architecture",
+        "coef": 4.0
+      },
+      {
+        "name": "Construction",
+        "coef": 4.0
+      },
+      {
+        "name": "Design",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 3.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 3.0
+      },
+      {
+        "name": "Francais",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 3.0
+      },
+      {
+        "name": "Chimie",
+        "coef": 3.0
+      },
+      {
+        "name": "Physique",
+        "coef": 3.0
+      },
+      {
+        "name": "D\u00e9veloppment durable",
+        "coef": 2.0
+      },
+      {
+        "name": "Questions philosophiques",
+        "coef": 2.0
+      },
+      {
+        "name": "ConMo",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]
