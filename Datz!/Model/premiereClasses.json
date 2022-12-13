@@ -1249,5 +1249,95 @@
         "coef": 1.0
       }
     ]
+  },
+  {
+    "name": "1CA-MAT",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "4e langue",
+        "coef": 4.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Economie",
+        "coef": 2.0
+      },
+      {
+        "name": "Option",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "1CLA-MAT",
+    "subjects": [
+      {
+        "name": "Fran\u00e7ais",
+        "coef": 4.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 4.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 4.0
+      },
+      {
+        "name": "4e langue vivante",
+        "coef": 4.0
+      },
+      {
+        "name": "Philosophie",
+        "coef": 3.0
+      },
+      {
+        "name": "Latin",
+        "coef": 3.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 2.0
+      },
+      {
+        "name": "Economie",
+        "coef": 2.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
   }
 ]
