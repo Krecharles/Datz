@@ -12,9 +12,9 @@
     class UIViewAnchorPoint: UIView {
         
         @IBInspectable var showAnchorPoint: Bool = false
-        @IBInspectable var anchorPoint: CGPoint = CGPoint(x: 0.5, y: 0.5) {
+        @IBInspectable var anchorPoint2: CGPoint = CGPoint(x: 0.5, y: 0.5) {
             didSet {
-                setAnchorPoint(anchorPoint: anchorPoint)
+                setAnchorPoint(anchorPoint: anchorPoint2)
             }
         }
         
