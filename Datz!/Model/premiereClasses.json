@@ -586,7 +586,11 @@
         "coef": 4.0
       },
       {
-        "name": "ConProf",
+        "name": "ConProf 1",
+        "coef": 4.0
+      },
+      {
+        "name": "ConProf 2",
         "coef": 4.0
       },
       {
