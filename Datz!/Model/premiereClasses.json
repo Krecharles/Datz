@@ -586,11 +586,7 @@
         "coef": 4.0
       },
       {
-        "name": "ConProf 1",
-        "coef": 4.0
-      },
-      {
-        "name": "ConProf 2",
+        "name": "ConProf",
         "coef": 4.0
       },
       {
@@ -1315,7 +1311,7 @@
         "coef": 4.0
       },
       {
-        "name": "4e langue vivante",
+        "name": "4e langue",
         "coef": 4.0
       },
       {
