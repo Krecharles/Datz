@@ -39,10 +39,6 @@
         "coef": 1.0
       },
       {
-        "name": "Luxembourgeois",
-        "coef": 1.0
-      },
-      {
         "name": "EduPhys",
         "coef": 1.0
       }
@@ -334,6 +330,92 @@
       },
       {
         "name": "EduPhys",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "5C-AD",
+    "subjects": [
+      {
+        "name": "Franc\u0327ais",
+        "coef": 2.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 2.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 2.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 1.0
+      },
+      {
+        "name": "G\u00e9ographie",
+        "coef": 1.0
+      },
+      {
+        "name": "SciNa",
+        "coef": 1.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      },
+      {
+        "name": "Acomp",
+        "coef": 1.0
+      }
+    ]
+  },
+  {
+    "name": "4C-AD",
+    "subjects": [
+      {
+        "name": "Franc\u0327ais",
+        "coef": 2.0
+      },
+      {
+        "name": "Allemand",
+        "coef": 2.0
+      },
+      {
+        "name": "Anglais",
+        "coef": 2.0
+      },
+      {
+        "name": "Math\u00e9matiques",
+        "coef": 2.0
+      },
+      {
+        "name": "Histoire",
+        "coef": 1.0
+      },
+      {
+        "name": "G\u00e9ographie",
+        "coef": 1.0
+      },
+      {
+        "name": "Biologie",
+        "coef": 1.0
+      },
+      {
+        "name": "Chimie/Physique",
+        "coef": 1.0
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1.0
+      },
+      {
+        "name": "Acomp",
         "coef": 1.0
       }
     ]
