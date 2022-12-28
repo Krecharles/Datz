@@ -4,3 +4,10 @@ assests/output.txt
 assests/console.txt
 assests/outputJSON.json
 .vscode
+
+
+# Added to because they contain sketchy api keys
+# https://github.com/firebase/flutterfire/discussions/7617
+datz_flutter/android/app/google-services.json
+datz_flutter/lib/firebase_options.dart
+datz_flutter/ios/Runner/GoogleService-Info.plist
