@@ -13,7 +13,7 @@ df.fillna("none", inplace=True)
 def getColumn(name):
     return df[name].values
 
-def calc(add):
+def calc(add, hasExams):
     classNames = getColumn("ClassNames" + add)
     subjectNames = getColumn("SubjectName" + add)
     coefs = getColumn("SubjectCoef" + add)
@@ -37,6 +37,7 @@ def calc(add):
             # keep the computed class
             if currentClass != {}:  # check if not the first row
                 if currentClass["name"] != "none":  # check if not empty finishing part
+                    currentClass["hasExams"] = hasExams
                     out.append(currentClass)
 
             # start a new class
@@ -80,25 +81,20 @@ def calc(add):
             "coef": lastCoef
         })
 
-    j = json.dumps(out, indent=2)
+    global allClasses
+    allClasses += out
 
-    filename = ""
-    if add == "":
-        filename = os.path.join(BASE_DIR, *"/other/output/classiqueClasses.json".split("/"))
-    elif add == ".1":
-        filename = os.path.join(BASE_DIR, *"/other/output/techniqueClasses.json".split("/"))
-    elif add == ".2":
-        filename = os.path.join(BASE_DIR, *"/other/output/premiereClasses.json".split("/"))
-    else:
-        print("ERROR")
-    f = codecs.open(filename, "w", "utf-8")
-    f.write(j)
-    f.close()
-
+    print(len(allClasses))
 
     
 addOptions = ["", ".1", ".2"]
+allClasses = []
 if __name__ == "__main__":
-    for add in addOptions:
-        calc(add);
+    calc("", False)
+    calc(".1", False)
+    calc(".2", True)
+    j = json.dumps(allClasses, indent=2)
+    f = codecs.open("./allClasses.json", "w", "utf-8")
+    f.write(j)
+    f.close()
     print("programm executed successfully")
