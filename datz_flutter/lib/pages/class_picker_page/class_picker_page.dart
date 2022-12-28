@@ -6,6 +6,7 @@ import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 class ClassPickerPage extends StatefulWidget {
   const ClassPickerPage({super.key});
@@ -29,6 +30,9 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
   void initState() {
     super.initState();
     loadData();
+
+    FirebaseAnalytics.instance.logScreenView(
+        screenClass: "the class of the screen", screenName: "Class Picker");
   }
 
   void onSelectUserClass(Class c) {
@@ -44,6 +48,14 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
 
     Provider.of<ClassProvider>(context, listen: false).selectClass(newClass);
     Navigator.pop(context);
+
+    FirebaseAnalytics.instance.logJoinGroup(
+      groupId: newClass.name,
+    );
+    // FirebaseAnalytics.instance.logSelectContent(
+    //   contentType: "class_picker_preset_class",
+    //   itemId: newClass.name,
+    // );
   }
 
   onDeleteClass(Class c) {
@@ -178,7 +190,11 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
       context,
       CupertinoPageRoute(
         builder: (context) => ClassEditPage(
-          onSubmit: (metaModel) {
+          onSubmit: (metaModel, _) {
+            FirebaseAnalytics.instance.logJoinGroup(
+              groupId: "Custom Class",
+            );
+
             Class newClass = Class.fromMetaModel(metaModel);
             DataLoader.addClassId(newClass.id);
             DataLoader.saveActiveClassId(newClass.id);

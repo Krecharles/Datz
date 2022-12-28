@@ -1,8 +1,12 @@
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:datz_flutter/model/data_loader.dart';
 import 'package:datz_flutter/pages/home_page/home_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DataLoader.loadAllClassMetaModels();
+    initFirebase();
 
     return ChangeNotifierProvider<ClassProvider>(
       create: (_) => ClassProvider(),
@@ -26,5 +31,13 @@ class MyApp extends StatelessWidget {
         home: HomePage(),
       ),
     );
+  }
+
+  void initFirebase() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    // FirebaseFunctions.instanceFor(region: 'europe-west3')
+    //     .useFunctionsEmulator('localhost', 5001);
   }
 }

@@ -5,14 +5,20 @@ import 'package:datz_flutter/pages/class_edit_page/class_creation_model.dart';
 import 'package:flutter/cupertino.dart';
 
 class ClassEditPage extends StatefulWidget {
-  final void Function(ClassMetaModel)? onSubmit;
+  final void Function(ClassMetaModel classMetaModel, bool reportAsError)?
+      onSubmit;
+  final bool? allowClassMetaModelErrorReporting;
   late ClassCreationModel classCreationModel = ClassCreationModel(
     useSemesters: true,
     hasExams: false,
   );
 
-  ClassEditPage(
-      {super.key, ClassCreationModel? classCreationModel, this.onSubmit}) {
+  ClassEditPage({
+    super.key,
+    ClassCreationModel? classCreationModel,
+    this.onSubmit,
+    this.allowClassMetaModelErrorReporting,
+  }) {
     this.classCreationModel = classCreationModel ??
         ClassCreationModel(
           useSemesters: true,
@@ -25,13 +31,16 @@ class ClassEditPage extends StatefulWidget {
 }
 
 class _ClassEditPageState extends State<ClassEditPage> {
+  bool _reportErrors = false;
+
   void onSubmit() {
     String? errorMessage = widget.classCreationModel.validate();
     if (errorMessage != null) {
       return alertError(context, errorMessage);
     }
     ClassMetaModel metaModel = widget.classCreationModel.parseToMetaModel();
-    widget.onSubmit?.call(metaModel);
+
+    widget.onSubmit?.call(metaModel, _reportErrors);
   }
 
   void removeSubject(int subjectId) {
@@ -70,6 +79,34 @@ class _ClassEditPageState extends State<ClassEditPage> {
                 buildGeneralInformationForm(),
                 buildSubjectsList(),
                 const SizedBox(height: 32),
+                if (widget.allowClassMetaModelErrorReporting != null &&
+                    widget.allowClassMetaModelErrorReporting!) ...[
+                  CupertinoListSection.insetGrouped(
+                    footer: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                      child: Text(
+                        "If your change reflects an error in the default class configuration, please tick this box so that it can be fixed in future versions.",
+                        style: TextStyle(
+                          fontSize: 13,
+                          letterSpacing: -0.08,
+                          fontWeight: FontWeight.w400,
+                          color: CupertinoColors.secondaryLabel
+                              .resolveFrom(context)
+                              .withOpacity(0.6),
+                        ),
+                      ),
+                    ),
+                    children: [
+                      BoolFieldFormRow(
+                        title: const Text("Report as Error"),
+                        value: _reportErrors,
+                        onChanged: (newVal) =>
+                            setState(() => _reportErrors = newVal),
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 32),
+                ],
                 buildSubmitButtonRow(context),
                 const SizedBox(height: 32),
               ],

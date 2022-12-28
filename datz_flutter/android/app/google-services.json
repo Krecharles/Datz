@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "497725344299",
+    "project_id": "datz-38fd2",
+    "storage_bucket": "datz-38fd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497725344299:android:711d67577920be4a44786e",
+        "android_client_info": {
+          "package_name": "com.example.datz_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497725344299-rrb4adk6ilus9p4hlvvvmh3qfqupgv1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZWgFzI4zuv-rxHb4QZg_vFJsADuC5znc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497725344299-rrb4adk6ilus9p4hlvvvmh3qfqupgv1p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "497725344299-thgnlh857c2ckki368g5df2j9bs93sjj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.charelkremer.Datz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

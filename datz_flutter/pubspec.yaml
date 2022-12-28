@@ -39,6 +39,9 @@ dependencies:
   native_shared_preferences: ^2.0.6
   font_awesome_flutter: ^10.3.0
   url_launcher: ^6.1.7
+  firebase_core: ^2.4.0
+  firebase_analytics: ^10.0.8
+  cloud_functions: ^4.0.6
 
 dev_dependencies:
   flutter_test:

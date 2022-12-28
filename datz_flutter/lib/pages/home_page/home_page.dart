@@ -1,3 +1,4 @@
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:datz_flutter/components/buttons.dart';
 import 'package:datz_flutter/components/custom_sliver.dart';
 import 'package:datz_flutter/model/class_meta_model.dart';
@@ -8,6 +9,7 @@ import 'package:datz_flutter/pages/home_page/home_page_sliver_header.dart';
 import 'package:datz_flutter/pages/home_page/subject_list.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
@@ -60,9 +62,28 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  void onEditClassMetaModel(BuildContext context, ClassMetaModel metaModel) {
+  void editClassMetaModel(
+      BuildContext context, ClassMetaModel metaModel, bool reportAsError) {
     final provider = context.read<ClassProvider>();
 
+    if (reportAsError) {
+      if (kDebugMode) {
+        print("Sending modified class meta model to server");
+      }
+
+      FirebaseFunctions.instanceFor(region: "europe-west3")
+          .httpsCallable('addModifiedClassModel')
+          .call(metaModel.toString());
+    }
+
+    provider.selectedClass!.applyMetaModelChanges(metaModel);
+    provider.notifyListeners();
+    Navigator.pop(context); // pop dialog
+    Navigator.pop(context); // pop class edit page
+  }
+
+  void onEditClassMetaModel(
+      BuildContext context, ClassMetaModel metaModel, bool reportAsError) {
     showCupertinoDialog<void>(
       context: context,
       builder: (BuildContext context) => CupertinoAlertDialog(
@@ -77,12 +98,8 @@ class HomePage extends StatelessWidget {
           ),
           CupertinoDialogAction(
             isDefaultAction: true,
-            onPressed: () {
-              provider.selectedClass!.applyMetaModelChanges(metaModel);
-              provider.notifyListeners();
-              Navigator.pop(context); // pop dialog
-              Navigator.pop(context); // pop class edit page
-            },
+            onPressed: () =>
+                editClassMetaModel(context, metaModel, reportAsError),
             child: const Text('Change'),
           ),
         ],
@@ -101,11 +118,13 @@ class HomePage extends StatelessWidget {
           context,
           CupertinoPageRoute(
             builder: ((context) => ClassEditPage(
-                classCreationModel: ClassCreationModel.fromClassModel(
-                  provider.selectedClass!,
-                ),
-                onSubmit: (ClassMetaModel metaModel) =>
-                    onEditClassMetaModel(context, metaModel))),
+                  classCreationModel: ClassCreationModel.fromClassModel(
+                    provider.selectedClass!,
+                  ),
+                  allowClassMetaModelErrorReporting: true,
+                  onSubmit: (ClassMetaModel metaModel, bool reportAsError) =>
+                      onEditClassMetaModel(context, metaModel, reportAsError),
+                )),
           ),
         );
       },

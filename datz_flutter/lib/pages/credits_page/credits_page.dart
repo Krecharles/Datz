@@ -1,4 +1,5 @@
 import 'package:datz_flutter/consts.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -45,6 +46,10 @@ class CreditsPage extends StatelessWidget {
                           recognizer: TapGestureRecognizer()
                             ..onTap = () async {
                               if (await canLaunchUrl(url)) {
+                                FirebaseAnalytics.instance.logSelectContent(
+                                  contentType: "action",
+                                  itemId: "Visit Github repo",
+                                );
                                 await launchUrl(url);
                               } else {
                                 if (kDebugMode) {

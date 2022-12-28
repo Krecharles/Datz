@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:datz_flutter/model/class_model.dart';
 import 'package:flutter/foundation.dart';
 
@@ -30,6 +32,16 @@ class ClassMetaModel {
       rethrow;
     }
   }
+
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        "useSemesters": useSemesters,
+        "hasExams": hasExams,
+        'subjects': subjects.map((s) => s.toJson()).toList(),
+      };
+
+  @override
+  String toString() => const JsonEncoder.withIndent("  ").convert(toJson());
 }
 
 class SubjectMetaModel {
@@ -66,6 +78,15 @@ class SubjectMetaModel {
       rethrow;
     }
   }
+
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        "coef": coef,
+        'subSubjects': subSubjects?.map((s) => s.toJson()).toList(),
+      };
+
+  @override
+  String toString() => const JsonEncoder.withIndent("  ").convert(toJson());
 }
 
 class SemesterMetaModel {
