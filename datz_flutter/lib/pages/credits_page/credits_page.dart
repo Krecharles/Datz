@@ -6,10 +6,21 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CreditsPage extends StatelessWidget {
-  CreditsPage({super.key});
+class CreditsPage extends StatefulWidget {
+  const CreditsPage({super.key});
 
+  @override
+  State<CreditsPage> createState() => _CreditsPageState();
+}
+
+class _CreditsPageState extends State<CreditsPage> {
   final Uri url = Uri.parse('https://github.com/Krecharles/Datz');
+  @override
+  void initState() {
+    super.initState();
+
+    FirebaseAnalytics.instance.logScreenView(screenName: "CreditsPage");
+  }
 
   @override
   Widget build(BuildContext context) {

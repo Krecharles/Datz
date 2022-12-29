@@ -50,8 +50,7 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     super.initState();
     loadData();
 
-    FirebaseAnalytics.instance.logScreenView(
-        screenClass: "the class of the screen", screenName: "Class Picker");
+    FirebaseAnalytics.instance.logScreenView(screenName: "Class Picker");
   }
 
   void onSelectUserClass(Class c) {
@@ -105,13 +104,16 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
               }
 
               FirebaseFunctions.instanceFor(region: "europe-west3")
-                  .httpsCallable('addCreatedClassModel')
+                  .httpsCallable('addMissingClassModel')
                   .call(metaModel.toString());
             }
 
             context
                 .read<ClassProvider>()
                 .createAndSelectClass(metaModel, isCustomModel: true);
+
+            Navigator.pop(context); // pop EditClasspage
+            Navigator.pop(context); // pop Picker
           },
         ),
       ),

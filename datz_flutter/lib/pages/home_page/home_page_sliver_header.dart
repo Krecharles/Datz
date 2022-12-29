@@ -102,7 +102,7 @@ class HomePageSliverHeader extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                CupertinoPageRoute(builder: (context) => CreditsPage()),
+                CupertinoPageRoute(builder: (context) => const CreditsPage()),
               );
             },
           ),
