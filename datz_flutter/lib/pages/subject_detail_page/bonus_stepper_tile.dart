@@ -1,4 +1,5 @@
 import 'package:datz_flutter/components/buttons.dart';
+import 'package:datz_flutter/components/custom_cupertino_list_section.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
@@ -24,18 +25,8 @@ class BonusStepperTile extends StatelessWidget {
     if (bonusPoints < 0) {
       bonusLabelColor = CupertinoColors.systemRed.resolveFrom(context);
     }
-    return CupertinoListSection.insetGrouped(
-      header: Padding(
-        padding: const EdgeInsets.only(left: 16.0),
-        child: Text(
-          "Bonus",
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: CupertinoColors.secondaryLabel.resolveFrom(context),
-          ),
-        ),
-      ),
+    return CustomCupertinoListSection(
+      header: "Bonus",
       children: [
         CupertinoListTile.notched(
           title: Text(

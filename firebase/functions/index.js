@@ -37,3 +37,11 @@ exports.addModifiedClassModel = functions
     functions.logger.info("Got class: ", d);
     admin.firestore().collection("modifiedClassModels").add({ data: d });
   });
+
+exports.addMissingClassModel = functions
+  .region("europe-west3")
+  .https.onCall((data, _) => {
+    let d = data.toString();
+    functions.logger.info("Got class: ", d);
+    admin.firestore().collection("missingClassModels").add({ data: d });
+  });

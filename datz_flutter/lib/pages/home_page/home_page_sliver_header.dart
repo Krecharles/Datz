@@ -9,7 +9,11 @@ import 'package:provider/provider.dart';
 
 class HomePageSliverHeader extends StatelessWidget {
   final double shrinkOffset;
-  const HomePageSliverHeader({super.key, required this.shrinkOffset});
+
+  const HomePageSliverHeader({
+    super.key,
+    required this.shrinkOffset,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -51,14 +55,20 @@ class HomePageSliverHeader extends StatelessWidget {
       left: 12.0,
       right: 12.0,
       bottom: 12.0 - shrinkOffset / 2,
-      child: Opacity(
-        opacity: opacity,
-        child: CupertinoSlidingSegmentedControl(
-          groupValue: provider.selectedSemester,
-          children: options,
-          onValueChanged: (int? value) {
-            provider.selectSemester(value ?? 0);
-          },
+      child: Center(
+        child: Container(
+          width: 600,
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Opacity(
+            opacity: opacity,
+            child: CupertinoSlidingSegmentedControl(
+              groupValue: provider.selectedSemester,
+              children: options,
+              onValueChanged: (int? value) {
+                provider.selectSemester(value ?? 0);
+              },
+            ),
+          ),
         ),
       ),
     );

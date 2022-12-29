@@ -139,4 +139,22 @@ class DataLoader {
       return null;
     }
   }
+
+  /// DEBUG
+
+  static void deleteAllData() async {
+    if (!kDebugMode) {
+      return;
+    }
+
+    final userDefaults = await SharedPreferences.getInstance();
+    final keys = userDefaults.getKeys();
+    for (String k in keys) {
+      userDefaults.remove(k);
+    }
+
+    if (kDebugMode) {
+      print("Deleted all Data from userdefaults");
+    }
+  }
 }

@@ -1,18 +1,25 @@
+import 'package:datz_flutter/model/class_meta_model.dart';
 import 'package:datz_flutter/model/data_loader.dart';
 import 'package:datz_flutter/model/subject_model.dart';
 import 'package:datz_flutter/model/class_model.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
 import '../model/semester_model.dart';
 import '../model/test_model.dart';
 
+/// A ChangeNotifier providing the main business logic.
+///
+///
 class ClassProvider with ChangeNotifier {
   Class? selectedClass;
   int selectedSemester;
 
   /// must be the id of a simpleSubject
   int? selectedSubjectId;
+
+  bool failedToLoadClass = false;
 
   ClassProvider({this.selectedClass, this.selectedSemester = 0}) {
     loadCurrentClass();
@@ -24,15 +31,18 @@ class ClassProvider with ChangeNotifier {
     super.notifyListeners();
   }
 
-  /// Loads the last used class from persistent memory
+  /// Loads the last used class from persistent memory.
   void loadCurrentClass() async {
     // TODO check if loadedClass does not exist, in that case
     // use a random other class or force class picker view
     Class? loadedClass = await DataLoader.loadCurrentClass();
     selectedClass = loadedClass;
-    if (kDebugMode) {
-      print("Loaded class: \n$selectedClass");
-    }
+
+    if (selectedClass == null) failedToLoadClass = true;
+
+    // if (kDebugMode) {
+    // print("Loaded class: \n$selectedClass");
+    // }
     notifyListeners();
   }
 
@@ -62,6 +72,29 @@ class ClassProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  /// Performs business logic when selecting a new class in [ClassPickerPage]
+  void createAndSelectClass(ClassMetaModel classMetaModel,
+      {isCustomModel = false}) {
+    Class newClass = Class.fromMetaModel(classMetaModel);
+    DataLoader.addClassId(newClass.id);
+    DataLoader.saveActiveClassId(newClass.id);
+    DataLoader.saveClass(newClass);
+
+    selectClass(newClass);
+    if (isCustomModel) {
+      FirebaseAnalytics.instance.logJoinGroup(
+        groupId: "Custom Class",
+      );
+      FirebaseAnalytics.instance.logJoinGroup(
+        groupId: "Custom_${newClass.name}",
+      );
+    } else {
+      FirebaseAnalytics.instance.logJoinGroup(
+        groupId: newClass.name,
+      );
+    }
+  }
+
   void selectClass(Class c) {
     if (kDebugMode) {
       print("Selected class: \n$c");
@@ -69,6 +102,7 @@ class ClassProvider with ChangeNotifier {
     selectedClass = c;
     selectedSemester = 0;
     selectedSubjectId = null;
+    failedToLoadClass = false;
     DataLoader.saveActiveClassId(c.id);
     notifyListeners();
   }

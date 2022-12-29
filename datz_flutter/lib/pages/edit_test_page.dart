@@ -1,3 +1,5 @@
+import 'package:datz_flutter/components/custom_cupertino_list_section.dart';
+import 'package:datz_flutter/components/custom_cupertino_page_body.dart';
 import 'package:datz_flutter/components/forms/form_rows.dart';
 import 'package:datz_flutter/components/buttons.dart';
 import 'package:datz_flutter/model/test_model.dart';
@@ -5,8 +7,13 @@ import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
+/// A page used for both Test creation and modification.
+///
+/// Modification works by copying the data given by [editTest] into the form
+/// values and keeping track of its id. [onSubmit] is called once the user is
+/// done and before the page has popped itself.
 class TestEditPage extends StatefulWidget {
-  /// indicates if it is a new test or modifying an existing one
+  /// indicates whether it is a new test or modifying an existing one
   final Test? editTest;
   final void Function(Test) onSubmit;
 
@@ -47,13 +54,13 @@ class _TestEditPageState extends State<TestEditPage> {
 
   void onSubmit() {
     if (_nameController.value.text == "") {
-      return alertError(context, "Name cannot be Empty.");
+      return alertFormError(context, "Name cannot be Empty.");
     }
     if (double.tryParse(_gradeController.value.text) == null) {
-      return alertError(context, "Grade must be a Number");
+      return alertFormError(context, "Grade must be a Number");
     }
     if (double.tryParse(_maxGradeController.value.text) == null) {
-      return alertError(context, "Max Grade must be a Number");
+      return alertFormError(context, "Max Grade must be a Number");
     }
 
     if (!_moreOptions) {
@@ -90,7 +97,7 @@ class _TestEditPageState extends State<TestEditPage> {
       Navigator.pop(context);
       return;
     } catch (e) {
-      return alertError(context, e.toString());
+      return alertFormError(context, e.toString());
     }
   }
 
@@ -107,28 +114,23 @@ class _TestEditPageState extends State<TestEditPage> {
           widget.editTest == null ? "Add Test" : "Edit Test",
         ),
       ),
-      child: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: SafeArea(
-          child: Column(
-            children: [
-              buildInputForm(),
-              const SizedBox(height: 32),
-              // TODO check if this is correct
-              if (widget.editTest == null ||
-                  widget.editTest is FixedContributionTest)
-                buildComplexForm(),
-              const SizedBox(height: 32),
-              buildSubmitButtonRow(context),
-            ],
-          ),
+      child: CustomCupertinoPageBody(
+        child: Column(
+          children: [
+            buildInputForm(),
+            const SizedBox(height: 32),
+            if (widget.editTest == null || isHandlingGivenFixedContribTest())
+              buildComplexForm(),
+            const SizedBox(height: 32),
+            buildSubmitButtonRow(context),
+          ],
         ),
       ),
     );
   }
 
-  CupertinoListSection buildInputForm() {
-    return CupertinoListSection.insetGrouped(
+  Widget buildInputForm() {
+    return CustomCupertinoListSection(
       children: [
         TextFieldFormRow(
             title: const Text("Name"), controller: _nameController),
@@ -142,24 +144,10 @@ class _TestEditPageState extends State<TestEditPage> {
     );
   }
 
-  CupertinoListSection buildComplexForm() {
-    return CupertinoListSection.insetGrouped(
-      footer: _moreOptions
-          ? Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0),
-              child: Text(
-                "This options should be used for orals or TPs that contribute a fixed portion to the average, e.g. 1/2",
-                style: TextStyle(
-                  fontSize: 13,
-                  letterSpacing: -0.08,
-                  fontWeight: FontWeight.w400,
-                  color: CupertinoColors.secondaryLabel
-                      .resolveFrom(context)
-                      .withOpacity(0.6),
-                ),
-              ),
-            )
-          : Container(),
+  Widget buildComplexForm() {
+    return CustomCupertinoListSection(
+      footer:
+          "This options should be used for orals or TPs that contribute a fixed portion to the average, e.g. 1/2",
       children: [
         BoolFieldFormRow(
           title: const Text("More Options"),
@@ -178,7 +166,7 @@ class _TestEditPageState extends State<TestEditPage> {
     );
   }
 
-  Row buildSubmitButtonRow(BuildContext context) {
+  Widget buildSubmitButtonRow(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -195,8 +183,7 @@ class _TestEditPageState extends State<TestEditPage> {
             color: CupertinoColors.systemRed,
             text: "Delete",
             onPressed: () {
-              Provider.of<ClassProvider>(context, listen: false)
-                  .deleteTest(widget.editTest!.id);
+              context.read<ClassProvider>().deleteTest(widget.editTest!.id);
               Navigator.pop(context);
             },
             // leadingIcon: CupertinoIcons.trash,

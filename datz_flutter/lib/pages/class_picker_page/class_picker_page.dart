@@ -1,15 +1,33 @@
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:datz_flutter/components/custom_cupertino_list_section.dart';
+import 'package:datz_flutter/components/custom_cupertino_page_body.dart';
+import 'package:datz_flutter/components/slidables.dart';
 import 'package:datz_flutter/model/class_meta_model.dart';
 import 'package:datz_flutter/model/class_model.dart';
 import 'package:datz_flutter/model/data_loader.dart';
-import 'package:datz_flutter/pages/class_edit_page/class_edit_page.dart';
+import 'package:datz_flutter/pages/edit_class_page/edit_class_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 
+/// A Page that lets the select the current class.
+///
+/// Invoques [DataLoader.loadAllClassMetaModels] and [DataLoader.loadAllClasses].
+/// Invoques [ClassProvider.selectClass] and [ClassProvider.createAndSelectClass].
 class ClassPickerPage extends StatefulWidget {
-  const ClassPickerPage({super.key});
+  /// Is called when the user has selected a class.
+  ///
+  /// Should be used to pop this page.
+  /// Functionality is needed for showing Picker when no class is selected on
+  /// initial startup.
+  final void Function(BuildContext context)? onExit;
+
+  const ClassPickerPage({
+    super.key,
+    this.onExit,
+  });
 
   @override
   State<ClassPickerPage> createState() => _ClassPickerPageState();
@@ -20,6 +38,7 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
   List<Class> _userClasses = [];
   String _searchTerm = "";
 
+  /// Repopulates
   void loadData() async {
     _allClassMetaModels = await DataLoader.loadAllClassMetaModels();
     _userClasses = await DataLoader.loadAllClasses();
@@ -36,30 +55,17 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
   }
 
   void onSelectUserClass(Class c) {
-    Provider.of<ClassProvider>(context, listen: false).selectClass(c);
-    Navigator.pop(context);
+    context.read<ClassProvider>().selectClass(c);
+    widget.onExit?.call(context);
   }
 
   void onSelectNewClass(ClassMetaModel classData) {
-    Class newClass = Class.fromMetaModel(classData);
-    DataLoader.addClassId(newClass.id);
-    DataLoader.saveActiveClassId(newClass.id);
-    DataLoader.saveClass(newClass);
-
-    Provider.of<ClassProvider>(context, listen: false).selectClass(newClass);
-    Navigator.pop(context);
-
-    FirebaseAnalytics.instance.logJoinGroup(
-      groupId: newClass.name,
-    );
-    // FirebaseAnalytics.instance.logSelectContent(
-    //   contentType: "class_picker_preset_class",
-    //   itemId: newClass.name,
-    // );
+    context.read<ClassProvider>().createAndSelectClass(classData);
+    widget.onExit?.call(context);
   }
 
   onDeleteClass(Class c) {
-    final classProvider = Provider.of<ClassProvider>(context, listen: false);
+    final classProvider = context.read<ClassProvider>();
     showCupertinoModalPopup<void>(
       context: context,
       builder: (BuildContext context) => CupertinoAlertDialog(
@@ -87,6 +93,31 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     );
   }
 
+  onCreateOwnClass(BuildContext context) {
+    Navigator.push(
+      context,
+      CupertinoPageRoute(
+        builder: (context) => EditClassPage(
+          onSubmit: (metaModel, reportAsError) {
+            if (reportAsError) {
+              if (kDebugMode) {
+                print("Sending created class meta model to server");
+              }
+
+              FirebaseFunctions.instanceFor(region: "europe-west3")
+                  .httpsCallable('addCreatedClassModel')
+                  .call(metaModel.toString());
+            }
+
+            context
+                .read<ClassProvider>()
+                .createAndSelectClass(metaModel, isCustomModel: true);
+          },
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -96,59 +127,40 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
           "Select Class",
         ),
       ),
-      child: SingleChildScrollView(
-        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        child: SafeArea(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: CupertinoSearchTextField(
-                  onChanged: (String s) => setState(() {
-                    _searchTerm = s.toUpperCase();
-                  }),
-                ),
+      child: CustomCupertinoPageBody(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: CupertinoSearchTextField(
+                onChanged: (String s) => setState(() {
+                  _searchTerm = s.toUpperCase();
+                }),
               ),
-              buildUserClasses(context),
-              buildPresetClasses(context),
-              buildCreateClassButton(context),
-            ],
-          ),
+            ),
+            buildUserClasses(context),
+            buildPresetClasses(context),
+            buildCreateClassButton(context),
+          ],
         ),
       ),
     );
   }
 
   Widget buildUserClasses(BuildContext context) {
-    var classes =
-        _userClasses.where((c) => c.name.contains(_searchTerm)).toList();
+    var classes = _userClasses
+        .where((c) => c.name.toUpperCase().contains(_searchTerm))
+        .toList();
     classes.sort((a, b) => b.name.compareTo(a.name));
+
     if (classes.isEmpty) return Container();
-    return CupertinoListSection.insetGrouped(
-      header: Padding(
-        padding: const EdgeInsets.only(left: 16.0),
-        child: Text(
-          "Your Classes",
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: CupertinoColors.secondaryLabel.resolveFrom(context),
-          ),
-        ),
-      ),
+
+    return CustomCupertinoListSection(
+      header: "Your Classes",
       children: [
         for (final c in classes)
-          Slidable(
-            endActionPane: ActionPane(
-              motion: const ScrollMotion(),
-              children: [
-                SlidableAction(
-                  onPressed: (context) => onDeleteClass(c),
-                  backgroundColor: CupertinoColors.systemRed,
-                  label: 'Delete',
-                ),
-              ],
-            ),
+          CustomSlidable(
+            onDelete: (context) => onDeleteClass(c),
             child: CupertinoListTile.notched(
               onTap: () => onSelectUserClass(c),
               title: Text(c.name),
@@ -159,22 +171,15 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
   }
 
   Widget buildPresetClasses(BuildContext context) {
-    var classes =
-        _allClassMetaModels.where((c) => c.name.contains(_searchTerm)).toList();
+    var classes = _allClassMetaModels
+        .where((c) => c.name.toUpperCase().contains(_searchTerm))
+        .toList();
     classes.sort((a, b) => b.name.compareTo(a.name));
+
     if (classes.isEmpty) return Container();
-    return CupertinoListSection.insetGrouped(
-      header: Padding(
-        padding: const EdgeInsets.only(left: 16.0),
-        child: Text(
-          "Preset Classes",
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: CupertinoColors.secondaryLabel.resolveFrom(context),
-          ),
-        ),
-      ),
+
+    return CustomCupertinoListSection(
+      header: "Preset Classes",
       children: [
         for (final m in classes)
           CupertinoListTile.notched(
@@ -185,44 +190,9 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     );
   }
 
-  onCreateOwnClass(BuildContext context) {
-    Navigator.push(
-      context,
-      CupertinoPageRoute(
-        builder: (context) => ClassEditPage(
-          onSubmit: (metaModel, _) {
-            FirebaseAnalytics.instance.logJoinGroup(
-              groupId: "Custom Class",
-            );
-
-            Class newClass = Class.fromMetaModel(metaModel);
-            DataLoader.addClassId(newClass.id);
-            DataLoader.saveActiveClassId(newClass.id);
-            DataLoader.saveClass(newClass);
-
-            Provider.of<ClassProvider>(context, listen: false)
-                .selectClass(newClass);
-            Navigator.pop(context); // pop to class picker
-            Navigator.pop(context); // pop to homepage
-          },
-        ),
-      ),
-    );
-  }
-
   Widget buildCreateClassButton(BuildContext context) {
-    return CupertinoListSection.insetGrouped(
-      header: Padding(
-        padding: const EdgeInsets.only(left: 16.0),
-        child: Text(
-          "Nothing Found?",
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: CupertinoColors.secondaryLabel.resolveFrom(context),
-          ),
-        ),
-      ),
+    return CustomCupertinoListSection(
+      header: "Nothing Found?",
       children: [
         CupertinoListTile.notched(
           title: const Text("Create your own"),

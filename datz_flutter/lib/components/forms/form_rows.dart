@@ -1,7 +1,7 @@
 import 'package:datz_flutter/components/forms/simple_stepper.dart';
 import 'package:flutter/cupertino.dart';
 
-void alertError(BuildContext context, String message) {
+void alertFormError(BuildContext context, String message) {
   showCupertinoDialog<void>(
     context: context,
     builder: (BuildContext context) => CupertinoAlertDialog(
