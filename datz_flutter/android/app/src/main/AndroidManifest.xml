@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.charelkremer.datz">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="datz_flutter"
+        android:label="Datz!"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
