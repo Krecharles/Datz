@@ -123,7 +123,6 @@ class SimpleSubject extends Subject {
       avg += contribution * calcExactAvgOfSimpleTests() / 60;
     } else {
       // if no simple test exists, still display the average
-      // TODO is this correct?
       avg = avg / (1 - contribution);
     }
 

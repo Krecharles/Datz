@@ -33,16 +33,11 @@ class ClassProvider with ChangeNotifier {
 
   /// Loads the last used class from persistent memory.
   void loadCurrentClass() async {
-    // TODO check if loadedClass does not exist, in that case
-    // use a random other class or force class picker view
     Class? loadedClass = await DataLoader.loadCurrentClass();
     selectedClass = loadedClass;
 
     if (selectedClass == null) failedToLoadClass = true;
 
-    // if (kDebugMode) {
-    // print("Loaded class: \n$selectedClass");
-    // }
     notifyListeners();
   }
 
@@ -93,6 +88,9 @@ class ClassProvider with ChangeNotifier {
         groupId: newClass.name,
       );
     }
+
+    FirebaseAnalytics.instance.logSelectItem(
+        itemListName: newClass.usesSemesters() ? "useSemesters" : "usesExams");
   }
 
   void selectClass(Class c) {

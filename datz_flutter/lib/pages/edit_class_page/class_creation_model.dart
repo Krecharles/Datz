@@ -42,8 +42,8 @@ class ClassCreationModel {
 
   ClassCreationModel.fromClassModel(Class c) {
     nameController = TextEditingController(text: c.name);
-    useSemesters = c.semesters.first.name.toLowerCase().contains("sem");
-    hasExams = c.semesters.last.name.toLowerCase().contains("ex");
+    useSemesters = c.usesSemesters();
+    hasExams = c.hasExams();
     subjects = c.semesters.first.subjects
         .map((s) => SubjectCreationModel.fromSubjectModel(s))
         .toList();

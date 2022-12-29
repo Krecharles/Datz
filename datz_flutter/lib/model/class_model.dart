@@ -114,6 +114,9 @@ class Class {
     return semesters.map((Semester sem) => sem.name).toList();
   }
 
+  bool usesSemesters() => semesters.first.name.toLowerCase().contains("sem");
+  bool hasExams() => semesters.last.name.toLowerCase().contains("ex");
+
   bool isAvgCalculable() {
     return semesters.any((s) => s.isAvgCalculable());
   }
