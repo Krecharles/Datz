@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:in_app_review/in_app_review.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CreditsPage extends StatefulWidget {
@@ -53,6 +54,22 @@ class _CreditsPageState extends State<CreditsPage> {
                     const Text(
                       "Made with ❤️",
                       style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                    const SizedBox(height: 64),
+                    Center(
+                      child: CupertinoButton(
+                          color: CupertinoColors.white,
+                          child: const Text(
+                            "Review",
+                            style: TextStyle(color: CupertinoColors.black),
+                          ),
+                          onPressed: () {
+                            final InAppReview inAppReview =
+                                InAppReview.instance;
+
+                            inAppReview.openStoreListing(
+                                appStoreId: '1367393128');
+                          }),
                     ),
                   ],
                 ),
