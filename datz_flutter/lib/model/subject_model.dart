@@ -35,9 +35,14 @@ class Subject {
     return calcExactAvg().ceil();
   }
 
-  String formattedAvg() {
+  String formattedExactAvg() {
     if (!isAvgCalculable()) return "";
     return formatDecimal(calcExactAvg());
+  }
+
+  String formattedFinalAvg() {
+    if (!isAvgCalculable()) return "";
+    return "${calcFinalAvg()}";
   }
 }
 

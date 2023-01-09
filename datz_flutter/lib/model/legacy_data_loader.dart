@@ -21,6 +21,7 @@ class LegacyDataLoader {
         }
         return;
       }
+      userDefaults.setBool("hasPortedLegacyData", true);
 
       NativeSharedPreferences prefs =
           await NativeSharedPreferences.getInstance();
@@ -43,8 +44,6 @@ class LegacyDataLoader {
           }
         }
       }
-
-      userDefaults.setBool("hasPortedLegacyData", true);
     } catch (e) {
       if (kDebugMode) {
         print("Something went wrong while Porting Legacy Data: $e");
@@ -93,9 +92,9 @@ class LegacyDataLoader {
       return SimpleSubject(
           id: id,
           name: json["name"],
-          coef: (json["coef"] as int).toDouble(),
+          coef: json["coef"].toDouble(),
           simpleTests: tests,
-          plusPoints: (json["plusPoints"] as int).toDouble());
+          plusPoints: json["plusPoints"].toDouble());
     }
     final subSubjects = (combis["subjects"] as List<dynamic>)
         .map((e) => parseSubject(e, subjectIdMap) as SimpleSubject)
@@ -103,7 +102,7 @@ class LegacyDataLoader {
     return CombiSubject(
       id: id,
       name: json["name"],
-      coef: (json["coef"] as int).toDouble(),
+      coef: json["coef"].toDouble(),
       subSubjects: subSubjects,
     );
   }
@@ -111,8 +110,8 @@ class LegacyDataLoader {
   static Test parseTest(JsonData json) {
     return Test(
       name: "Test",
-      grade: (json["grade"] as int).toDouble(),
-      maxGrade: (json["maxGrade"] as int).toDouble(),
+      grade: json["grade"].toDouble(),
+      maxGrade: json["maxGrade"].toDouble(),
     );
   }
 }

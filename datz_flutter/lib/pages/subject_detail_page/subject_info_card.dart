@@ -18,7 +18,7 @@ class SubjectInfoCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            provider.getSelectedSubject()?.formattedAvg() ?? "",
+            provider.getSelectedSubject()?.formattedExactAvg() ?? "",
             style: TextStyle(
               color: CupertinoColors.label.resolveFrom(context),
               fontSize: 34,

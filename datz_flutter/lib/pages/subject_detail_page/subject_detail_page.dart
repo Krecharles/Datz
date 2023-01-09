@@ -111,7 +111,7 @@ class SubjectDetailPage extends StatelessWidget {
       trailing: Row(
         children: [
           Text(
-            "${t.grade} / ${t.maxGrade}",
+            "${Formatter.formatDecimalNumber(t.grade)} / ${Formatter.formatDecimalNumber(t.maxGrade)}",
             style: TextStyle(
                 color: CupertinoColors.secondaryLabel.resolveFrom(context)),
           ),

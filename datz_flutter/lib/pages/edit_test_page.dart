@@ -2,6 +2,7 @@ import 'package:datz_flutter/components/custom_cupertino_list_section.dart';
 import 'package:datz_flutter/components/custom_cupertino_page_body.dart';
 import 'package:datz_flutter/components/forms/form_rows.dart';
 import 'package:datz_flutter/components/buttons.dart';
+import 'package:datz_flutter/consts.dart';
 import 'package:datz_flutter/model/test_model.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
@@ -38,12 +39,17 @@ class _TestEditPageState extends State<TestEditPage> {
   void initState() {
     super.initState();
 
+    String? grade = null;
+    String? maxGrade = "60";
+    if (widget.editTest != null) {
+      grade = Formatter.formatDecimalNumber(widget.editTest!.grade);
+      maxGrade = Formatter.formatDecimalNumber(widget.editTest!.maxGrade);
+    }
+
     _nameController =
         TextEditingController(text: widget.editTest?.name ?? "Test");
-    _gradeController =
-        TextEditingController(text: widget.editTest?.grade.toString());
-    _maxGradeController =
-        TextEditingController(text: "${widget.editTest?.maxGrade ?? 60}");
+    _gradeController = TextEditingController(text: grade);
+    _maxGradeController = TextEditingController(text: maxGrade);
     final test = widget.editTest;
     if (test is FixedContributionTest) {
       _moreOptions = true;

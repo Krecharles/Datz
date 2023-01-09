@@ -62,7 +62,7 @@ class SimpleSubjectListTile extends StatelessWidget {
             children: [
               if (!provider.isDisplayingTotalAvg())
                 Text(
-                  subject.formattedAvg(),
+                  subject.formattedFinalAvg(),
                   style: TextStyle(
                       color:
                           CupertinoColors.secondaryLabel.resolveFrom(context)),
@@ -112,7 +112,7 @@ class CombiSubjectListTile extends StatelessWidget {
             children: [
               if (!provider.isDisplayingTotalAvg())
                 Text(
-                  subject.formattedAvg(),
+                  subject.formattedFinalAvg(),
                   style: TextStyle(
                       color:
                           CupertinoColors.secondaryLabel.resolveFrom(context)),
@@ -153,7 +153,7 @@ class CombiSubjectListTile extends StatelessWidget {
               children: [
                 if (!provider.isDisplayingTotalAvg())
                   Text(
-                    sub.formattedAvg(),
+                    sub.formattedFinalAvg(),
                     style: TextStyle(
                         color: CupertinoColors.secondaryLabel
                             .resolveFrom(context)),

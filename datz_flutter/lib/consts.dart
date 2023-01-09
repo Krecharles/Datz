@@ -39,3 +39,10 @@ class CustomDecorations {
     );
   }
 }
+
+class Formatter {
+  /// 15 -> "15", 15.5 -> "15.50"
+  static String formatDecimalNumber(double n) {
+    return n.toStringAsFixed(n.truncateToDouble() == n ? 0 : 2);
+  }
+}
