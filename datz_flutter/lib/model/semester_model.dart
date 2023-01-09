@@ -36,7 +36,7 @@ class Semester {
     }
   }
 
-  Semester.fromJson(Map<String, dynamic> json) {
+  Semester.fromJson(JsonData json) {
     try {
       name = json["name"];
       coef = json["coef"];
@@ -54,7 +54,7 @@ class Semester {
     }
   }
 
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         'id': id,
         'coef': coef,

@@ -1,4 +1,4 @@
-import 'package:datz_flutter/model/data_loader.dart';
+import 'package:datz_flutter/model/legacy_data_loader.dart';
 import 'package:datz_flutter/pages/home_page/home_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // DataLoader.deleteAllData();
-    DataLoader.loadAllClassMetaModels();
+    LegacyDataLoader.checkPreferences();
+
     initFirebase();
 
     return ChangeNotifierProvider<ClassProvider>(

@@ -18,7 +18,7 @@ class ClassMetaModel {
 
   /// This method throws an error if something didn't parse correctly or if the
   /// data format is not met. Be sure to wrap it in a try catch
-  ClassMetaModel.fromJson(Map<String, dynamic> json) {
+  ClassMetaModel.fromJson(JsonData json) {
     try {
       name = json["name"];
       useSemesters = json["useSemesters"] ?? true;
@@ -33,7 +33,7 @@ class ClassMetaModel {
     }
   }
 
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         "useSemesters": useSemesters,
         "hasExams": hasExams,
@@ -59,7 +59,7 @@ class SubjectMetaModel {
     this.id = id ?? randomId();
   }
 
-  SubjectMetaModel.fromJson(Map<String, dynamic> json) {
+  SubjectMetaModel.fromJson(JsonData json) {
     try {
       name = json["name"];
       coef = json["coef"];
@@ -79,7 +79,7 @@ class SubjectMetaModel {
     }
   }
 
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         "coef": coef,
         'subSubjects': subSubjects?.map((s) => s.toJson()).toList(),
@@ -101,7 +101,7 @@ class SemesterMetaModel {
 
   /// This method throws an error if something didn't parse correctly or if the
   /// data format is not met. Be sure to wrap it in a try catch
-  SemesterMetaModel.fromJson(Map<String, dynamic> json) {
+  SemesterMetaModel.fromJson(JsonData json) {
     try {
       name = json["name"];
       coef = json["coef"];

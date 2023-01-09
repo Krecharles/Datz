@@ -6,6 +6,8 @@ import 'package:datz_flutter/model/semester_model.dart';
 import 'package:datz_flutter/model/subject_model.dart';
 import 'package:flutter/foundation.dart';
 
+typedef JsonData = Map<String, dynamic>;
+
 class Class {
   late String name;
 
@@ -18,7 +20,7 @@ class Class {
     this.id = id ?? randomId();
   }
 
-  List<SemesterMetaModel> calcSemesterMetaModels(
+  static List<SemesterMetaModel> calcSemesterMetaModels(
       bool useSemesters, bool hasExams) {
     if (useSemesters && !hasExams) {
       return [
@@ -62,7 +64,7 @@ class Class {
 
   /// This method throws an error if something didn't parse correctly or if the
   /// data format is not met. Be sure to wrap it in a try catch
-  Class.fromJson(Map<String, dynamic> json) {
+  Class.fromJson(JsonData json) {
     try {
       name = json["name"];
       id = json["id"];
@@ -76,7 +78,7 @@ class Class {
     }
   }
 
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         'id': id,
         'semesters': semesters.map((s) => s.toJson()).toList(),

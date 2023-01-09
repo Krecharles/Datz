@@ -14,7 +14,7 @@ class Test {
     this.id = id ?? randomId();
   }
 
-  Test.fromJson(Map<String, dynamic> json) {
+  Test.fromJson(JsonData json) {
     try {
       name = json["name"];
       grade = json["grade"];
@@ -28,7 +28,7 @@ class Test {
     }
   }
 
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         'id': id,
         'grade': grade,
@@ -49,7 +49,7 @@ class FixedContributionTest extends Test {
       int? id})
       : super(id: id);
 
-  FixedContributionTest.fromJson(Map<String, dynamic> json)
+  FixedContributionTest.fromJson(JsonData json)
       : super(grade: 0, maxGrade: 0, name: "") {
     try {
       name = json["name"];
@@ -67,7 +67,7 @@ class FixedContributionTest extends Test {
   }
 
   @override
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         'id': id,
         'grade': grade,

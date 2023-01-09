@@ -13,7 +13,7 @@ class Subject {
     this.id = id ?? randomId();
   }
 
-  Map<String, dynamic> toJson() =>
+  JsonData toJson() =>
       {"some key": "Subject.toJson() should never be called on parent class"};
 
   void applyMetaModelChanges(SubjectMetaModel subjectMetaModel) {
@@ -49,7 +49,7 @@ class SimpleSubject extends Subject {
     required super.name,
     required super.coef,
     this.plusPoints = 0,
-    required this.simpleTests,
+    this.simpleTests = const [],
     this.fixedContributionTests = const [],
     int? id,
   }) : super(id: id);
@@ -64,7 +64,7 @@ class SimpleSubject extends Subject {
     plusPoints = 0;
   }
 
-  SimpleSubject.fromJson(Map<String, dynamic> json) : super(name: "", coef: 0) {
+  SimpleSubject.fromJson(JsonData json) : super(name: "", coef: 0) {
     try {
       id = json["id"];
       name = json["name"];
@@ -86,7 +86,7 @@ class SimpleSubject extends Subject {
   }
 
   @override
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         'id': id,
         'coef': coef,
@@ -157,7 +157,7 @@ class CombiSubject extends Subject {
     }
   }
 
-  CombiSubject.fromJson(Map<String, dynamic> json) : super(name: "", coef: 0) {
+  CombiSubject.fromJson(JsonData json) : super(name: "", coef: 0) {
     try {
       id = json["id"];
       name = json["name"];
@@ -174,7 +174,7 @@ class CombiSubject extends Subject {
   }
 
   @override
-  Map<String, dynamic> toJson() => {
+  JsonData toJson() => {
         'name': name,
         'id': id,
         'coef': coef,

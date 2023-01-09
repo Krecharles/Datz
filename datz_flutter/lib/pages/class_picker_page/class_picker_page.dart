@@ -40,6 +40,7 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
 
   /// Repopulates
   void loadData() async {
+    print("Loading all class models");
     _allClassMetaModels = await DataLoader.loadAllClassMetaModels();
     _userClasses = await DataLoader.loadAllClasses();
     setState(() {});
@@ -49,6 +50,9 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
   void initState() {
     super.initState();
     loadData();
+
+    // Make sure that LegacyDataLoader has finished its work.
+    Future.delayed(const Duration(milliseconds: 300), loadData);
 
     FirebaseAnalytics.instance.logScreenView(screenName: "Class Picker");
   }
