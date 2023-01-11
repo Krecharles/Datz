@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "lib",
+    "sourceMap": true,
+    "target": "es2017"
+  },
+  "compileOnSave": true,
+  "include": ["src"]
+}

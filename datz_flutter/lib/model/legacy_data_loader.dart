@@ -6,6 +6,7 @@ import 'package:datz_flutter/model/data_loader.dart';
 import 'package:datz_flutter/model/semester_model.dart';
 import 'package:datz_flutter/model/subject_model.dart';
 import 'package:datz_flutter/model/test_model.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:native_shared_preferences/native_shared_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -27,6 +28,11 @@ class LegacyDataLoader {
           await NativeSharedPreferences.getInstance();
       final allClassKeys = prefs.get('allNames') as List<dynamic>;
 
+      FirebaseAnalytics.instance
+          .logEvent(name: "LegacyClassPortStart", parameters: {
+        "savedClasses": allClassKeys.length,
+      });
+
       for (final key in allClassKeys) {
         try {
           final String classString =
@@ -35,10 +41,16 @@ class LegacyDataLoader {
           final Class newClass = parseLegacyClass(jsonMap);
           DataLoader.addClassId(newClass.id);
           DataLoader.saveClass(newClass);
+          FirebaseAnalytics.instance
+              .logEvent(name: "LegacyClassSuccess", parameters: {
+            "name": newClass.name,
+          });
+
           if (kDebugMode) {
             print("Parsed and saved legacy Class: $key");
           }
         } catch (e) {
+          FirebaseAnalytics.instance.logEvent(name: "LegacyClassParseFail");
           if (kDebugMode) {
             print("Something went wrong while parsing legacy Class: $e");
           }
@@ -47,6 +59,7 @@ class LegacyDataLoader {
     } catch (e) {
       if (kDebugMode) {
         print("Something went wrong while Porting Legacy Data: $e");
+        FirebaseAnalytics.instance.logEvent(name: "LegacyNonClassParseFail");
       }
     }
   }

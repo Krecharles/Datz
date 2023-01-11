@@ -1,0 +1,131 @@
+[
+  {
+    "name": "1GACV",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "desma",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Histoire Art",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "mathe",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "CommuGraphInfo",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Volume",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Langage Médias",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Sciences",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "3GSO",
+    "useSemesters": false,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "ConMon",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Economie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Schus",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Edcit",
+        "coef": 2,
+        "subSubjects": null
+      }
+    ]
+  }
+]

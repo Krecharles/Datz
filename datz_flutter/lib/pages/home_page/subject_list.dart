@@ -129,7 +129,7 @@ class CombiSubjectListTile extends StatelessWidget {
                       color:
                           CupertinoColors.secondaryLabel.resolveFrom(context)),
                 ),
-              if (!provider.isDisplayingTotalAvg()) const SizedBox(width: 28),
+              if (!provider.isDisplayingTotalAvg()) const SizedBox(width: 22),
             ],
           ),
         ),

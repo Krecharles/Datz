@@ -64,6 +64,10 @@ class _CreditsPageState extends State<CreditsPage> {
                             style: TextStyle(color: CupertinoColors.black),
                           ),
                           onPressed: () {
+                            FirebaseAnalytics.instance.logEvent(
+                              name: "PressReviewButton",
+                            );
+
                             final InAppReview inAppReview =
                                 InAppReview.instance;
 
@@ -93,9 +97,8 @@ class _CreditsPageState extends State<CreditsPage> {
               recognizer: TapGestureRecognizer()
                 ..onTap = () async {
                   if (await canLaunchUrl(url)) {
-                    FirebaseAnalytics.instance.logSelectContent(
-                      contentType: "action",
-                      itemId: "Visit Github repo",
+                    FirebaseAnalytics.instance.logEvent(
+                      name: "PressVisitGHButton",
                     );
                     await launchUrl(url);
                   } else {

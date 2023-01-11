@@ -61,6 +61,10 @@ class ClassProvider with ChangeNotifier {
       );
       return;
     }
+
+    FirebaseAnalytics.instance.logEvent(
+      name: "DeleteClass",
+    );
     DataLoader.deleteClass(classId);
     DataLoader.removeClassId(classId);
     notifyListeners();
@@ -75,32 +79,30 @@ class ClassProvider with ChangeNotifier {
     DataLoader.saveClass(newClass);
 
     selectClass(newClass);
-    if (isCustomModel) {
-      FirebaseAnalytics.instance.logJoinGroup(
-        groupId: "Custom Class",
-      );
-      FirebaseAnalytics.instance.logJoinGroup(
-        groupId: "Custom_${newClass.name}",
-      );
-    } else {
-      FirebaseAnalytics.instance.logJoinGroup(
-        groupId: newClass.name,
-      );
-    }
-
-    FirebaseAnalytics.instance.logSelectItem(
-        itemListName: newClass.usesSemesters() ? "useSemesters" : "usesExams");
+    FirebaseAnalytics.instance.logEvent(
+      name: "CreatedClass",
+      parameters: {
+        "className": classMetaModel.name,
+        "isCustomModel": isCustomModel,
+        "usesSemesters": classMetaModel.useSemesters,
+        "hasExams": classMetaModel.hasExams,
+      },
+    );
   }
 
   void selectClass(Class c) {
-    // if (kDebugMode) {
-    //   print("Selected class: \n$c");
-    // }
     selectedClass = c;
     selectedSemester = 0;
     selectedSubjectId = null;
     failedToLoadClass = false;
     DataLoader.saveActiveClassId(c.id);
+
+    FirebaseAnalytics.instance.logEvent(
+      name: "SelectedClass",
+      parameters: {
+        "className": c.name,
+      },
+    );
     notifyListeners();
   }
 
@@ -160,6 +162,12 @@ class ClassProvider with ChangeNotifier {
 
   void addTest(Test newTest) {
     if (getSelectedSubject() == null) return;
+    FirebaseAnalytics.instance.logEvent(
+      name: "AddTest",
+      parameters: {
+        "className": selectedClass!.name,
+      },
+    );
     if (newTest is FixedContributionTest) {
       getSelectedSubject()!.fixedContributionTests.add(newTest);
     } else {
@@ -171,6 +179,12 @@ class ClassProvider with ChangeNotifier {
   void editTest(Test editedTest) {
     if (getSelectedSubject() == null) return;
 
+    FirebaseAnalytics.instance.logEvent(
+      name: "EditTest",
+      parameters: {
+        "className": selectedClass!.name,
+      },
+    );
     Test oldTest;
 
     if (editedTest is FixedContributionTest) {
@@ -196,6 +210,13 @@ class ClassProvider with ChangeNotifier {
 
   void deleteTest(int testId) {
     if (getSelectedSubject() == null) return;
+
+    FirebaseAnalytics.instance.logEvent(
+      name: "DeleteTest",
+      parameters: {
+        "className": selectedClass!.name,
+      },
+    );
     getSelectedSubject()!.simpleTests.removeWhere((Test t) => t.id == testId);
     getSelectedSubject()!
         .fixedContributionTests

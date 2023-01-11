@@ -82,6 +82,7 @@ class HomePage extends StatelessWidget {
   Widget buildBody(BuildContext context) {
     final provider = context.watch<ClassProvider>();
     return CustomCupertinoPageBody(
+      needsSafeArea: false,
       child: Column(
         children: <Widget>[
           const SubjectList(),

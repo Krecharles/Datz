@@ -117,6 +117,7 @@ class Class {
   }
 
   bool usesSemesters() => semesters.first.name.toLowerCase().contains("sem");
+  bool usesTrimesters() => semesters.first.name.toLowerCase().contains("tri");
   bool hasExams() => semesters.last.name.toLowerCase().contains("ex");
 
   bool isAvgCalculable() {
