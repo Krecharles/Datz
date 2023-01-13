@@ -39,7 +39,7 @@ class _TestEditPageState extends State<TestEditPage> {
   void initState() {
     super.initState();
 
-    String? grade = null;
+    String? grade;
     String? maxGrade = "60";
     if (widget.editTest != null) {
       grade = Formatter.formatDecimalNumber(widget.editTest!.grade);

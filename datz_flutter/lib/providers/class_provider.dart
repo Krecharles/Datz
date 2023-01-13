@@ -4,6 +4,7 @@ import 'package:datz_flutter/model/subject_model.dart';
 import 'package:datz_flutter/model/class_model.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 
 import '../model/semester_model.dart';
 import '../model/test_model.dart';
@@ -82,10 +83,10 @@ class ClassProvider with ChangeNotifier {
     FirebaseAnalytics.instance.logEvent(
       name: "CreatedClass",
       parameters: {
-        "className": classMetaModel.name,
-        "isCustomModel": isCustomModel,
-        "usesSemesters": classMetaModel.useSemesters,
-        "hasExams": classMetaModel.hasExams,
+        "CreatedClass_className": classMetaModel.name,
+        "CreatedClass_isCustomModel": isCustomModel,
+        "CreatedClass_usesSemesters": classMetaModel.useSemesters,
+        "CreatedClass_hasExams": classMetaModel.hasExams,
       },
     );
   }
@@ -100,7 +101,7 @@ class ClassProvider with ChangeNotifier {
     FirebaseAnalytics.instance.logEvent(
       name: "SelectedClass",
       parameters: {
-        "className": c.name,
+        "SelectedClass_className": c.name,
       },
     );
     notifyListeners();
@@ -165,7 +166,8 @@ class ClassProvider with ChangeNotifier {
     FirebaseAnalytics.instance.logEvent(
       name: "AddTest",
       parameters: {
-        "className": selectedClass!.name,
+        "AddTest_className": selectedClass!.name,
+        "AddTest_isFixedContributionTest": newTest is FixedContributionTest,
       },
     );
     if (newTest is FixedContributionTest) {
@@ -182,7 +184,7 @@ class ClassProvider with ChangeNotifier {
     FirebaseAnalytics.instance.logEvent(
       name: "EditTest",
       parameters: {
-        "className": selectedClass!.name,
+        "EditTest_className": selectedClass!.name,
       },
     );
     Test oldTest;
@@ -210,13 +212,19 @@ class ClassProvider with ChangeNotifier {
 
   void deleteTest(int testId) {
     if (getSelectedSubject() == null) return;
+    bool isFixedContribTest = getSelectedSubject()!
+        .fixedContributionTests
+        .map((t) => t.id)
+        .contains(testId);
 
     FirebaseAnalytics.instance.logEvent(
       name: "DeleteTest",
       parameters: {
-        "className": selectedClass!.name,
+        "DeleteTest_className": selectedClass!.name,
+        "DeleteTest_isFixedContributionTest": isFixedContribTest,
       },
     );
+
     getSelectedSubject()!.simpleTests.removeWhere((Test t) => t.id == testId);
     getSelectedSubject()!
         .fixedContributionTests

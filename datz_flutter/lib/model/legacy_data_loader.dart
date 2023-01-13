@@ -30,7 +30,7 @@ class LegacyDataLoader {
 
       FirebaseAnalytics.instance
           .logEvent(name: "LegacyClassPortStart", parameters: {
-        "savedClasses": allClassKeys.length,
+        "legacyClassPortStart_allClassLength": allClassKeys.length,
       });
 
       for (final key in allClassKeys) {
@@ -43,7 +43,7 @@ class LegacyDataLoader {
           DataLoader.saveClass(newClass);
           FirebaseAnalytics.instance
               .logEvent(name: "LegacyClassSuccess", parameters: {
-            "name": newClass.name,
+            "legacyClassSuccessName": newClass.name,
           });
 
           if (kDebugMode) {

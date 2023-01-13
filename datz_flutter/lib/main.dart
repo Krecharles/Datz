@@ -1,7 +1,6 @@
 import 'package:datz_flutter/model/legacy_data_loader.dart';
 import 'package:datz_flutter/pages/home_page/home_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';

@@ -40,7 +40,9 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
 
   /// Repopulates
   void loadData() async {
-    print("Loading all class models");
+    if (kDebugMode) {
+      print("Loading all class models");
+    }
     _allClassMetaModels = await DataLoader.loadAllClassMetaModels();
     _userClasses = await DataLoader.loadAllClasses();
     setState(() {});

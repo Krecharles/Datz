@@ -9,6 +9,7 @@ import 'package:datz_flutter/pages/class_picker_page/class_picker_page.dart';
 import 'package:datz_flutter/pages/home_page/home_page_sliver_header.dart';
 import 'package:datz_flutter/pages/home_page/subject_list.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
@@ -32,6 +33,13 @@ class HomePage extends StatelessWidget {
 
     provider.selectedClass!.applyMetaModelChanges(metaModel);
     provider.notifyListeners();
+
+    FirebaseAnalytics.instance.logEvent(name: "EditClass", parameters: {
+      "EditClass_oldClassName": provider.selectedClass!.name,
+      "EditClass_newClassName": metaModel.name,
+      "EditClass_reportAsError": reportAsError,
+    });
+
     Navigator.pop(context); // pop dialog
     Navigator.pop(context); // pop class edit page
   }
