@@ -45,7 +45,7 @@ class _CreditsPageState extends State<CreditsPage> {
                 child: Column(
                   children: [
                     const Text(
-                      "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. ",
+                      "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. All Data and calculated Averages is without Gurantee.",
                       style: TextStyle(color: Colors.white),
                     ),
                     const SizedBox(height: 64),

@@ -167,7 +167,8 @@ class ClassProvider with ChangeNotifier {
       name: "AddTest",
       parameters: {
         "AddTest_className": selectedClass!.name,
-        "AddTest_isFixedContributionTest": newTest is FixedContributionTest,
+        "AddTest_isFixedContributionTest":
+            (newTest is FixedContributionTest).toString(),
       },
     );
     if (newTest is FixedContributionTest) {
