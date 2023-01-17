@@ -56,6 +56,16 @@ class DataLoader {
     }
   }
 
+  static void saveActiveSemesterIndex(int semesterIndex) async {
+    final userDefaults = await SharedPreferences.getInstance();
+    userDefaults.setInt("ActiveSemesterIndex", semesterIndex);
+  }
+
+  static Future<int?> loadActiveSemesterIndex() async {
+    final userDefaults = await SharedPreferences.getInstance();
+    return userDefaults.getInt("ActiveSemesterIndex");
+  }
+
   static Future<List<ClassMetaModel>> loadAllClassMetaModels() async {
     if (kDebugMode) {
       print("Loading all classes metadata");

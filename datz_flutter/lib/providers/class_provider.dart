@@ -21,6 +21,7 @@ class ClassProvider with ChangeNotifier {
   bool failedToLoadClass = false;
 
   ClassProvider({this.selectedClass, this.selectedSemester = 0}) {
+    loadSemesterIndex();
     loadCurrentClass();
   }
 
@@ -36,7 +37,15 @@ class ClassProvider with ChangeNotifier {
     selectedClass = loadedClass;
 
     if (selectedClass == null) failedToLoadClass = true;
+    checkSemesterIndexOverFlow();
+    notifyListeners();
+  }
 
+  /// Loads the active semester from memory.
+  void loadSemesterIndex() async {
+    int? semesterIndex = await DataLoader.loadActiveSemesterIndex();
+    selectedSemester = semesterIndex ?? 0;
+    checkSemesterIndexOverFlow();
     notifyListeners();
   }
 
@@ -103,11 +112,32 @@ class ClassProvider with ChangeNotifier {
         "SelectedClass_className": c.name,
       },
     );
+
+    checkSemesterIndexOverFlow();
     notifyListeners();
+  }
+
+  void applyMetaModelChanges(ClassMetaModel metaModel) {
+    selectedClass!.applyMetaModelChanges(metaModel);
+    checkSemesterIndexOverFlow();
+    notifyListeners();
+  }
+
+  void checkSemesterIndexOverFlow() {
+    // + 1 because of total semester tab
+    if (selectedClass != null &&
+        selectedSemester >= selectedClass!.semesters.length + 1) {
+      FirebaseAnalytics.instance.logEvent(name: "SemesterIndexOverFlow");
+      selectedSemester = 0;
+    }
   }
 
   void selectSemester(int sem) {
     selectedSemester = sem;
+
+    checkSemesterIndexOverFlow();
+
+    DataLoader.saveActiveSemesterIndex(sem);
     notifyListeners();
   }
 

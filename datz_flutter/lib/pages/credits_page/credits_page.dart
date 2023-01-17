@@ -36,46 +36,52 @@ class _CreditsPageState extends State<CreditsPage> {
       ),
       child: Container(
         decoration: CustomDecorations.primaryGradientDecoration(context),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
-            child: Center(
-              child: SizedBox(
-                width: 600,
-                child: Column(
-                  children: [
-                    const Text(
-                      "If you find a bug, your class is missing, a subject has the wrong coefficient or if you have an improvement idea, feel free to open an issue on GitHub. I will try my best to solve your problems. All Data and calculated Averages is without Gurantee.",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    const SizedBox(height: 64),
-                    buildGithubLine(),
-                    const SizedBox(height: 32),
-                    const Text(
-                      "Made with ❤️",
-                      style: TextStyle(fontSize: 16, color: Colors.white),
-                    ),
-                    const SizedBox(height: 64),
-                    Center(
-                      child: CupertinoButton(
-                          color: CupertinoColors.white,
-                          child: const Text(
-                            "Review",
-                            style: TextStyle(color: CupertinoColors.black),
-                          ),
-                          onPressed: () {
-                            FirebaseAnalytics.instance.logEvent(
-                              name: "PressReviewButton",
-                            );
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            child: SafeArea(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
+                child: Center(
+                  child: SizedBox(
+                    width: 500,
+                    child: Column(
+                      children: [
+                        buildGithubLine(),
+                        const SizedBox(height: 96),
+                        const Text(
+                          "If you enjoy Datz, please leave a Review. It would mean a lot to me.",
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        ),
+                        const SizedBox(height: 16),
+                        Center(
+                          child: CupertinoButton(
+                              color: CupertinoColors.white,
+                              child: const Text(
+                                "Review",
+                                style: TextStyle(color: CupertinoColors.black),
+                              ),
+                              onPressed: () {
+                                FirebaseAnalytics.instance.logEvent(
+                                  name: "PressReviewButton",
+                                );
 
-                            final InAppReview inAppReview =
-                                InAppReview.instance;
+                                final InAppReview inAppReview =
+                                    InAppReview.instance;
 
-                            inAppReview.openStoreListing(
-                                appStoreId: '1367393128');
-                          }),
+                                inAppReview.openStoreListing(
+                                    appStoreId: '1367393128');
+                              }),
+                        ),
+                        const SizedBox(height: 32),
+                        const Text(
+                          "Made with ❤️",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),
@@ -88,8 +94,9 @@ class _CreditsPageState extends State<CreditsPage> {
   RichText buildGithubLine() {
     return RichText(
       text: TextSpan(
-        text: 'Get involved on ',
-        style: const TextStyle(fontSize: 24, color: Colors.white),
+        text:
+            'Datz! is a project I started on a few years ago when I needed a grade calculator myself. It was never intended to reach the audience that it did, but I am very grateful that there are so many students who can benefit from the app. I still work on the project in my spare time and when communicating with me, please keep in mind that I am just another person and that I am allowed to make mistakes.\n\nThat being said, if you find a bug or if you have an improvement idea, feel free to open an issue on ',
+        style: const TextStyle(color: Colors.white, fontSize: 16),
         children: <TextSpan>[
           TextSpan(
               text: "Github",
@@ -107,6 +114,10 @@ class _CreditsPageState extends State<CreditsPage> {
                     }
                   }
                 }),
+          const TextSpan(
+            text:
+                ". I will try my best to solve your problems.\n\nAll Data and calculated Averages is without Gurantee.",
+          ),
         ],
       ),
     );

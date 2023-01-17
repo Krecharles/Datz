@@ -31,8 +31,7 @@ class HomePage extends StatelessWidget {
           .call(metaModel.toString());
     }
 
-    provider.selectedClass!.applyMetaModelChanges(metaModel);
-    provider.notifyListeners();
+    provider.applyMetaModelChanges(metaModel);
 
     FirebaseAnalytics.instance.logEvent(name: "EditClass", parameters: {
       "EditClass_oldClassName": provider.selectedClass!.name,

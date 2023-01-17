@@ -62,10 +62,12 @@ class _TestEditPageState extends State<TestEditPage> {
     if (_nameController.value.text == "") {
       return alertFormError(context, "Name cannot be Empty.");
     }
-    if (double.tryParse(_gradeController.value.text) == null) {
+    String gradeString = _gradeController.value.text.replaceAll(",", ".");
+    String maxGradeString = _maxGradeController.value.text.replaceAll(",", ".");
+    if (double.tryParse(gradeString) == null) {
       return alertFormError(context, "Grade must be a Number");
     }
-    if (double.tryParse(_maxGradeController.value.text) == null) {
+    if (double.tryParse(maxGradeString) == null) {
       return alertFormError(context, "Max Grade must be a Number");
     }
 
@@ -73,8 +75,8 @@ class _TestEditPageState extends State<TestEditPage> {
       Test newTest = Test(
         id: widget.editTest?.id,
         name: _nameController.value.text,
-        grade: double.parse(_gradeController.value.text),
-        maxGrade: double.parse(_maxGradeController.value.text),
+        grade: double.parse(gradeString),
+        maxGrade: double.parse(maxGradeString),
       );
       widget.onSubmit(newTest);
       Navigator.pop(context);
