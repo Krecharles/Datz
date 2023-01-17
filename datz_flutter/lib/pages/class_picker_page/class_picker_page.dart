@@ -45,6 +45,9 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     }
     _allClassMetaModels = await DataLoader.loadAllClassMetaModels();
     _userClasses = await DataLoader.loadAllClasses();
+    if (kDebugMode) {
+      print("finished Loading Class Picker Data.");
+    }
     setState(() {});
   }
 
@@ -162,7 +165,7 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     classes.sort((a, b) => b.name.compareTo(a.name));
 
     if (classes.isEmpty) return Container();
-
+    final provider = context.watch<ClassProvider>();
     return CustomCupertinoListSection(
       header: "Your Classes",
       children: [
@@ -171,7 +174,12 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
             onDelete: (context) => onDeleteClass(c),
             child: CupertinoListTile.notched(
               onTap: () => onSelectUserClass(c),
-              title: Text(c.name),
+              title: c.id == provider.selectedClass?.id
+                  ? Text(
+                      c.name,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    )
+                  : Text(c.name),
             ),
           ),
       ],
