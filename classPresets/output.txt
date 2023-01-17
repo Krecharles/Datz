@@ -1,0 +1,151 @@
+--- Analysing 2I --- 
+editedSubs:
+[
+  { name: "Mathématiques", coef: 4, subSubjects: null },
+  {
+    name: "TechApp",
+    coef: 2,
+    subSubjects: [
+      { name: "TechInn", coef: 1, subSubjects: null },
+      { name: "MaiOu", coef: 1, subSubjects: null }
+    ]
+  }
+]
+createdSubjects:
+[]
+deletedSubjects:
+[]
+--- Analysing 3GSO-2 --- 
+This is a new class
+--- Analysing 2GIG --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[]
+--- Analysing 4GSO --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[]
+--- Analysing 1GIG --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[ { name: "Allemand", coef: 3 } ]
+--- Analysing 6C04 --- 
+This is a new class
+--- Analysing 1GIG --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[ { name: "Allemand", coef: 3 } ]
+--- Analysing 7e --- 
+editedSubs:
+[]
+createdSubjects:
+[
+  { name: "Deutsch", coef: 4, subSubjects: null },
+  { name: "Geschichte", coef: 2, subSubjects: null },
+  { name: "Geographie", coef: 2, subSubjects: null },
+  { name: "Luxembourg", coef: 1, subSubjects: null }
+]
+deletedSubjects:
+[
+  { name: "Allemand", coef: 4 },
+  { name: "Histoire", coef: 2 },
+  { name: "Géographie", coef: 2 },
+  { name: "Luxembourgeois", coef: 1 }
+]
+--- Analysing 1GIG --- 
+editedSubs:
+[
+  { name: "Electrotechnique", coef: 2, subSubjects: null },
+  { name: "Informatique", coef: 2, subSubjects: null },
+  { name: "Mécanique", coef: 2, subSubjects: null }
+]
+createdSubjects:
+[]
+deletedSubjects:
+[]
+--- Analysing 1GSO --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[ { name: "Allemand", coef: 3 } ]
+--- Analysing 3GIG --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[]
+--- Analysing 1GACV --- 
+editedSubs:
+[]
+createdSubjects:
+[
+  { name: "desma", coef: 4, subSubjects: null },
+  { name: "mathe", coef: 3, subSubjects: null }
+]
+deletedSubjects:
+[
+  { name: "LangPlaBidim", coef: 4 },
+  { name: "Français", coef: 3 },
+  { name: "Mathématiques", coef: 3 },
+  { name: "Travail Personnel", coef: 2 }
+]
+--- Analysing 6G1 1 --- 
+This is a new class
+--- Analysing 1GIG --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[ { name: "Allemand", coef: 3 } ]
+--- Analysing 3GSO --- 
+editedSubs:
+[]
+createdSubjects:
+[ { name: "Edcit", coef: 2, subSubjects: null } ]
+deletedSubjects:
+[
+  {
+    name: "Citoyenneté",
+    coef: 2,
+    subSubjects: [ { name: "EduCit", coef: 1 }, { name: "Luxembourgeois", coef: 1 } ]
+  }
+]
+--- Analysing 2GSO --- 
+editedSubs:
+[]
+createdSubjects:
+[]
+deletedSubjects:
+[ { name: "Français", coef: 3 } ]
+--- Analysing 2GIG --- 
+editedSubs:
+[
+  {
+    name: "Mathématiques",
+    coef: 4,
+    subSubjects: [
+      { name: "Mathématiques 1", coef: 2, subSubjects: null },
+      { name: "Mathématiques 2", coef: 1, subSubjects: null }
+    ]
+  }
+]
+createdSubjects:
+[]
+deletedSubjects:
+[]

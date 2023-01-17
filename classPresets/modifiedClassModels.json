@@ -1,5 +1,1107 @@
 [
   {
+    "name": "2I",
+    "useSemesters": false,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Français ",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "AmInf",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Programmation",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "CommMedia",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "TechApp",
+        "coef": 2,
+        "subSubjects": [
+          {
+            "name": "TechInn",
+            "coef": 1,
+            "subSubjects": null
+          },
+          {
+            "name": "MaiOu",
+            "coef": 1,
+            "subSubjects": null
+          }
+        ]
+      },
+      {
+        "name": "Civique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Histoire",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "3GSO-2",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "ConMon",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Economie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Schus",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Citoyenneté",
+        "coef": 2,
+        "subSubjects": [
+          {
+            "name": "EduCit",
+            "coef": 1,
+            "subSubjects": null
+          },
+          {
+            "name": "Luxembourgeois",
+            "coef": 1,
+            "subSubjects": null
+          }
+        ]
+      },
+      {
+        "name": "Option",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "2GIG",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mécanique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "4GSO",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "ConMon",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Economie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Schus",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Biologie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduCit",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "1GIG",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mécanique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "6C04",
+    "useSemesters": false,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Geographie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Science",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhy",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Deutsch",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Franc",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathe",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Vieso",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduArt",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Histo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "English",
+        "coef": 4,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "1GIG",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mécanique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "7e",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Français",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Deutsch",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "SciNa",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Geschichte",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Geographie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Artistique",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduMusic",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Luxembourg",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "ext",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Allemand/Lux",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "CulGen",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "1GIG",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Mécanique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "1GSO",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Sociologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Psycho/Commu",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "EcoPol",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Pédagogie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Arts/Culture",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "7e",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Français",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "SciNa",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Histoire",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Géographie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Artistique",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduMusic",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Luxembourgeois",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "3ME",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Artistique",
+        "coef": 4,
+        "subSubjects": [
+          {
+            "name": "Dessin",
+            "coef": 1,
+            "subSubjects": null
+          },
+          {
+            "name": "Graphisme",
+            "coef": 1,
+            "subSubjects": null
+          },
+          {
+            "name": "HistoArt",
+            "coef": 1,
+            "subSubjects": null
+          }
+        ]
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Histoire",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Biologie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "3GIG",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduCit",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "6M",
+    "useSemesters": false,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Français",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "SciNa",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Histoire",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Géographie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Artistique",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "3GPS",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Biologie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Schus&So",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduCit",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "7e",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Français",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Deutsch",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "SciNa",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Geschichte",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "VieSo",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Geographie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Artistique",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduMusic",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Luxembourg",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
     "name": "1GACV",
     "useSemesters": true,
     "hasExams": true,
@@ -51,6 +1153,95 @@
       },
       {
         "name": "Sciences",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "6G1 1",
+    "useSemesters": false,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Mathématiques ",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Français ",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Deutsch",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Englisch ",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "1GIG",
+    "useSemesters": true,
+    "hasExams": true,
+    "subjects": [
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mécanique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
         "coef": 2,
         "subSubjects": null
       },
@@ -125,6 +1316,151 @@
         "name": "Edcit",
         "coef": 2,
         "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "2GSO",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Sociologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Psycho/Commu",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "EcoPol",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Philosophie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "Pédagogie",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "TravPerso",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Option",
+        "coef": 1,
+        "subSubjects": null
+      }
+    ]
+  },
+  {
+    "name": "2GIG",
+    "useSemesters": true,
+    "hasExams": false,
+    "subjects": [
+      {
+        "name": "Chimie",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Physique",
+        "coef": 4,
+        "subSubjects": null
+      },
+      {
+        "name": "Anglais",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Allemand",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Français",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Electrotechnique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Informatique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Mécanique",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "Technologie",
+        "coef": 3,
+        "subSubjects": null
+      },
+      {
+        "name": "ConMon",
+        "coef": 2,
+        "subSubjects": null
+      },
+      {
+        "name": "EduPhys",
+        "coef": 1,
+        "subSubjects": null
+      },
+      {
+        "name": "Mathématiques",
+        "coef": 4,
+        "subSubjects": [
+          {
+            "name": "Mathématiques 1",
+            "coef": 2,
+            "subSubjects": null
+          },
+          {
+            "name": "Mathématiques 2",
+            "coef": 1,
+            "subSubjects": null
+          }
+        ]
       }
     ]
   }

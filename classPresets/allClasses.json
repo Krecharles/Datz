@@ -814,15 +814,15 @@
         "subSubjects": [
           {
             "name": "Dessin",
-            "coef": 1.25
+            "coef": 1
           },
           {
             "name": "Graphisme",
-            "coef": 1.25
+            "coef": 1
           },
           {
             "name": "HistoArt",
-            "coef": 1.25
+            "coef": 1
           }
         ]
       },
@@ -848,6 +848,10 @@
       },
       {
         "name": "Chimie",
+        "coef": 2.0
+      },
+      {
+        "name": "Biologie",
         "coef": 2.0
       },
       {
@@ -920,6 +924,10 @@
       },
       {
         "name": "Chimie",
+        "coef": 2.0
+      },
+      {
+        "name": "Biologie",
         "coef": 2.0
       },
       {
