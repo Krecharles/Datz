@@ -4,7 +4,6 @@ import 'package:datz_flutter/model/subject_model.dart';
 import 'package:datz_flutter/model/class_model.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 
 import '../model/semester_model.dart';
 import '../model/test_model.dart';
