@@ -126,14 +126,15 @@ class Class {
 
   /// the average without rounding
   double calcExactAvg() {
-    final calcableSemesters =
-        semesters.where((s) => s.isAvgCalculable()).toList();
+    double avg = 0;
+    double coefSum = 0;
+    for (Subject s in semesters.first.subjects) {
+      if (!isSubjectTotalAvgCalculable(s.id)) continue;
+      avg += getSubjectTotalFinalAvg(s.id) * s.coef;
+      coefSum += s.coef;
+    }
 
-    // not + bonus as it is usually not the case for combisubjects
-    return weightedAvg(
-      calcableSemesters.map((s) => s.calcExactAvg()).toList(),
-      calcableSemesters.map((s) => s.coef).toList(),
-    );
+    return avg / coefSum;
   }
 
   /// the average ceiled
