@@ -5,12 +5,25 @@ import 'package:datz_flutter/pages/settings_page/brightness_picker_page.dart';
 import 'package:datz_flutter/pages/settings_page/language_picker_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:datz_flutter/providers/settings_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
+
+  @override
+  State<SettingsPage> createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
+  @override
+  void initState() {
+    super.initState();
+
+    FirebaseAnalytics.instance.logScreenView(screenName: "SettingsPage");
+  }
 
   void onChangeClass(BuildContext context) {
     Navigator.push(
@@ -23,9 +36,40 @@ class SettingsPage extends StatelessWidget {
     );
   }
 
+  void onTapBrightness(BuildContext context) {
+    Navigator.push(
+      context,
+      CupertinoPageRoute(
+        builder: (context) => const BrightnessPickerPage(),
+      ),
+    ).then((value) {
+      var brightnessString =
+          context.read<SettingsProvider>().brightness?.name ?? "system";
+      FirebaseAnalytics.instance
+          .logEvent(name: "ChangeBrightness", parameters: {
+        "brightness_value": brightnessString,
+      });
+    });
+  }
+
+  void onTapLanguage(BuildContext context) {
+    Navigator.push(
+      context,
+      CupertinoPageRoute(
+        builder: (context) => const LanguagePickerPage(),
+      ),
+    ).then((value) {
+      var languageCode = context.read<SettingsProvider>().languageCode;
+      FirebaseAnalytics.instance.logEvent(name: "ChangeLanguage", parameters: {
+        "language_code": languageCode,
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final provider = context.watch<ClassProvider>();
+    final classProvider = context.watch<ClassProvider>();
+    final settingsProvider = context.watch<SettingsProvider>();
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         previousPageTitle: AppLocalizations.of(context)!.back,
@@ -40,7 +84,7 @@ class SettingsPage extends StatelessWidget {
                   title: Text(AppLocalizations.of(context)!.class_),
                   trailing: Row(
                     children: [
-                      Text(provider.selectedClass?.name ?? ""),
+                      Text(classProvider.selectedClass?.name ?? ""),
                       const SizedBox(width: 8),
                       const CupertinoListTileChevron()
                     ],
@@ -51,42 +95,24 @@ class SettingsPage extends StatelessWidget {
                   title: Text(AppLocalizations.of(context)!.language),
                   trailing: Row(
                     children: [
-                      Text(context
-                          .watch<SettingsProvider>()
-                          .getLanguageDescription()),
+                      Text(settingsProvider.getLanguageDescription()),
                       const SizedBox(width: 8),
                       const CupertinoListTileChevron()
                     ],
                   ),
-                  onTap: () => {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => const LanguagePickerPage(),
-                      ),
-                    )
-                  },
+                  onTap: () => onTapLanguage(context),
                 ),
                 CupertinoListTile.notched(
-                  title: Text(AppLocalizations.of(context)!.brightness),
-                  trailing: Row(
-                    children: [
-                      Text(context
-                          .watch<SettingsProvider>()
-                          .getBrightnessDescription(context)),
-                      const SizedBox(width: 8),
-                      const CupertinoListTileChevron()
-                    ],
-                  ),
-                  onTap: () => {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => const BrightnessPickerPage(),
-                      ),
-                    )
-                  },
-                ),
+                    title: Text(AppLocalizations.of(context)!.brightness),
+                    trailing: Row(
+                      children: [
+                        Text(
+                            settingsProvider.getBrightnessDescription(context)),
+                        const SizedBox(width: 8),
+                        const CupertinoListTileChevron()
+                      ],
+                    ),
+                    onTap: () => onTapBrightness(context)),
               ],
             ),
             CupertinoListSection.insetGrouped(

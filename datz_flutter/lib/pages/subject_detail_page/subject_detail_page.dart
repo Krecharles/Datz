@@ -8,14 +8,27 @@ import 'package:datz_flutter/pages/edit_test_page.dart';
 import 'package:datz_flutter/pages/subject_detail_page/bonus_stepper_tile.dart';
 import 'package:datz_flutter/pages/subject_detail_page/subject_info_card.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Shown when a user taps on a subjet in [HomePage].
-class SubjectDetailPage extends StatelessWidget {
+class SubjectDetailPage extends StatefulWidget {
   const SubjectDetailPage({super.key});
+
+  @override
+  State<SubjectDetailPage> createState() => _SubjectDetailPageState();
+}
+
+class _SubjectDetailPageState extends State<SubjectDetailPage> {
+  @override
+  void initState() {
+    super.initState();
+
+    FirebaseAnalytics.instance.logScreenView(screenName: "SubjectDetailPage");
+  }
 
   @override
   Widget build(BuildContext context) {

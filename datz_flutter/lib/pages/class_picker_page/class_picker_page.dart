@@ -175,12 +175,11 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
             onDelete: (context) => onDeleteClass(c),
             child: CupertinoListTile.notched(
               onTap: () => onSelectUserClass(c),
-              title: c.id == provider.selectedClass?.id
-                  ? Text(
-                      c.name,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    )
-                  : Text(c.name),
+              leading: Opacity(
+                opacity: c.id == provider.selectedClass?.id ? 1 : 0,
+                child: const Icon(CupertinoIcons.check_mark),
+              ),
+              title: Text(c.name),
             ),
           ),
       ],

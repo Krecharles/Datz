@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -52,7 +53,13 @@ class SettingsProvider with ChangeNotifier {
   void loadBrightness() async {
     final userDefaults = await SharedPreferences.getInstance();
     final b = userDefaults.getBool("brightness");
-    setBrightness(b);
+    if (b == null) {
+      brightness = null;
+    } else if (b) {
+      brightness = Brightness.light;
+    } else {
+      brightness = Brightness.dark;
+    }
   }
 
   String getBrightnessDescription(BuildContext context) {
@@ -65,14 +72,8 @@ class SettingsProvider with ChangeNotifier {
     return AppLocalizations.of(context)!.dark;
   }
 
-  void setBrightness(bool? b) {
-    if (b == null) {
-      brightness = null;
-    } else if (b) {
-      brightness = Brightness.light;
-    } else {
-      brightness = Brightness.dark;
-    }
+  void setBrightness(Brightness? b) {
+    brightness = b;
     saveBrightness();
     notifyListeners();
   }

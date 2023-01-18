@@ -5,6 +5,7 @@ import 'package:datz_flutter/components/buttons.dart';
 import 'package:datz_flutter/consts.dart';
 import 'package:datz_flutter/model/test_model.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -57,6 +58,8 @@ class _TestEditPageState extends State<TestEditPage> {
       _fixedContribTestController =
           TextEditingController(text: test.getContributionFractionString());
     }
+
+    FirebaseAnalytics.instance.logScreenView(screenName: "EditTestPage");
   }
 
   void onSubmit() {

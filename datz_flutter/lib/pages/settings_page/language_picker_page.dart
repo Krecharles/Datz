@@ -1,11 +1,24 @@
 import 'package:datz_flutter/components/custom_cupertino_page_body.dart';
 import 'package:datz_flutter/providers/settings_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class LanguagePickerPage extends StatelessWidget {
+class LanguagePickerPage extends StatefulWidget {
   const LanguagePickerPage({super.key});
+
+  @override
+  State<LanguagePickerPage> createState() => _LanguagePickerPageState();
+}
+
+class _LanguagePickerPageState extends State<LanguagePickerPage> {
+  @override
+  void initState() {
+    super.initState();
+
+    FirebaseAnalytics.instance.logScreenView(screenName: "LanguagePickerPage");
+  }
 
   @override
   Widget build(BuildContext context) {

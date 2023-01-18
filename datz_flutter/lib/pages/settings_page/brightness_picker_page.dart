@@ -1,11 +1,25 @@
 import 'package:datz_flutter/components/custom_cupertino_page_body.dart';
 import 'package:datz_flutter/providers/settings_provider.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class BrightnessPickerPage extends StatelessWidget {
+class BrightnessPickerPage extends StatefulWidget {
   const BrightnessPickerPage({super.key});
+
+  @override
+  State<BrightnessPickerPage> createState() => _BrightnessPickerPageState();
+}
+
+class _BrightnessPickerPageState extends State<BrightnessPickerPage> {
+  @override
+  void initState() {
+    super.initState();
+
+    FirebaseAnalytics.instance
+        .logScreenView(screenName: "BrightnessPickerPage");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +48,7 @@ class BrightnessPickerPage extends StatelessWidget {
                     child: const Icon(CupertinoIcons.check_mark),
                   ),
                   title: Text(AppLocalizations.of(context)!.light),
-                  onTap: () => provider.setBrightness(true),
+                  onTap: () => provider.setBrightness(Brightness.light),
                 ),
                 CupertinoListTile.notched(
                   leading: Opacity(
@@ -42,7 +56,7 @@ class BrightnessPickerPage extends StatelessWidget {
                     child: const Icon(CupertinoIcons.check_mark),
                   ),
                   title: Text(AppLocalizations.of(context)!.dark),
-                  onTap: () => provider.setBrightness(false),
+                  onTap: () => provider.setBrightness(Brightness.dark),
                 ),
               ],
             ),

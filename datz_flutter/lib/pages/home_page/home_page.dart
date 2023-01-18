@@ -16,8 +16,20 @@ import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+
+    FirebaseAnalytics.instance.logScreenView(screenName: "HomePage");
+  }
 
   void editClassMetaModel(
       BuildContext context, ClassMetaModel metaModel, bool reportAsError) {

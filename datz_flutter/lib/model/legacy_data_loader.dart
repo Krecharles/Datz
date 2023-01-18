@@ -26,6 +26,9 @@ class LegacyDataLoader {
 
       NativeSharedPreferences prefs =
           await NativeSharedPreferences.getInstance();
+
+      if (prefs.get("allNames") == null) return;
+
       final allClassKeys = prefs.get('allNames') as List<dynamic>;
 
       FirebaseAnalytics.instance
