@@ -11,6 +11,7 @@ import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Shown when a user taps on a subjet in [HomePage].
 class SubjectDetailPage extends StatelessWidget {
@@ -21,7 +22,7 @@ class SubjectDetailPage extends StatelessWidget {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         backgroundColor: CustomColors.colorMid,
-        previousPageTitle: "Back",
+        previousPageTitle: AppLocalizations.of(context)!.back,
         middle: Text(
           context.watch<ClassProvider>().getSelectedSubject()?.name ?? "",
           style: const TextStyle(color: Colors.white),
@@ -42,13 +43,13 @@ class SubjectDetailPage extends StatelessWidget {
         buildTestList(
           context,
           provider.getSelectedSubject()?.simpleTests,
-          "Tests",
+          AppLocalizations.of(context)!.tests,
           buildTestTile,
         ),
         buildTestList(
           context,
           provider.getSelectedSubject()?.fixedContributionTests,
-          "Fixed Contribution Tests",
+          AppLocalizations.of(context)!.fixedContribTests,
           buildTestTile,
         ),
         const SizedBox(height: 32),
@@ -125,7 +126,7 @@ class SubjectDetailPage extends StatelessWidget {
   Widget buildAddTestButton(BuildContext context) {
     final provider = context.watch<ClassProvider>();
     return Button(
-      text: "Add Test",
+      text: AppLocalizations.of(context)!.addTest,
       type: ButtonType.tinted,
       leadingIcon: CupertinoIcons.add,
       onPressed: () {

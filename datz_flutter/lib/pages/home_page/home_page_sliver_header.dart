@@ -1,10 +1,8 @@
 import 'package:datz_flutter/consts.dart';
-import 'package:datz_flutter/pages/credits_page/credits_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 class HomePageSliverHeader extends StatelessWidget {
@@ -27,7 +25,6 @@ class HomePageSliverHeader extends StatelessWidget {
           decoration: CustomDecorations.primaryGradientDecoration(context),
         ),
         buildClassIndicator(context, opacity),
-        buildCreditsPageButton(context, opacity),
         buildAvgLabel(context, opacity),
         buildSemesterPicker(context, opacity)
       ],
@@ -76,7 +73,7 @@ class HomePageSliverHeader extends StatelessWidget {
 
   Widget buildClassIndicator(BuildContext context, double opacity) {
     return Positioned(
-      left: 12.0,
+      right: 20.0,
       top: 12.0,
       child: Opacity(
         opacity: opacity,
@@ -84,27 +81,6 @@ class HomePageSliverHeader extends StatelessWidget {
           child: Text(
             context.watch<ClassProvider>().selectedClass?.name ?? "",
             style: const TextStyle(color: Colors.white),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildCreditsPageButton(BuildContext context, double opacity) {
-    return Positioned(
-      right: 12.0,
-      top: 12.0,
-      child: Opacity(
-        opacity: opacity,
-        child: SafeArea(
-          child: CupertinoButton(
-            child: const FaIcon(FontAwesomeIcons.github, color: Colors.white),
-            onPressed: () {
-              Navigator.push(
-                context,
-                CupertinoPageRoute(builder: (context) => const CreditsPage()),
-              );
-            },
           ),
         ),
       ),

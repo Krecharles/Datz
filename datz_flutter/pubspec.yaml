@@ -44,6 +44,9 @@ dependencies:
   cloud_functions: ^4.0.6
   in_app_review: ^2.0.6
   flutter_native_splash: ^2.2.16
+  flutter_localizations: # Add this line
+    sdk: flutter # Add this line
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.11.0
@@ -80,9 +83,13 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # needed for localization
+  generate: true
+
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/class_meta_data/
+    - assets/l10n/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

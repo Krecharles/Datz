@@ -11,6 +11,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// A Page that lets the select the current class.
 ///
@@ -77,8 +78,8 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     showCupertinoModalPopup<void>(
       context: context,
       builder: (BuildContext context) => CupertinoAlertDialog(
-        title: Text('Delete Class ${c.name}?'),
-        content: const Text('Data in this class will be lost forever.'),
+        title: Text(AppLocalizations.of(context)!.deleteClass),
+        content: Text(AppLocalizations.of(context)!.allDataInClassLost),
         actions: <CupertinoDialogAction>[
           CupertinoDialogAction(
             isDestructiveAction: true,
@@ -87,14 +88,14 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
               classProvider.deleteClass(context, c.id);
               loadData();
             },
-            child: const Text('Delete'),
+            child: Text(AppLocalizations.of(context)!.delete),
           ),
           CupertinoDialogAction(
             isDefaultAction: true,
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text('Cancel'),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
         ],
       ),
@@ -132,10 +133,10 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        previousPageTitle: "Back",
+      navigationBar: CupertinoNavigationBar(
+        previousPageTitle: AppLocalizations.of(context)!.back,
         middle: Text(
-          "Select Class",
+          AppLocalizations.of(context)!.selectClass,
         ),
       ),
       child: CustomCupertinoPageBody(
@@ -167,7 +168,7 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     if (classes.isEmpty) return Container();
     final provider = context.watch<ClassProvider>();
     return CustomCupertinoListSection(
-      header: "Your Classes",
+      header: AppLocalizations.of(context)!.yourClasses,
       children: [
         for (final c in classes)
           CustomSlidable(
@@ -195,7 +196,7 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
     if (classes.isEmpty) return Container();
 
     return CustomCupertinoListSection(
-      header: "Preset Classes",
+      header: AppLocalizations.of(context)!.presetClass,
       children: [
         for (final m in classes)
           CupertinoListTile.notched(
@@ -208,10 +209,10 @@ class _ClassPickerPageState extends State<ClassPickerPage> {
 
   Widget buildCreateClassButton(BuildContext context) {
     return CustomCupertinoListSection(
-      header: "Nothing Found?",
+      header: AppLocalizations.of(context)!.nothingFound,
       children: [
         CupertinoListTile.notched(
-          title: const Text("Create your own"),
+          title: Text(AppLocalizations.of(context)!.createYourOwn),
           onTap: () => onCreateOwnClass(context),
           trailing: const CupertinoListTileChevron(),
         ),

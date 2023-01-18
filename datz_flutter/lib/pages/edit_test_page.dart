@@ -7,6 +7,7 @@ import 'package:datz_flutter/model/test_model.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// A page used for both Test creation and modification.
 ///
@@ -60,15 +61,18 @@ class _TestEditPageState extends State<TestEditPage> {
 
   void onSubmit() {
     if (_nameController.value.text == "") {
-      return alertFormError(context, "Name cannot be Empty.");
+      return alertFormError(
+          context, AppLocalizations.of(context)!.nameCannotBeEmpty);
     }
     String gradeString = _gradeController.value.text.replaceAll(",", ".");
     String maxGradeString = _maxGradeController.value.text.replaceAll(",", ".");
     if (double.tryParse(gradeString) == null) {
-      return alertFormError(context, "Grade must be a Number");
+      return alertFormError(
+          context, AppLocalizations.of(context)!.gradeMustBeNumber);
     }
     if (double.tryParse(maxGradeString) == null) {
-      return alertFormError(context, "Max Grade must be a Number");
+      return alertFormError(
+          context, AppLocalizations.of(context)!.maxGradeMustBeNumber);
     }
 
     if (!_moreOptions) {
@@ -117,9 +121,11 @@ class _TestEditPageState extends State<TestEditPage> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        previousPageTitle: "Back",
+        previousPageTitle: AppLocalizations.of(context)!.back,
         middle: Text(
-          widget.editTest == null ? "Add Test" : "Edit Test",
+          widget.editTest == null
+              ? AppLocalizations.of(context)!.addTest
+              : AppLocalizations.of(context)!.editTest,
         ),
       ),
       child: CustomCupertinoPageBody(
@@ -141,24 +147,25 @@ class _TestEditPageState extends State<TestEditPage> {
     return CustomCupertinoListSection(
       children: [
         TextFieldFormRow(
-            title: const Text("Name"), controller: _nameController),
+            title: Text(AppLocalizations.of(context)!.name),
+            controller: _nameController),
         NumberFieldFormRow(
-            title: const Text("Grade"),
+            title: Text(AppLocalizations.of(context)!.grade),
             placeholder: "45",
             controller: _gradeController),
         NumberFieldFormRow(
-            title: const Text("Max Grade"), controller: _maxGradeController),
+            title: Text(AppLocalizations.of(context)!.maxGrade),
+            controller: _maxGradeController),
       ],
     );
   }
 
   Widget buildComplexForm() {
     return CustomCupertinoListSection(
-      footer:
-          "This options should be used for orals or TPs that contribute a fixed portion to the average, e.g. 1/2",
+      footer: AppLocalizations.of(context)!.fixedContribExplanation,
       children: [
         BoolFieldFormRow(
-          title: const Text("More Options"),
+          title: Text(AppLocalizations.of(context)!.moreOptions),
           value: _moreOptions,
           onChanged: (newVal) => setState(() {
             if (!isHandlingGivenFixedContribTest()) _moreOptions = newVal;
@@ -166,7 +173,7 @@ class _TestEditPageState extends State<TestEditPage> {
         ),
         if (_moreOptions)
           TextFieldFormRow(
-            title: const Text("Fixed Contribution"),
+            title: Text(AppLocalizations.of(context)!.fixedContrib),
             placeholder: "1/3",
             controller: _fixedContribTestController,
           ),
@@ -180,7 +187,9 @@ class _TestEditPageState extends State<TestEditPage> {
       children: [
         Button(
           type: ButtonType.filled,
-          text: widget.editTest == null ? "Add" : "Save",
+          text: widget.editTest == null
+              ? AppLocalizations.of(context)!.add
+              : AppLocalizations.of(context)!.save,
           onPressed: onSubmit,
           // leadingIcon: CupertinoIcons.add,
         ),
@@ -189,7 +198,7 @@ class _TestEditPageState extends State<TestEditPage> {
           Button(
             type: ButtonType.plain,
             color: CupertinoColors.systemRed,
-            text: "Delete",
+            text: AppLocalizations.of(context)!.delete,
             onPressed: () {
               context.read<ClassProvider>().deleteTest(widget.editTest!.id);
               Navigator.pop(context);

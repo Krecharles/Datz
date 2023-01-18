@@ -2,6 +2,7 @@ import 'package:datz_flutter/consts.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 // A widget displaying the Average and Coefficient of a subject
 class SubjectInfoCard extends StatelessWidget {
@@ -27,7 +28,7 @@ class SubjectInfoCard extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            "Coefficient: ${provider.getSelectedSubject()?.coef ?? ""}",
+            "${AppLocalizations.of(context)!.coefficient}: ${provider.getSelectedSubject()?.coef ?? ""}",
             style: TextStyle(
               color: CupertinoColors.secondaryLabel.resolveFrom(context),
             ),

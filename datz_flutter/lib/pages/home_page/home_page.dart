@@ -8,11 +8,13 @@ import 'package:datz_flutter/pages/edit_class_page/edit_class_page.dart';
 import 'package:datz_flutter/pages/class_picker_page/class_picker_page.dart';
 import 'package:datz_flutter/pages/home_page/home_page_sliver_header.dart';
 import 'package:datz_flutter/pages/home_page/subject_list.dart';
+import 'package:datz_flutter/pages/settings_page/settings_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -74,6 +76,9 @@ class HomePage extends StatelessWidget {
     if (provider.failedToLoadClass) {
       return const ClassPickerPage();
     }
+    Locale activeLocale = Localizations.localeOf(context);
+    debugPrint(activeLocale.languageCode); // => fr
+    debugPrint(activeLocale.countryCode); // => CA
 
     return CupertinoPageScaffold(
       child: CustomSliver(
@@ -95,10 +100,10 @@ class HomePage extends StatelessWidget {
           const SubjectList(),
           const SizedBox(height: 64),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               if (provider.selectedClass != null) buildEditClassButton(context),
-              buildChangeClassButton(context),
+              buildSettingsButton(context),
             ],
           ),
           const SizedBox(height: 64),
@@ -110,9 +115,9 @@ class HomePage extends StatelessWidget {
   Widget buildEditClassButton(BuildContext context) {
     final provider = context.watch<ClassProvider>();
     return Button(
-      text: "Edit",
-      leadingIcon: CupertinoIcons.pen,
-      type: ButtonType.tinted,
+      text: AppLocalizations.of(context)!.edit,
+      // leadingIcon: CupertinoIcons.pen,
+      type: ButtonType.plain,
       onPressed: () {
         Navigator.push(
           context,
@@ -130,18 +135,15 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildChangeClassButton(BuildContext context) {
+  Widget buildSettingsButton(BuildContext context) {
     return Button(
-      text: "Change Class",
-      type: ButtonType.plain,
+      text: AppLocalizations.of(context)!.settings,
+      type: ButtonType.tinted,
+      leadingIcon: CupertinoIcons.gear_solid,
       onPressed: () {
         Navigator.push(
           context,
-          CupertinoPageRoute(
-            builder: (context) => ClassPickerPage(
-              onExit: (context) => Navigator.pop(context),
-            ),
-          ),
+          CupertinoPageRoute(builder: (context) => const SettingsPage()),
         );
       },
     );

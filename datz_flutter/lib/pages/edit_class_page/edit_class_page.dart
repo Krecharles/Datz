@@ -5,6 +5,7 @@ import 'package:datz_flutter/components/forms/form_rows.dart';
 import 'package:datz_flutter/model/class_meta_model.dart';
 import 'package:datz_flutter/pages/edit_class_page/class_creation_model.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// A page used for both Class creation and modification.
 ///
@@ -77,10 +78,10 @@ class _EditClassPageState extends State<EditClassPage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        previousPageTitle: "Back",
+      navigationBar: CupertinoNavigationBar(
+        previousPageTitle: AppLocalizations.of(context)!.back,
         middle: Text(
-          "Edit Class",
+          AppLocalizations.of(context)!.editClass,
         ),
       ),
       child: CustomCupertinoPageBody(
@@ -90,13 +91,12 @@ class _EditClassPageState extends State<EditClassPage> {
             buildSubjectsList(),
             const SizedBox(height: 32),
             CustomCupertinoListSection(
-              footer:
-                  "If you disagree with the preset class, please tick this box so that your changes will be reported to the developer.",
+              footer: AppLocalizations.of(context)!.reportAsMistakeDesciption,
               children: [
                 BoolFieldFormRow(
                   title: Text(widget.isCreatingNewClass
-                      ? "Report as missing Class"
-                      : "Report as Mistake in Preset"),
+                      ? AppLocalizations.of(context)!.reportAsMissing
+                      : AppLocalizations.of(context)!.reportAsMistake),
                   value: _reportErrors,
                   onChanged: (newVal) => setState(() => _reportErrors = newVal),
                 )
@@ -116,11 +116,11 @@ class _EditClassPageState extends State<EditClassPage> {
       children: [
         TextFieldFormRow(
           controller: widget.classCreationModel.nameController,
-          title: const Text("Name"),
+          title: Text(AppLocalizations.of(context)!.name),
           placeholder: "3MB",
         ),
         BoolFieldFormRow(
-          title: const Text("Use Semesters"),
+          title: Text(AppLocalizations.of(context)!.useSemesters),
           value: widget.classCreationModel.useSemesters,
           onChanged: (newVal) => setState(() {
             widget.classCreationModel.useSemesters = newVal;
@@ -132,7 +132,7 @@ class _EditClassPageState extends State<EditClassPage> {
           }),
         ),
         BoolFieldFormRow(
-          title: const Text("Has Exams"),
+          title: Text(AppLocalizations.of(context)!.hasExams),
           value: widget.classCreationModel.hasExams,
           onChanged: (newVal) => setState(() {
             widget.classCreationModel.hasExams = newVal;
@@ -156,11 +156,11 @@ class _EditClassPageState extends State<EditClassPage> {
             children: [
               TextFieldFormRow(
                 controller: subjectModel.nameController,
-                title: const Text("Subject Name"),
+                title: Text(AppLocalizations.of(context)!.subjectName),
                 placeholder: "Allemand",
               ),
               StepperFieldFormRow(
-                title: const Text("Coefficient"),
+                title: Text(AppLocalizations.of(context)!.coefficient),
                 value: subjectModel.coef,
                 minValue: 1,
                 maxValue: 99,
@@ -170,7 +170,7 @@ class _EditClassPageState extends State<EditClassPage> {
               ),
               if (subjectModel.subSubjects != null) ...[
                 StepperFieldFormRow(
-                  title: const Text("Combi Subjects"),
+                  title: Text(AppLocalizations.of(context)!.combiSubjects),
                   value: subjectModel.subSubjects!.length,
                   minValue: 1,
                   maxValue: 9,
@@ -190,7 +190,7 @@ class _EditClassPageState extends State<EditClassPage> {
               CupertinoListTile.notched(
                 title: Center(
                   child: Text(
-                    "Delete",
+                    AppLocalizations.of(context)!.delete,
                     style: TextStyle(
                         color: CupertinoColors.systemRed.resolveFrom(context)),
                   ),
@@ -207,16 +207,16 @@ class _EditClassPageState extends State<EditClassPage> {
     return [
       TextFieldFormRow(
         controller: subSubjectModel.nameController,
-        title: const Padding(
-          padding: EdgeInsets.only(left: 24.0),
-          child: Text("Subject Name"),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 24.0),
+          child: Text(AppLocalizations.of(context)!.subjectName),
         ),
         placeholder: "Allemand",
       ),
       StepperFieldFormRow(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 24.0),
-          child: Text("Coefficient"),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 24.0),
+          child: Text(AppLocalizations.of(context)!.coefficient),
         ),
         value: subSubjectModel.coef,
         minValue: 1,
@@ -236,7 +236,7 @@ class _EditClassPageState extends State<EditClassPage> {
           children: [
             Button(
               type: ButtonType.tinted,
-              text: "Subject",
+              text: AppLocalizations.of(context)!.subject,
               leadingIcon: CupertinoIcons.add,
               onPressed: addSimpleSubject,
               // leadingIcon: CupertinoIcons.add,
@@ -244,7 +244,7 @@ class _EditClassPageState extends State<EditClassPage> {
             const SizedBox(width: 8),
             Button(
               type: ButtonType.plain,
-              text: "Combi",
+              text: AppLocalizations.of(context)!.combi,
               leadingIcon: CupertinoIcons.add,
               onPressed: addCombiSubject,
               // leadingIcon: CupertinoIcons.add,
@@ -257,7 +257,7 @@ class _EditClassPageState extends State<EditClassPage> {
           children: [
             Button(
               type: ButtonType.filled,
-              text: "Save",
+              text: AppLocalizations.of(context)!.save,
               onPressed: onSubmit,
               // leadingIcon: CupertinoIcons.add,
             ),

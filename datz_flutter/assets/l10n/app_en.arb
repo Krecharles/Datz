@@ -1,0 +1,61 @@
+{
+  "edit": "edit",
+  "@edit": {
+    "description": "edit Button Text"
+  },
+  "changeClass": "Change Class",
+  "@changeClass": {
+    "description": "change Class Button Text"
+  },
+  "back": "Back",
+  "editClass": "Edit Class",
+  "@editClass": {
+    "description": "Class Edit Page Title"
+  },
+  "name": "Name",
+  "subjectName": "Subject Name",
+  "@subjectName": {
+    "description": "Class Edit Page Subject Name"
+  },
+  "coefficient": "coefficient",
+  "delete": "Delete",
+  "useSemesters": "Use Semesters",
+  "hasExams": "Has Exams",
+  "combiSubjects": "Combi Subjects",
+  "reportAsMistake": "Report as Mistake in Preset",
+  "reportAsMissing": "Report as missing Class",
+  "reportAsMistakeDesciption": "If you disagree with the preset class, please tick this box so that your changes will be reported to the developer.",
+  "subject": "Subject",
+  "combi": "Combi",
+  "class_": "Class",
+  "save": "Save",
+  "settings": "Settings",
+  "language": "Language",
+  "credits": "Credits",
+  "selectClass": "Select Class",
+  "yourClasses": "Your Classes",
+  "presetClass": "Preset Classes",
+  "nothingFound": "Nothing Found?",
+  "createYourOwn": "Create your Own",
+  "deleteClass": "Delete Class?",
+  "allDataInClassLost": "Data in this class will be lost forever.",
+  "cancel": "Cancel",
+  "tests": "Tests",
+  "fixedContribTests": "Fixed Contribution Tests",
+  "addTest": "Add Test",
+  "editTest": "Edit Test",
+  "nameCannotBeEmpty": "Name cannot be Empty.",
+  "gradeMustBeNumber": "Grade must be a Number.",
+  "maxGradeMustBeNumber": "Max Grade must be a Number.",
+  "grade": "Grade",
+  "maxGrade": "Max Grade",
+  "fixedContribExplanation": "This option should be used for orals or TPs that contribute a fixed portion to the average, e.g. 1/2",
+  "moreOptions": "More Options",
+  "fixedContrib": "Fixed Contribution",
+  "add": "Add",
+  "reviewIncentive": "If you enjoy Datz, please leave a Review. It would mean a lot to me.",
+  "review": "Review",
+  "madeWithLove": "Made with ❤️",
+  "creditsBigTextPreGH": "Datz! is a project I started a few years ago when I needed a grade calculator myself. It was never intended to reach the audience that it did, but I am very grateful that there are so many students who can benefit from the app. I still work on the project in my spare time and when communicating with me, please keep in mind that I am just another person and that I am allowed to make mistakes.\n\nThat being said, if you find a bug or if you have an improvement idea, feel free to open an issue on ",
+  "creditsBigTextPostGH": ". I will try my best to solve your problems.\n\nAll Data and calculated Averages is without Gurantee."
+}

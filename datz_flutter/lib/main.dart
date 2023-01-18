@@ -1,13 +1,21 @@
 import 'package:datz_flutter/model/legacy_data_loader.dart';
 import 'package:datz_flutter/pages/home_page/home_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
+import 'package:datz_flutter/providers/language_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  runApp(
+    ChangeNotifierProvider<LanguageProvider>(
+      create: (_) => LanguageProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -22,13 +30,25 @@ class MyApp extends StatelessWidget {
 
     return ChangeNotifierProvider<ClassProvider>(
       create: (_) => ClassProvider(),
-      child: const CupertinoApp(
+      child: CupertinoApp(
         title: 'Datz!',
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('en'),
+          Locale('de'),
+        ],
+        locale: Locale.fromSubtags(
+            languageCode: context.watch<LanguageProvider>().languageCode),
         debugShowCheckedModeBanner: false,
-        theme: CupertinoThemeData(
+        theme: const CupertinoThemeData(
           scaffoldBackgroundColor: CupertinoColors.systemGroupedBackground,
         ),
-        home: HomePage(),
+        home: const HomePage(),
       ),
     );
   }
