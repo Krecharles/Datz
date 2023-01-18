@@ -57,5 +57,9 @@
   "review": "Review",
   "madeWithLove": "Made with ❤️",
   "creditsBigTextPreGH": "Datz! is a project I started a few years ago when I needed a grade calculator myself. It was never intended to reach the audience that it did, but I am very grateful that there are so many students who can benefit from the app. I still work on the project in my spare time and when communicating with me, please keep in mind that I am just another person and that I am allowed to make mistakes.\n\nThat being said, if you find a bug or if you have an improvement idea, feel free to open an issue on ",
-  "creditsBigTextPostGH": ". I will try my best to solve your problems.\n\nAll Data and calculated Averages is without Gurantee."
+  "creditsBigTextPostGH": ". I will try my best to solve your problems.\n\nAll Data and calculated Averages is without Gurantee.",
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System",
+  "brightness": "Brightness"
 }

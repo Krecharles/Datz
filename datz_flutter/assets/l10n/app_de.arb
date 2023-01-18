@@ -46,5 +46,9 @@
   "review": "Bewäerten",
   "madeWithLove": "Gemaach mat ❤️",
   "creditsBigTextPreGH": "Datz! ass e Projet deen ech virun e puer Joer ugefaang hunn wéi ech selwer e Nottenrechner gebraucht hunn. Et war ni geduecht fir d'Publikum z'erreechen, dat et haut huet, awer ech si dankbar datt et sou vill Studenten ginn déi vun der App profitéiere kënnen. Ech schaffen nach ëmmer a menger Fräizäit um Projet a denk w.e.g. drun datt ech just eng aner Persoun sinn an datt ech däerf Feeler maachen.\n\nDat gesot, wanns de e Feeler fënns oder wanns du eng Verbesserung hues, kanns du gären eng Issue opmaachen op ",
-  "creditsBigTextPostGH": ". Ech probéieren mäi Bescht fir deng Problemer ze léisen.\n\nAll Donnéeën a berechent Duerchschnëtter sinn ouni Garantie."
+  "creditsBigTextPostGH": ". Ech probéieren mäi Bescht fir deng Problemer ze léisen.\n\nAll Donnéeën a berechent Duerchschnëtter sinn ouni Garantie.",
+  "light": "Hell",
+  "dark": "Donkel",
+  "system": "System",
+  "brightness": "Hellegkeet"
 }

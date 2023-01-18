@@ -1,7 +1,7 @@
 import 'package:datz_flutter/model/legacy_data_loader.dart';
 import 'package:datz_flutter/pages/home_page/home_page.dart';
 import 'package:datz_flutter/providers/class_provider.dart';
-import 'package:datz_flutter/providers/language_provider.dart';
+import 'package:datz_flutter/providers/settings_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -11,8 +11,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   runApp(
-    ChangeNotifierProvider<LanguageProvider>(
-      create: (_) => LanguageProvider(),
+    ChangeNotifierProvider<SettingsProvider>(
+      create: (_) => SettingsProvider(),
       child: const MyApp(),
     ),
   );
@@ -43,10 +43,12 @@ class MyApp extends StatelessWidget {
           Locale('de'),
         ],
         locale: Locale.fromSubtags(
-            languageCode: context.watch<LanguageProvider>().languageCode),
+          languageCode: context.watch<SettingsProvider>().languageCode,
+        ),
         debugShowCheckedModeBanner: false,
-        theme: const CupertinoThemeData(
+        theme: CupertinoThemeData(
           scaffoldBackgroundColor: CupertinoColors.systemGroupedBackground,
+          brightness: context.watch<SettingsProvider>().brightness,
         ),
         home: const HomePage(),
       ),
