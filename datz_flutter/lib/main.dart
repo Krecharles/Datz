@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: CupertinoThemeData(
           scaffoldBackgroundColor: CupertinoColors.systemGroupedBackground,
-          brightness: context.watch<SettingsProvider>().brightness,
+          brightness: context.watch<SettingsProvider>().getBrightness(),
         ),
         home: const HomePage(),
       ),
